@@ -1,0 +1,18 @@
+.btn, .button, button{
+    @include latomd;
+    line-height: 36px;
+    color:$blu;
+    padding:0px 10px !important;
+    border:1px solid $blu;
+    line-height: 36px !important;
+    @include border-radius($myrad !important);
+    display:inline-block !important;
+    &.lg{ font-size:24px; line-height:48px;}
+    &:active, &:focus{
+    text-decoration:none;}     
+    &:hover{
+    background:$blu; color:#fff;
+    text-decoration:none;
+    opacity:1;
+    *{color:#fff;}}
+}
