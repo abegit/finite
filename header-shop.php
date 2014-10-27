@@ -15,15 +15,13 @@
 
     <!--font-awesome-->
     <link href="<?php bloginfo('template_directory'); ?>/css/whhg.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/js/snap.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/js/demo.css">
 
     <!--scroll to-->
     <script src="<?php bloginfo('template_directory'); ?>/js/easing.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.scrollTo.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.nav.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
-    <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css">
+    <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v6">
     <style>
     #logo {background-image:url('<?php header_image(); ?>') !important;}
     </style>
@@ -62,9 +60,7 @@
 .page-container { 
   position: relative; 
 }
-html {
-  margin-top: 0 !important;
-}
+html {margin-top: 0 !important; }
 
 
 #resume {
@@ -120,12 +116,22 @@ html {
 <script type="text/javascript">
 var $jfs = jQuery.noConflict();
 $jfs(document).ready(function(){
+  $jfs('body').scrollTop(1);
+});  
+</script>
 
-  $jfs('section[data-type="background"]').each(function(){
-        var $bgobj = $jfs(this); // assigning the object
-        var $window = $jfs('#snapcontent');
+<script>
+var $onlyDesktop = jQuery.noConflict();
 
-        $jfs('#snapcontent').scroll(function() {
+$onlyDesktop(window).load(function() {
+        var w = $(window).width();
+
+        if(w>400) {
+            $onlyDesktop('section[data-type="background"]').each(function(){
+                var $bgobj = $onlyDesktop(this); // assigning the object
+                var $window = $onlyDesktop('#snapcontent');
+
+                $onlyDesktop('#snapcontent').scroll(function() {
           var yPos = -($window.scrollTop() / $bgobj.data('speed'));
 
             // Put together our final background position
@@ -136,14 +142,11 @@ $jfs(document).ready(function(){
             $bgobj.css({ backgroundPosition: coords });
         });
   });   
-  // $jfs('#front').cycle({ 
-  //   fx:    'fade', 
-  //   speed:  4000,
-  //   random: 1 
-  // });
+        }
+        else { }
 });  
-</script>
 
+</script>
 
 <script>
 var $jj = jQuery.noConflict();
@@ -159,32 +162,6 @@ $jj(document).ready(function(){
   });
   });
   </script>
-
-<style type="text/css">
-        /*select {display: none;}*/
-        
-        .desc { color:#6b6b6b;}
-        .desc a {color:#0092dd;}
-        
-        .dropdown dd, .dropdown dt, .dropdown ul { margin:0px; padding:0px; }
-        .dropdown dd { position:relative; }
-        .dropdown a, .dropdown a:visited { color:#816c5b; text-decoration:none; outline:none;height: 40px; line-height: 30px; width: 100% !important;}
-        .dropdown a:hover { color:#5d4617;}
-        .dropdown dt a:hover { color:#5d4617; border: 1px solid #d0c9af;}
-        .dropdown dt a {background:#e4dfcb url(arrow.png) no-repeat scroll right center; display:block; padding-right:20px;
-                        border:1px solid #d4ca9a; width:160px; padding:5px;}
-        .dropdown dt a span {cursor:pointer; display:block;}
-        .dropdown dd ul { background:#e4dfcb none repeat scroll 0 0; width:100%; border:1px solid #d4ca9a; color:#C5C0B0; display:none;
-                          left:0px; padding:5px 0px; position:absolute; top:2px; min-width:170px; list-style:none;}
-        .dropdown span.value { display:none;}
-        .dropdown dd ul li a { padding:5px; display:block;}
-        .dropdown dd ul li a:hover { background-color:#d0c9af;}
-        
-        .dropdown img.flag { border:none; vertical-align:middle; margin-left:10px; }
-        .flagvisibility { display:none;}
-        
-        
-    </style>
     <script type="text/javascript">
     var $dd = jQuery.noConflict();
 
@@ -253,11 +230,12 @@ function createDropDown(){
   <div class="snap-drawers">
    <div class="snap-drawer snap-drawer-left">
             <div id="headerfix"></div>
-      <?php dynamic_sidebar( 'Leftbar' ); ?>
+      <ul><?php dynamic_sidebar( 'Leftbar' ); ?></ul>
    </div>
    <div class="snap-drawer snap-drawer-right">
-            <div id="headerfix"></div>
-            <?php dynamic_sidebar( 'Rightbar' ); ?>
+            <div id="closeee" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
+            <div id="selfie"><a href="./"><img src="http://placehold.it/120"></a></div>
+            <ul><?php dynamic_sidebar( 'Rightbar' ); ?></ul>
    </div>
 </div>
   
@@ -293,14 +271,14 @@ function createDropDown(){
 
 
 
-
-        <div id="headerfix"><!--header-->
+<!--header-->
+<div id="headerfix">
         <div class="row">
           <div class="columns">
               <a href="/" id="logo"></a>
               <a href="#" id="menu" class="ani"><i class="icon-menu" id="open-right"></i><i class="icon-circledelete" id="closee"></i></a>
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'no-mobi lastbutnot anis' ) ); ?>
-          </div><!--nav-->
+  </div><!--columns-->
         </div><!--row-->
         </div><!--header-->
 
@@ -327,24 +305,7 @@ function createDropDown(){
               <?php } elseif (apply_filters('woocommerce_show_page_title',true) ){woocommerce_page_title();}
                       else {echo the_title();} ?>
                   </h1><!-- end initial title -->
-                  
-
-                  <!-- breadcrumbs -->
-                  <?php if (is_category()) { ?>
-                    <ul class="breadcrumbs catlist">
-                    <?php $catsy = get_the_category();
-                    $myCat = $catsy->cat_ID;
-                    $currentcategory = '&current_category='.$myCat; ?>
-                    <?php wp_list_categories( 'show_option_all=&orderby=count&show_count=0&hierarchical=0&title_li=&show_option_none=&depth=1&pad_counts=1&taxonomy=category'.$currentcategory ); ?> 
-                    </ul>
-                  <?php } elseif (is_home()) { ?>
-                  <?php } elseif (!is_search() && !is_singular('product') && !is_shop() && !is_product_category() && !is_page_template('page-enter.php')) { ?>
-                          <div class="breadcrumbs"><?php if(function_exists('bcn_display')) { bcn_display(); } ?></div>
-                  <?php } ?>
-
-
-
-
+            <?php get_template_part('/inc/breadcrumbs');?>
           <?php } elseif (is_singular('product')) {
                   if ( $terms = wc_get_product_terms( $post->ID, 'product_cat', array( 'orderby' => 'parent', 'order' => 'DESC' ) ) ) {
                     $main_term = $terms[0];
