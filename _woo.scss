@@ -5,13 +5,11 @@
 .products {
 	clear:both;
 	.product {
-	    border: 1px solid #dddddd;
 	    @include border-box;
 	    clear: none !important;
 	    margin: 0 0.5% !important;
-	    padding: 17px !important;
 	    width: 32.333% !important;
-	    img {@include box-shadow(none);}
+	    img {@include box-shadow(none !important); margin-bottom: 0;}
 	 &:nth-child(3n+1) {
     	clear: both;}
     	.onsale {background: none repeat scroll 0 0 #FF0000;

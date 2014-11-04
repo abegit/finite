@@ -1133,7 +1133,7 @@ h1 b{
 
 .breadcrumbs{background:none; border:none; padding:0; overflow:visible; margin:0;  font-size:16px; line-height:12px;
   &.catlist{
-    &:before{content:"Browse Topics:";float:left; font-size:0.6875em; margin-right:10px; text-transform:uppercase;}
+    &:before{content:"Browse:";float:left; font-size:0.6875em; margin-right:10px; text-transform:uppercase;}
     .current-cat > a{
     opacity:1;}
   }

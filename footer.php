@@ -12,11 +12,11 @@
       <?php } ?>
       
 <section class="wrapper footer">
-	<div class="section-header gr">
+	<!-- <div class="section-header gr">
     <div class="row"> <div class="large-12 columns">
         <h4 class="subheader alignleft">Going to be releasing new tees soon, follow my newsletter to cut in line early! </h4 class="subheader">
         <a href="http://unscene.us/shop" class="btn alignright"><i class="icon-leaf"></i>Support the Artist!</a>
-    </div></div></div>
+    </div></div></div> -->
 	<div id="footer">
     <div class="row">
     <div class="columns large-12">
@@ -24,6 +24,7 @@
 </div>
   </div>
 </section>
+
     <!--end page-container-->
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/snap.js"></script>
 <script type="text/javascript">

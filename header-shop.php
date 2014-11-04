@@ -132,19 +132,19 @@ $onlyDesktop(window).load(function() {
                 var $window = $onlyDesktop('#snapcontent');
 
                 $onlyDesktop('#snapcontent').scroll(function() {
-          var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+                  var yPos = -($window.scrollTop() / $bgobj.data('speed'));
 
-            // Put together our final background position
-            var round = '50% '+ yPos;
-            var coords = round + 'px';
+                    // Put together our final background position
+                    var round = '50% '+ yPos;
+                    var coords = round + 'px';
 
-            // Move the background
-            $bgobj.css({ backgroundPosition: coords });
-        });
-  });   
+                    // Move the background
+                    $bgobj.css({ backgroundPosition: coords });
+                });
+          });
         }
         else { }
-});  
+    });
 
 </script>
 
@@ -234,7 +234,7 @@ function createDropDown(){
    </div>
    <div class="snap-drawer snap-drawer-right">
             <div id="closeee" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
-            <div id="selfie"><a href="./"><img src="http://placehold.it/120"></a></div>
+            <div id="selfie"><a href="/"><img src="http://placehold.it/120"></a></div>
             <ul><?php dynamic_sidebar( 'Rightbar' ); ?></ul>
    </div>
 </div>
@@ -273,14 +273,14 @@ function createDropDown(){
 
 <!--header-->
 <div id="headerfix">
-        <div class="row">
-          <div class="columns">
-              <a href="/" id="logo"></a>
-              <a href="#" id="menu" class="ani"><i class="icon-menu" id="open-right"></i><i class="icon-circledelete" id="closee"></i></a>
-            <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'no-mobi lastbutnot anis' ) ); ?>
+<div class="row">
+  <div class="columns">
+      <a href="/" id="logo"></a>
+      <a href="#" id="menu" class="ani"><i class="icon-menu" id="open-right"></i><i class="icon-circledelete" id="closee"></i></a>
+    <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'no-mobi lastbutnot anis' ) ); ?>
   </div><!--columns-->
-        </div><!--row-->
-        </div><!--header-->
+</div><!--row-->
+</div><!--header-->
 
 <?php if (!is_page_template('page-dark-centered.php')) { ?>
   <div class="section-header">
@@ -305,7 +305,7 @@ function createDropDown(){
               <?php } elseif (apply_filters('woocommerce_show_page_title',true) ){woocommerce_page_title();}
                       else {echo the_title();} ?>
                   </h1><!-- end initial title -->
-            <?php get_template_part('/inc/breadcrumbs');?>
+            <?php get_template_part('/inc/shopcrumbs');?>
           <?php } elseif (is_singular('product')) {
                   if ( $terms = wc_get_product_terms( $post->ID, 'product_cat', array( 'orderby' => 'parent', 'order' => 'DESC' ) ) ) {
                     $main_term = $terms[0];

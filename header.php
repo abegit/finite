@@ -234,7 +234,7 @@ function createDropDown(){
    </div>
    <div class="snap-drawer snap-drawer-right">
             <div id="closeee" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
-            <div id="selfie"><a href="./"><img src="http://placehold.it/120"></a></div>
+            <div id="selfie"><a href="/"><img src="http://placehold.it/120"></a></div>
             <ul><?php dynamic_sidebar( 'Rightbar' ); ?></ul>
    </div>
 </div>
