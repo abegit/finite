@@ -1793,6 +1793,9 @@ h1.product_title {
   top: 1px !important; }
 
 /*end product single*/
+.fpd-sidebar {
+  margin: 0 !important; }
+
 @media only screen and (min-width: 940px) {
   .item.content {
     padding: 20px;
