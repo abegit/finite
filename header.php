@@ -23,7 +23,7 @@
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v6">
     <style>
-    .wrapper {background-image:url('<?php header_image(); ?>') !important;}
+    #header.wrapper {background-image:url('<?php header_image(); ?>') !important;}
     #logo {background-image:url('<?php bloginfo('template_directory'); ?>/images/logo.png') !important;}
     </style>
 <!--Google Analytics-->

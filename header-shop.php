@@ -23,7 +23,8 @@
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v6">
     <style>
-    #logo {background-image:url('<?php header_image(); ?>') !important;}
+    #header.wrapper {background-image:url('<?php header_image(); ?>') !important;}
+    #logo {background-image:url('<?php bloginfo('template_directory'); ?>/images/logo.png') !important;}
     </style>
 <!--Google Analytics-->
 <meta name="google-site-verification" content="3C5HGnbFsnL5Asr2pr3GVBmIrIjtawd8cXJ6aMwVNlg" />
