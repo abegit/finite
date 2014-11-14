@@ -1,15 +1,10 @@
 <?php get_header('shop'); ?>
 
-
+ 
 
 <!-- body content -->
 
 <div id="shop" class="wrapper lt woocommerce">
-
-<div class="section-header store">
-    <div class="row"> <div class="large-12 columns"><ul class="store"><?php dynamic_sidebar( 'store' ); ?></ul></div></div></div>
-
-
         <div class="row">
 
 

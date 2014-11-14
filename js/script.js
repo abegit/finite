@@ -74,9 +74,7 @@
   //  sticknav();
 //
   //  and run it again every time you scroll
-  //  $jqnew(window).scroll(function () {
-  //      sticknav();
-  //  });
+  //  
 // });
 
 

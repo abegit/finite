@@ -82,12 +82,19 @@ $myrad:5px;
   h1, h2, h3, h4, h5{margin:0;}
   *{line-height:34px !important;}
 }
-.lt{background:#EEEEEE;}
+.lt{background:#121212;
+    h1, h2, h3, h4, h5{color:#888;}
+    em {color: #999;}
+    p{color:#929292;}
+    &.image{
+    #headerfix, .section-header{background:none rgba(0, 0, 0, 0.8);}}
 
-.dk{background:#333333;
-  h1, h2, h3, h4, h5{color:#fff;}
+}
+
+.dk{background:#333;
+  h1, h2, h3, h4, h5{color:#999;}
   em {color: #999;}
-  p{color:#929292;}
+  p{color:#999;}
   &.image{
   #headerfix, .section-header{background:none rgba(0, 0, 0, 0.8);}}
 }
@@ -432,13 +439,13 @@ body.snapjs-right, body.snapjs-left{
 body.snapjs-left{
   #snapcontent:before{
     left:0;}
-    #snapcontent:after{
+  #snapcontent:after{
     left:0;}
 }
 body.snapjs-right{
   #snapcontent:before{
     right:20px;}
-    #snapcontent:after{
+  #snapcontent:after{
     right:20px;}
 }
 
@@ -524,7 +531,7 @@ body.snapjs-right{
           z-index:10;
           i{margin:0; vertical-align:middle;display:block;
             padding:20px 35px;}
-          #closee{display:none; opacity:0;}
+          #close-r{display:none; opacity:0;}
           &:hover{color:#B0B0B0;} }
       #logo{ float:left; position:relative; z-index:10;
         display:inline-block;
@@ -614,7 +621,7 @@ body.snapjs-right{
 
 
 /*start nav*/
-#header{overflow:visible; z-index: 999;}
+#header{overflow:visible; z-index: 999; position: absolute; background:#202020;}
 #header:hover{
   #open-left{
     background:none rgba(255, 255, 255, 0.1);
@@ -785,11 +792,11 @@ body.snapjs-right{
   
 }
 
-.page.wrapper{background:url('images/enter.gif') repeat fixed top center / cover  #383838;}
+.page.wrapper{background: #333;}
 
-.single.wrapper{background:url('images/enter.gif') repeat fixed top center / cover  #383838;}
+.single.wrapper{background: #333;}
 
-.image.wrapper{background:url('images/enter.gif') repeat fixed top center / cover  #383838;}
+.image.wrapper{background: #333;}
 
 .product.wrapper{
 .breadcrumbs{margin-top:0;}
