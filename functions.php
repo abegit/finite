@@ -215,6 +215,7 @@ function yourtheme_setup() {
     // Add a filter to yourtheme_header_image_width and yourtheme_header_image_height to change these values.
     define( 'HEADER_IMAGE_WIDTH', apply_filters( 'yourtheme_header_image_width', 400 ) );
     define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'yourtheme_header_image_height',  100 ) );
+
     // We'll be using post thumbnails for custom header images on posts and pages.
     // We want them to be 940 pixels wide by 198 pixels tall (larger images will be auto-cropped to fit).
     set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
