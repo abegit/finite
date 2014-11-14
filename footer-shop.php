@@ -4,7 +4,7 @@
 <?php get_template_part('/inc/breadcrumbs');?>
 <!-- end breadcrumbs -->
  </div></div></div></div>
-      <?php } elseif (!is_front_page() && !is_home() && !is_search() && !is_singular('product') && !is_page_template('page-dark-centered.php')) { ?>
+      <?php } elseif (!is_front_page() && !is_home() && !is_search() && !is_singular('product')) { ?>
 <div class="wrapper dk page"><div class="section-header"><div class="row"><div class="large-12 columns">  
               <div class="breadcrumbs"><?php if(function_exists('bcn_display')) { bcn_display(); }?></div>
       <!-- end breadcrumbs -->
@@ -20,7 +20,7 @@
 	<div id="footer">
     <div class="row">
     <div class="columns large-12">
- <p class="alignleft"><a href="#" id="open-left">Contact!</a></p> <p class="alignright">Startup by Abraham Perez in Los Angeles &copy; 2014. All rights reserved.</p>    </div>
+ <p class="alignleft"><a href="#" id="open-left">Contact!</a></p> <p class="alignright">Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p>    </div>
 </div>
   </div>
 </section>

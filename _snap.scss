@@ -13,6 +13,7 @@
 /* styles */
 .snap-content {
   background: #1C1C1C;
+  padding-top: 60px;
 }
 
 .snap-drawers {
@@ -20,6 +21,7 @@
 }
 
 .snap-drawer {
+  padding-top: 60px;
   #selfie {
     text-align: center;
     a {border-bottom: 1px solid #ffffff;
@@ -64,6 +66,5 @@
 .snap-drawer li > a:hover {padding-left: 5px; }
 
 .snap-drawer p {
-  padding: 15px;
   font-size: 12px;
 }
