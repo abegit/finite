@@ -86,10 +86,10 @@ $myrad:5px;
 
 .dk{background:#333333;
   h1, h2, h3, h4, h5{color:#fff;}
-  em {color: #999;}
-  p{color:#929292;}
-  &.image{
-  #headerfix, .section-header{background:none rgba(0, 0, 0, 0.8);}}
+    em {color: #999;}
+    p{color:#929292;}
+    &.image{
+    #headerfix, .section-header{background:none rgba(0, 0, 0, 0.8);}}
 }
 
 
@@ -432,13 +432,13 @@ body.snapjs-right, body.snapjs-left{
 body.snapjs-left{
   #snapcontent:before{
     left:0;}
-    #snapcontent:after{
+  #snapcontent:after{
     left:0;}
 }
 body.snapjs-right{
   #snapcontent:before{
     right:20px;}
-    #snapcontent:after{
+  #snapcontent:after{
     right:20px;}
 }
 

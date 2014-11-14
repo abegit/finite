@@ -76,6 +76,8 @@ Tags:fixed-width, flexible-width, custom-background, custom-colors, custom-heade
 .snap-drawers {
   background: #BEBEBE; }
 
+.snap-drawer {
+  padding-top: 60px; }
   .snap-drawer #selfie {
     text-align: center; }
     .snap-drawer #selfie a {

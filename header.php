@@ -227,7 +227,7 @@ function createDropDown(){
   elseif ( is_single()) { echo "id='blog" . $blog_id . "'" ?> " <?php body_class( 'home' ); }
   else { echo 'id="blog' . $blog_id . "'" ?> " <?php body_class( 'home woocommerce' ); ?> <?php } ?> >
 
-    <!-- header wrapper-->
+ <!-- header wrapper-->
 <?php if ( is_home() ) { ?> 
         <section id="header" class="wrapper page dk" data-type="background" data-speed="2">
 <?php } elseif (is_page_template('page-enter.php')) { ?> 
@@ -290,67 +290,47 @@ function createDropDown(){
 
 
 <!-- page container -->
-  <div class="section-header">
-  <div class="row">
-  <div class="large-12 large-centered columns">
-  <?php $paged = $wp_query->get( 'paged' );
-  // if first page or single
-        if ( ! $paged || $paged < 2 ) {
-          // first page_type if_then not product or dark-centered
-          if ( !is_page_template( 'page-dark-centered.php' ) && !is_singular('product') && !is_page_template('page-enter.php')) { ?>
-
-                  <!-- initial title -->
-                  <h1 class="subheader<?php if(is_home()){ ?> text-center home<?php } ?>"<?php if(is_search()){ ?> style="margin-bottom:0;"<?php } ?>>  
-                    <?php if( is_home() ) {  echo get_bloginfo( 'description' ); }
-                      elseif (is_category() ) { echo single_cat_title(); }
-                      elseif (is_singular('product') || is_page_template('page-enter.php')) {}
-                      elseif (is_single() || is_page() || is_cart()) { the_title(); }
-                      elseif (is_search()) { ?>
-                        <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-                        <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
-                        <input type="submit" id="searchsubmit" value="Search" /></form>
-              <?php } elseif (apply_filters('woocommerce_show_page_title',true) ){woocommerce_page_title();}
-                      else {echo the_title();} ?>
-                  </h1><!-- end initial title -->
-            <?php get_template_part('/inc/breadcrumbs');?>
-          <?php } elseif (is_singular('product')) {
-                  if ( $terms = wc_get_product_terms( $post->ID, 'product_cat', array( 'orderby' => 'parent', 'order' => 'DESC' ) ) ) {
-                    $main_term = $terms[0];
-                    $ancestors = get_ancestors( $main_term->term_id, 'product_cat' );
-                    $ancestors = array_reverse( $ancestors );
-                    echo $before . '<span class="breadcrumbs"><a href="' . get_term_link( $main_term->slug, 'product_cat' ) . '"><i class="icon-pageback"></i> Go back to ' . $main_term->name . '</a></span>' . $after . $delimiter;
-                  }
-                  echo $before; 
-         // end if first page
-          } ?>
-
-      <?php } // second page of archive
-        else { ?>
-          <div class="large-12 large-centered columns">
-          <h1 class="subheader">
-          <?php if ( is_category() ) {  echo single_cat_title(); } elseif ( is_archive() ) {  echo the_title(); } ?>
-          </h1>
-          <ul class="breadcrumbs catlist">
-            <?php 
-              $catsy = get_the_category();
-              $myCat = $catsy->cat_ID;
-              $currentcategory = '&current_category='.$myCat;
-              wp_list_categories( 'show_option_all=&orderby=count&show_count=0&hierarchical=0&title_li=&show_option_none=&depth=1&pad_counts=1&taxonomy=category'.$currentcategory ); ?> 
-          </ul>
-          </div>
+  <div class="page-container snap-content" id="snapcontent">
+  <?php 
+    if ( is_archive('product') && is_front_page()) { 
+        $paged = $wp_query->get( 'paged' );
+        if ( ! $paged || $paged < 2 ) {  
+            slippy_slider_init('Homepage','widget', '1024px','300px'); ?>
+  <?php } ?>
+        <div class="wrapper dk page"><div class="section-header">
+            <div class="row">
+            <div class="large-12 large-centered columns">
+              <?php get_template_part('/inc/shopcrumbs');?>
+              </div>
+              </div>
+            </div></div>
+<?php } elseif (is_singular('product')) { ?>
+            <section class="wrapper product">
+            <div class="section-header">
+            <div class="row">
+            <div class="large-12 large-centered columns">
+            <?php get_template_part('/inc/productcrumbs'); ?>
+            </div></div></div>
+            </section>
+      <?php  // end if first page
+          } else { ?>
+        <div class="wrapper dk page"><div class="section-header">
+            <div class="row">
+            <div class="large-12 large-centered columns">
+              <?php get_template_part('/inc/title');?>
+              <?php get_template_part('/inc/shopcrumbs');?>
+              </div>
+              </div>
+            </div></div>
        <?php } ?>
-             </div> <!-- end columns -->
-           </div><!-- end row -->
 
            <?php if (!is_singular('product') && !is_page_template('page-enter.php') && !is_archive() && !is_home()) { ?>
                 <?php if (has_post_thumbnail( $post->ID ) ) { ?>
                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
                 <img src="<?php echo $image[0]; ?>" class="scrollme mobi"><?php } ?>
            <?php } ?>
-
-</div> <? } ?>
-
+           
            <?php if (is_home()) { ?> <div class="clear mobi"></div><a href="#feed" class="wrapper mobi smoothie text-center"><i class="icon-circledown"></i></a><?php } ?>
 
-</section><!--end headerfix-->
+
             <!-- navigation bar -->
