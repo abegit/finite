@@ -227,21 +227,6 @@ function createDropDown(){
   elseif ( is_single()) { echo "id='blog" . $blog_id . "'" ?> " <?php body_class( 'home' ); }
   else { echo 'id="blog' . $blog_id . "'" ?> " <?php body_class( 'home woocommerce' ); ?> <?php } ?> >
 
-  <div class="snap-drawers">
-   <div class="snap-drawer snap-drawer-left">
-            <div id="headerfix"></div>
-      <ul><?php dynamic_sidebar( 'Leftbar' ); ?></ul>
-   </div>
-   <div class="snap-drawer snap-drawer-right">
-            <div id="closeee" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
-            <div id="selfie"><a href="/"><img src="http://placehold.it/120"></a></div>
-            <ul><?php dynamic_sidebar( 'Rightbar' ); ?></ul>
-   </div>
-</div>
-  
-
-<!-- page container -->
-  <div class="page-container snap-content" id="snapcontent">
     <!-- header wrapper-->
 <?php if ( is_home() ) { ?> 
         <section id="header" class="wrapper page dk" data-type="background" data-speed="2">
@@ -275,14 +260,36 @@ function createDropDown(){
 <div id="headerfix">
 <div class="row">
   <div class="columns">
-      <a href="/" id="logo"></a>
-      <a href="#" id="menu" class="ani"><i class="icon-menu" id="open-right"></i><i class="icon-circledelete" id="closee"></i></a>
+      <a href="#" id="logo"></a>
+      <a href="#" id="menu" class="ani"><i class="icon-menu" id="open-right"></i><i class="icon-circledelete" id="close-r"></i></a>
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'no-mobi lastbutnot anis' ) ); ?>
   </div><!--columns-->
 </div><!--row-->
 </div><!--header-->
+</section><!--end headerfix-->
 
-<?php if (!is_page_template('page-dark-centered.php')) { ?>
+
+
+
+
+  <div class="snap-drawers">
+   <div class="snap-drawer snap-drawer-left">
+      <div class="close-l" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
+      <ul><?php dynamic_sidebar( 'Leftbar' ); ?></ul>
+   </div>
+   <div class="snap-drawer snap-drawer-right">
+            <div class="close-r" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
+            <div id="selfie"><a href="/"><img src="http://placehold.it/120"></a></div>
+            <ul><?php dynamic_sidebar( 'Rightbar' ); ?></ul>
+   </div>
+</div>
+  
+
+
+   
+
+
+<!-- page container -->
   <div class="section-header">
   <div class="row">
   <div class="large-12 large-centered columns">
