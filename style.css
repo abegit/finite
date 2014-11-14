@@ -1529,6 +1529,7 @@ table {
     border-bottom: 1px solid #606060; }
   .footer ul a {
     color: #646464;
+    display: block;
     font-size: 1rem;
     font-weight: normal;
     line-height: 31px;
