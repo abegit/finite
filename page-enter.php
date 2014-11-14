@@ -23,7 +23,7 @@ get_header(); ?>
         <?php endif; ?>      
 
         <div class="large-12 columns">
-            <div class="text-center"><?php dynamic_sidebar('home-footer'); ?></div>
+            <div class="text-center"> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Footer') ) : ?> <?php endif; ?></div>
         </div>
     </div> <!-- end row -->
     <div class="section-footer">

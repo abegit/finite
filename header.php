@@ -1,11 +1,6 @@
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <?php if (is_404()) { ?>
-<script><?php $url = "$_SERVER[REQUEST_URI]";
-                                        $chunks = array_filter(explode('/', $url));
-                                        $s_query = str_replace('/', ' ', trim($url, '/')); ?></script>
-<?php } ?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta itemprop="name" content="<?php the_title(); ?>" /> 
     <?php if(function_exists('the_post_thumbnail')) : ?>

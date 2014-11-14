@@ -122,7 +122,7 @@ global $qa_general_settings;
 if ( isset( $qa_general_settings["page_layout"] ) && $qa_general_settings["page_layout"] !='content' )
 	get_sidebar( 'question' );
 ?>        
-        <ul><?php dynamic_sidebar( 'blog' ); ?></ul>
+        <ul> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) : ?> <?php endif; ?></ul>
 
         </div>
 

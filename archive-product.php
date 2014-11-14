@@ -5,7 +5,7 @@
 
 <section id="shop" class="wrapper lt woocommerce" data-type="elements" data-speed="2">
 <div class="section-header store">
-    <div class="row"> <div class="large-12 columns"><ul class="store"><?php dynamic_sidebar( 'archive-7' ); ?></ul></div></div></div>
+    <div class="row"> <div class="large-12 columns"><ul class="store"> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Store') ) : ?> <?php endif; ?></ul></div></div></div>
 
 
 
@@ -42,7 +42,7 @@
 
 
 <div class="large-2 columns sidebar pull-10">
-		      	<ul class="store"><?php dynamic_sidebar( 'blog' ); ?></ul>
+		      	<ul class="store"> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) : ?> <?php endif; ?></ul>
         	</div>
 
 

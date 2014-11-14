@@ -21,7 +21,7 @@
             <?php endif; ?>
         </div>
         <div class="large-3 columns sidebar">
-        <ul><?php dynamic_sidebar( 'blog-1' ); ?></ul>
+        <ul> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) : ?> <?php endif; ?> </ul>
         
         </div>
 

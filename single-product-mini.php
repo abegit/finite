@@ -97,7 +97,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	<?php do_action( 'woocommerce_after_single_product_summary' ); ?>
 	<div class="clear"></div>
-      	<ul class="store"><?php dynamic_sidebar( 'store' ); ?></ul>
+      	<ul class="store"> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('StoreSide') ) : ?> <?php endif; ?></ul>
 </div>
 
             <div class="clear"></div>

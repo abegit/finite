@@ -9,7 +9,6 @@
               <div class="breadcrumbs"><?php if(function_exists('bcn_display')) { bcn_display(); }?></div>
       <!-- end breadcrumbs -->
  </div></div></div></div>
-<<<<<<< HEAD
       <?php } ?>
       
 <section class="wrapper footer">
@@ -20,7 +19,9 @@
     </div></div></div>
   <div id="footer">
 <div class="row links">
-      <ul class="columns large-9 small-12"><?php dynamic_sidebar( 'Footer' ); ?></ul>
+      <ul class="columns large-9 small-12">
+         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Only Footer') ) : ?> <?php endif; ?> 
+       </ul>
         <ul class="columns large-3 small-12">
         <lh></lh>
         <li><a href="/" id="logo" style="height:40px; width:160px; display: block; background-size:contain;"></a><p>Startup made in <a href="#close" class="btn-tip" title="Special Thanks!" data-text="to our team for working day in and day out.">Costa Mesa</a>, CA &copy; 2015. All rights reserved.</p>
@@ -68,9 +69,7 @@
   </div>
 <?php } ?>
 
-    <div class="row links">
-      <?php dynamic_sidebar('only-footer'); ?>
-    </div>
+    
 
     <div class="row">
     <div class="columns large-12">

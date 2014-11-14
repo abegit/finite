@@ -14,7 +14,7 @@
 <section class="wrapper footer">
   <div id="footer">
 <div class="row links">
-      <ul class="columns large-9 small-12"><?php dynamic_sidebar( 'Footer' ); ?></ul>
+      <ul class="columns large-9 small-12"> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Only Footer') ) : ?> <?php endif; ?></ul>
         <ul class="columns large-3 small-12">
         <lh></lh>
         <li><a href="/" id="logo" style="height:40px; width:160px; display: block; background-size:contain;"></a><p>Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p>
@@ -37,10 +37,6 @@
         <a href="http://unscene.us/shop" class="btn alignright"><i class="icon-leaf"></i>Support the Artist!</a>
     </div></div></div> -->
     
-
-    <div class="row links">
-      <?php dynamic_sidebar('only-footer'); ?>
-    </div>
 
     <div class="row">
     <div class="columns large-12">

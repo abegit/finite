@@ -69,7 +69,7 @@ get_header( 'question' );
 
 
                 <div class="large-4 columns">        
-        <ul><?php dynamic_sidebar( 'blog' ); ?></ul>
+        <ul> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) : ?> <?php endif; ?></ul>
 
         </div>
 

@@ -244,12 +244,7 @@ function createDropDown(){
 
 <body>
 
-  <div class="snap-drawers">
-    <div class="snap-drawer snap-drawer-left">
-            <div id="headerfix"></div>
-      <?php dynamic_sidebar( 'left-2' ); ?>
-   </div>
-</div>
+   <?php get_template_part('/inc/snapdrawers'); ?>
   
 
 <!-- page container -->

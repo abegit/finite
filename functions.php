@@ -605,8 +605,8 @@ if ( function_exists('register_sidebar') ) {
     register_sidebar(array(
         'name'          => 'Only Footer',
         'id'         => 'only-footer',
-        'before_widget' => '<ul id="%1$s" class="columns large-3 small-6 widget %2$s">',
-        'after_widget'  => '</ul>',
+        'before_widget' => '<li id="%1$s" class="widget %2$s columns large-4 small-12">',
+        'after_widget'  => '</li>',
         'before_title'  => '<lh>',
         'after_title'   => '</lh>',
     ));
