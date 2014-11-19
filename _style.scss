@@ -82,7 +82,7 @@ $myrad:5px;
   h1, h2, h3, h4, h5{margin:0;}
   *{line-height:34px !important;}
 }
-.lt{background:#121212;
+.lt{background:#333;
     h1, h2, h3, h4, h5{color:#888;}
     em {color: #999;}
     p{color:#929292;}
@@ -91,7 +91,7 @@ $myrad:5px;
 
 }
 
-.dk{background:#333;
+.dk{background:#444;
   h1, h2, h3, h4, h5{color:#999;}
   em {color: #999;}
   p{color:#999;}
@@ -184,6 +184,7 @@ address {
     font-weight: 400;
     margin-top: 0;
     font-style: italic;
+    &> br {margin:0;}
 }
 em{
     color:#000;
@@ -763,7 +764,6 @@ body.snapjs-right{
       h1.subheader{margin:0;}
     .row{padding:20px 0;}
   }
-  .breadcrumbs{margin-top:18px;}
 }
 
 .home.wrapper{
@@ -803,7 +803,15 @@ body.snapjs-right{
 }
 
 
-
+.widget .bp-login-widget-user-links div {
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0 !important;
+    padding: 0 !important;
+    a {color: #fff;
+      &:hover {color:red;}
+    }
+}
 
 .columns.sidebar{
   ul{margin-left:0; list-style-type:none;}
@@ -1158,8 +1166,16 @@ h1 b{
   a:hover{text-decoration:underline;}
 }
 div.breadcrumbs{
-    &:before{content:"You\'re Here :"; float:left; font-size:0.6875em; margin-right:10px; text-transform:uppercase;}
-    .current-item, a:last-child{display:none;}
+    &:before{ background: none repeat scroll 0 0 rgba(255, 255, 255, 0.2);
+    content: "";
+    float: left;
+    font-family: webhostinghub-glyphs;
+    font-size: 0.6875em;
+    line-height: 23px;
+    margin-right: 10px;
+    padding: 0 6px;
+    text-transform: uppercase;}
+    a {line-height: 23px;}
 }
 
 
@@ -1228,7 +1244,6 @@ input, select, textarea{
   background:rgba(255, 255, 255, 0.14);
   width:100%;
 &:focus{background:rgba(255, 255, 255, 0.14);}}
-
 }
 
 /*-------------footer-----------*/

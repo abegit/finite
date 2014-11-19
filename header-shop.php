@@ -267,17 +267,7 @@ function createDropDown(){
 
 
 
-  <div class="snap-drawers">
-   <div class="snap-drawer snap-drawer-left">
-      <div class="close-l" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
-      <ul><?php dynamic_sidebar( 'Leftbar' ); ?></ul>
-   </div>
-   <div class="snap-drawer snap-drawer-right">
-            <div class="close-r" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
-            <div id="selfie"><a href="/"><img src="http://placehold.it/120"></a></div>
-            <ul><?php dynamic_sidebar( 'Rightbar' ); ?></ul>
-   </div>
-</div>
+  <?php get_template_part('/inc/snapdrawers'); ?>
   
   
 
@@ -301,11 +291,6 @@ function createDropDown(){
               </div>
             </div></div>
 <?php } elseif (is_singular('product')) { ?>
-            <div class="section-header">
-            <div class="row">
-            <div class="large-12 large-centered columns">
-            <?php get_template_part('/inc/productcrumbs'); ?>
-            </div></div></div>
       <?php  // end if first page
           } else { ?>
         <div class="wrapper dk page"><div class="section-header">

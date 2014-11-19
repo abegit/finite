@@ -1,8 +1,11 @@
 .fpd-icon-sb-right  {
- 	.fpd-sidebar {margin:0 !important;}
-
 	&.fpd-container {margin-right: 0;
-		.fpd-product-container  {margin-right: 0;}
+			.fpd-sidebar {overflow: hidden; margin:0 !important; @include border-radius(0 15px 15px 0);}
+		.fpd-product-container  {@include border-radius(15px 0 0 15px);
+		overflow: hidden;
+		margin-right: 0;
+			.fpd-primary-bg-color.fpd-menu-bar {} 
+		}
 	}
 
 }

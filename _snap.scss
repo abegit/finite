@@ -12,7 +12,7 @@
 
 /* styles */
 .snap-content {
-  background: #1C1C1C;
+  background: #000;
   padding-top: 60px;
 }
 
@@ -35,14 +35,22 @@
   .g {line-height: 0;}
 }
 
-.snap-drawer h3 {
-    font-size: 18px;
+.snap-drawer {
+  .widget {
+    h3 {
+      @include trans(500ms);
+    border-bottom: dotted 1px #ddd;
+    font-size: 12px;
     font-weight: normal;
-    background:#3d3d3d;
-    line-height: 18px;
+    line-height: 15px;
     margin: 0 !important;
-    padding: 15px !important;
-    text-indent: 20px;
+    padding: 5px 0 !important;
+    text-align: center;
+    text-transform: uppercase;}
+    &:hover h3 {background-color:rgba(0,0,0,.16)}
+  }
+
+
 }
 
 

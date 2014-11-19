@@ -87,7 +87,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
         </div> <!-- end row -->
-
+<div class="wrapper lt">
+	<div class="section-header">
+            <div class="row">
+            <div class="large-12 large-centered columns">
+            <?php get_template_part('/inc/productcrumbs'); ?>
+            </div></div></div>
+</div>
         <div class="clear"></div>
     </div>
 

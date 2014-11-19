@@ -1,4 +1,4 @@
-#shop { background: #121212;}
+#shop { background: #2a2a2a;}
 
 /*productlist*/
 
@@ -185,7 +185,7 @@ p.price {margin:5px 0;}
 	    &:hover {background:$upc + 30 !important;}
 	}
 
-
+	.add_info_wccs, .col-2 {display: none;}
 	.shop_table {
 	    font-family: lato;
 	    font-size: 13px;

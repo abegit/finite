@@ -20,7 +20,7 @@
 	<div id="footer">
     <div class="row">
     <div class="columns large-12">
- <p class="alignleft"><a href="#" id="open-left">Contact!</a></p> <p class="alignright">Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p>    </div>
+ <p class="alignleft"><a href="/">Start FRSH</a></p> <p class="alignright">Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p>    </div>
 </div>
   </div>
 </section>
