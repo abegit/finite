@@ -10,7 +10,7 @@
 
         	
             
-        <div class="large-10 push-2 columns"><?php
+        <div class="large-12 columns"><?php
 		/**
 		 * woocommerce_before_main_content hook
 		 *
@@ -74,9 +74,9 @@
         
 
 
-<div class="large-2 pull-10 columns sidebar">
+<!-- <div class="large-2 pull-10 columns sidebar">
 		      	<ul class="store"><?php dynamic_sidebar( 'storeside' ); ?></ul>
-        	</div>
+        	</div> -->
 
 
 

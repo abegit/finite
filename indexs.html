@@ -1,595 +1,765 @@
 
-
-
-
-
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<meta content='width=device-width; initial-scale=1.0;' name='viewport' />
-<title>We Are Unscene</title>
-<link href="http://unscene.us/wp-content/themes/zeus/css/foundation.min.css" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="http://unscene.us/wp-content/themes/zeus/css/topnavmenu.css?=v1" />
-<link type="text/css" rel="stylesheet" href="http://unscene.us/wp-content/themes/zeus/css/store.css?=v1" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+      <!-- Set the viewport width to device width for mobile IPHONE STUFF -->
+  <meta name="apple-mobile-web-app-title" content="Unscene">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- Make the status bar black with white text. -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-<!--font-awesome-->
-<link href="http://unscene.us/wp-content/themes/zeus/css/whhg.css" rel="stylesheet">
+<!-- Disable phone number detection. -->
+<meta name="format-detection" content="telephone=yes">
+<!-- Prevent text size adjustment on orientation change. -->
+<style>html { -webkit-text-size-adjust: 100%; }</style><!-- 
+<script>    $(document).on(
+    "click",
+    "a",
+    function(event){
+    if(!$(this).hasClass("ngg-fancybox")){
+    event.preventDefault();
+    if(!$(event.target).attr("href")){
+    location.href = $(event.target).parent().attr("href");
+    }
+    else{
+    location.href = $(event.target).attr("href");
+    }
+    }
+    else {
+    }
+    }
+    );</script>
+-->
 
 
+<!-- iOS 7 iPad (retina) --> <link href="images/ios/icon-152.png" sizes="152x152" rel="apple-touch-icon"> 
+<!-- iOS 6 iPad (retina) --> <link href="images/ios/icon-144.png" sizes="144x144" rel="apple-touch-icon"> 
+<!-- iOS 7 iPhone (retina) --> <link href="images/ios/icon-120.png" sizes="120x120" rel="apple-touch-icon"> 
+<!-- iOS 6 iPhone (retina) --> <link href="images/ios/icon-114.png" sizes="114x114" rel="apple-touch-icon"> 
+<!-- iOS 7 iPad --> <link href="images/ios/icon-76.png" sizes="76x76" rel="apple-touch-icon"> 
+<!-- iOS 6 iPad --> <link href="images/ios/icon-72.png" sizes="72x72" rel="apple-touch-icon"> 
+<!-- iOS 6 iPhone --> <link href="images/ios/icon-57.png" sizes="57x57" rel="apple-touch-icon"> 
 
-<!--scroll to-->
-<script src="http://unscene.us/wp-content/themes/zeus/js/jquery.scrollTo.js"></script>
-<script src="http://unscene.us/wp-content/themes/zeus/js/jquery.nav.js"></script>
-<script type="text/javascript" src="http://unscene.us/wp-content/themes/zeus/js/script.js"></script>
+
+<!-- Startup images -->
+<!-- iOS 6 & 7 iPad (retina, portrait) -->
+<link href="images/ios/ipad-startup-1536-2008.png"
+media="(device-width: 768px) and (device-height: 1024px)
+and (orientation: portrait)
+and (-webkit-device-pixel-ratio: 2)"
+rel="apple-touch-startup-image">
  
+<!-- iOS 6 & 7 iPad (retina, landscape) -->
+<link href="images/ios/ipad-startup-2048-1496.png"
+media="(device-width: 768px) and (device-height: 1024px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 2)"
+rel="apple-touch-startup-image">
+ 
+<!-- iOS 6 iPad (portrait) -->
+<link href="images/ios/ipad-startup-768-1004.png"
+media="(device-width: 768px) and (device-height: 1024px)
+and (orientation: portrait)
+and (-webkit-device-pixel-ratio: 1)"
+rel="apple-touch-startup-image">
+ 
+<!-- iOS 6 iPad (landscape) -->
+<link href="images/ios/ipad-startup-1024-748.png"
+media="(device-width: 768px) and (device-height: 1024px)
+and (orientation: landscape)
+and (-webkit-device-pixel-ratio: 1)"
+rel="apple-touch-startup-image">
+ 
+<!-- iOS 6 & 7 iPhone 5 new -->
+<link href="images/ios/ipad-startup-640-1096.png"
+media="(device-width: 320px) and (device-height: 568px)
+and (-webkit-device-pixel-ratio: 2)"
+rel="apple-touch-startup-image">
+ 
+<!-- iOS 6 & 7 iPhone (retina) -->
+<link href="images/ios/iphone-startup-640-920.png"
+media="(device-width: 320px) and (device-height: 480px)
+and (-webkit-device-pixel-ratio: 2)"
+rel="apple-touch-startup-image">
+ 
+<!-- iOS 6 iPhone -->
+<link href="images/ios/iphone-startup-320-460.png"
+media="(device-width: 320px) and (device-height: 480px)
+and (-webkit-device-pixel-ratio: 1)"
+rel="apple-touch-startup-image">    <link rel="shortcut icon" href="/favicon.ico" >
+    <link rel="icon" href="/animated_favicon.gif" type="image/gif" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link href="css/foundation.min.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>-->
+    <script src="js/jq.js"></script>
 
-<!--photoswipe-->
-<script type="text/javascript" src="http://unscene.us/wp-content/themes/zeus/js/klass.js"></script>
-<script type="text/javascript" src="http://unscene.us/wp-content/themes/zeus/js/bigSlide.js"></script>
-<script type="text/javascript" src="http://unscene.us/wp-content/themes/zeus/js/photoswipe.js"></script>
-<link href="http://unscene.us/wp-content/themes/zeus/css/photoswipe.css" type="text/css" rel="stylesheet" />
-<link type="text/css" rel="stylesheet" href="http://unscene.us/wp-content/themes/zeus/style.css?=v2.3" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 
+    <!--font-awesome-->
+    <link href="css/whhg.css" rel="stylesheet">
 
-
-   <!--  <script src="http://unscene.us/wp-content/themes/zeus/contacttab/js/jquery.tabSlideOut.v1.3.js"></script> -->
-         <script>
-		 $(function(){
-            //  $('.slide-out-div').tabSlideOut({
-            //     tabHandle: '.handle',                              //class of the element that will be your tab
-            //     pathToTabImage: 'contacttab/images/contact_tab.gif',          //path to the image for the tab (optionaly can be set using css)
-            //     imageHeight: '122px',                               //height of tab image
-            //     imageWidth: '40px',                               //width of tab image    
-            //     tabLocation: 'right',                               //side of screen where tab lives, top, right, bottom, or left
-            //     speed: 750,                                        //speed of animation
-            //     action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
-            //     topPos: '300px',                                   //position from the top
-            //     fixedPosition: false                               //options: true makes it stick(fixed position) on scroll
-            //  }); 
-			  $('.app input[name=addcart]').val('Download >');
-     });
-		 </script>
-
-
-	<script type="text/javascript">
- 		(function(window, $j, PhotoSwipe){
-			
-  // Use jQuery via $j(...)
-
- 			$j(function(){
-				
- 				var options = {};
- 				$j("#portfolio a").photoSwipe({ captionAndToolbarFlipPosition: false });
- 			});
-			
-
- 		}(window, window.jQuery, window.Code.PhotoSwipe));
-
- 	</script>
-
-
+    <!--scroll to-->
+    <script src="js/easing.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css?=v6">
+     <style>
+    #logo {background-image:url('http://indie.unscene.us/wp-content/uploads/2014/11/frsh-fits-logo.gif') !important;}
+    </style>
 <!--Google Analytics-->
-<script type="text/javascript">
+<meta name="google-site-verification" content="3C5HGnbFsnL5Asr2pr3GVBmIrIjtawd8cXJ6aMwVNlg" />
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-28070375-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  ga('create', 'UA-28070375-1', 'unscene.us');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
 
 </script>
-<meta name="google-site-verification" content="OY-BXpM5ACDxpGSa7pqhvdMsHqIyprZui6HCuCeZBoU" />
+<meta name="google-site-verification" content="OY-BXpM5ACDxpGSa7pqhvdMsHqIyprZui6HCuCeZBoU">
+          <style type="text/css">
+
+            /* Styling */
+
+            .fancy-product .fpd-primary-bg-color {
+              background-color: #606060;
+            }
+
+            .fancy-product .fpd-primary-text-color,
+            .fancy-product .fpd-primary-text-color:hover {
+              color: #606060;
+            }
+
+            .fancy-product .fpd-secondary-bg-color {
+              background-color: #F6F6F6;
+            }
+
+            .fancy-product .fpd-secondary-text-color,
+            .fancy-product .fpd-secondary-text-color:hover {
+              color: #F6F6F6;
+            }
+
+            .fancy-product .fpd-border-color {
+              border-color: #020202;
+            }
+
+            .fancy-product .fpd-button {
+              background-color: #c1cfd9;
+              color: #F6F6F6;
+            }
+
+            .fancy-product .fpd-button-danger {
+              background-color: #f97e76;
+            }
+
+            .fancy-product .fpd-button-submit {
+              background-color: #a8bd44;
+            }
+
+            .fancy-product .fpd-tooltip-theme {
+              background: #F6F6F6;
+              color: #606060;
+              border-color: #020202;
+            }
+
+          </style>
+                  <style type="text/css">
+
+          
+
+          /* Fancy Product Designer Container */
+      .fancy-product .fpd-container  {
+        float: left;
+        margin-right: 40px;
+      }
 
 
+      /* the on-sale element */
+      .woocommerce .fancy-product span.onsale {
+        top: 17px;
+        left: -17px;
+    }
+        </style>
+        <link rel="alternate" type="application/rss+xml" title="FRSHFITS.com &raquo; Products Feed" href="http://indie.unscene.us/shop/feed/" />
+<link rel='stylesheet' id='jquery-ui-style-css'  href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://indie.unscene.us/wp-includes/css/dashicons.min.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://indie.unscene.us/wp-includes/css/admin-bar.min.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://indie.unscene.us/wp-content/plugins/buddypress/bp-core/css/admin-bar.min.css?ver=2.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://indie.unscene.us/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.min.css?ver=2.1.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://indie.unscene.us/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-4.1-css'  href='http://indie.unscene.us/wp-content/plugins/fancy-product-designer/font-awesome/css/font-awesome.min.css?ver=4.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fpd-fonts-css'  href='http://indie.unscene.us/wp-content/plugins/fancy-product-designer/css/jquery.fancyProductDesigner-fonts.css?ver=2.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='fpd-plugins-css'  href='http://indie.unscene.us/wp-content/plugins/fancy-product-designer/css/plugins.min.css?ver=2.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='fpd-single-product-css'  href='http://indie.unscene.us/wp-content/plugins/fancy-product-designer/css/fancy-product.css?ver=1.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='fpd-flat-layout-css'  href='http://indie.unscene.us/wp-content/plugins/fancy-product-designer/css/jquery.fancyProductDesigner.css?ver=2.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ss_style-css'  href='http://indie.unscene.us/wp-content/plugins/slippy-slider-responsive-touch-navigation-slider/style/ss_style.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='//indie.unscene.us/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=2.2.8' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='//indie.unscene.us/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=2.2.8' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='//indie.unscene.us/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.2.8' type='text/css' media='all' />
+<link rel='stylesheet' id='wpmenucart-icons-css'  href='http://indie.unscene.us/wp-content/plugins/wp-menu-cart/css/wpmenucart-icons.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wpmenucart-css'  href='http://indie.unscene.us/wp-content/plugins/wp-menu-cart/css/wpmenucart-main.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='yinstagram-admin-menu-css'  href='http://indie.unscene.us/wp-content/plugins/yakadanda-instagram/css/menu.css?ver=0.1.8' type='text/css' media='all' />
+<link rel='stylesheet' id='pcs-styles-css'  href='http://indie.unscene.us/wp-content/plugins/post-content-shortcodes/default-styles.css?ver=0.3' type='text/css' media='screen' />
+<script type='text/javascript' src='http://indie.unscene.us/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_Confirm = {"are_you_sure":"Are you sure?"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-content/plugins/buddypress/bp-core/js/confirm.min.js?ver=2.1.1'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-content/plugins/buddypress/bp-core/js/widget-members.min.js?ver=2.1.1'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-content/plugins/buddypress/bp-core/js/jquery-query.min.js?ver=2.1.1'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-content/plugins/buddypress/bp-core/js/jquery-cookie.min.js?ver=2.1.1'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-content/plugins/buddypress/bp-core/deprecated/js/jquery-scroll-to.min.js?ver=2.1.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all %d comments","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.min.js?ver=2.1.1'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-content/plugins/slippy-slider-responsive-touch-navigation-slider/js/js-functions.js?ver=4.0.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://indie.unscene.us/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://indie.unscene.us/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.0.1" />
+<meta name="generator" content="WooCommerce 2.2.8" />
 
+<!-- This site is using AdRotate v3.10.12 to display their advertisements - https://www.adrotateplugin.com/ -->
 
-
+  <script type="text/javascript">var ajaxurl = 'http://indie.unscene.us/wp-admin/admin-ajax.php';</script>
 
 <style type="text/css">
-	div.jp-interface { color:#525252; }
-	div.innertab { background:#a7a7a7; opacity:0.35; filter:alpha(opacity=35); }
-	span.mp3-tint { background:#5CC9FF; } 
-	div.playlist-colour { background:#f1f1f1; opacity:1; filter:alpha(opacity=100); }
-	div.loadMI_mp3j, span.loadB_mp3j, span.load_mp3j { background:#34A2D9; opacity:0.7; filter:alpha(opacity=70); } 
-	div.poscolMI_mp3j { background:#5CC9FF url('http://unscene.us/wp-content/plugins/mp3-jplayer/css/images/posbar-soften-tipped-2.png') repeat-y right top; opacity:0.8; filter:alpha(opacity=80); } 
-	div.MIsliderVolume .ui-widget-header { background:transparent url('http://unscene.us/wp-content/plugins/mp3-jplayer/css/images/vol-grad60w2.png') repeat-y -15px top; } 
-	ul.UL-MI_mp3j { background: url('http://unscene.us/wp-content/plugins/mp3-jplayer/css/images/pl-gradlong10g.png') repeat-x left -130px !important; } 
-	ul.UL-MI_mp3j li { background:transparent url('http://unscene.us/wp-content/plugins/mp3-jplayer/css/images/t75e.png') repeat-x left bottom !important; } 
-	ul.UL-MI_mp3j li a { background-image:none !important; color:#525252 !important; } 
-	ul.UL-MI_mp3j li a:hover { background-image:none !important; color:#768D99 !important; background:#f7f7f7 !important; } 
-	ul.UL-MI_mp3j li a.mp3j_A_current { background-image:none !important; color:#47ACDE !important; background:#f4f4f4 !important; } 
-	span.mp3j-link-play, span.textbutton_mp3j:hover, div.transport-MI div { color:#768D99; } 
-	span.mp3j-link-play:hover, span.textbutton_mp3j, div.transport-MI div:hover { color:#47ACDE; }
-	div.transport-MI div, div.mp3j-popout-MI:hover { background-color:#47ACDE; }
-	.MI-image a:hover img { background:#47ACDE;}
-</style><link rel='stylesheet' id='dashicons-css'  href='http://unscene.us/wp-includes/css/dashicons.min.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='thickbox-css'  href='http://unscene.us/wp-includes/js/thickbox/thickbox.css?ver=20131201' type='text/css' media='all' />
-<link rel='stylesheet' id='stylePrt-css'  href='http://unscene.us/wp-content/plugins/pricing-table-ready/css/style.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='adminStylesPrt-css'  href='http://unscene.us/wp-content/plugins/pricing-table-ready/css/adminStyles.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='jquery-tabs-css'  href='http://unscene.us/wp-content/plugins/pricing-table-ready/css/jquery-tabs.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='jquery-buttons-css'  href='http://unscene.us/wp-content/plugins/pricing-table-ready/css/jquery-buttons.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-jquery-ui-dialog-css'  href='http://unscene.us/wp-includes/css/jquery-ui-dialog.min.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='farbtastic-css'  href='http://unscene.us/wp-admin/css/farbtastic.css?ver=1.3u1' type='text/css' media='all' />
-<link rel='stylesheet' id='jquery-dialog-css'  href='http://unscene.us/wp-content/plugins/pricing-table-ready/css/jquery-dialog.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='jquery-progress-css'  href='http://unscene.us/wp-content/plugins/pricing-table-ready/css/jquery-progress.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='contact-form-7-css'  href='http://unscene.us/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.7.2' type='text/css' media='all' />
-<link rel='stylesheet' id='ss_style-css'  href='http://unscene.us/wp-content/plugins/slippy-slider-responsive-touch-navigation-slider/style/ss_style.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='NextGEN-css'  href='http://unscene.us/wp-content/plugins/nextgen-gallery/css/nggallery.css?ver=1.0.0' type='text/css' media='screen' />
-<link rel='stylesheet' id='players-1-8-silver-css'  href='http://unscene.us/wp-content/plugins/mp3-jplayer/css/players-1-8-silver.css?ver=3.8.1' type='text/css' media='all' />
-<link rel='stylesheet' id='pcs-styles-css'  href='http://unscene.us/wp-content/plugins/post-content-shortcodes/default-styles.css?ver=0.3' type='text/css' media='screen' />
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/pricing-table-ready/js/common.js?ver=3.8.1'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var PRT_DATA = {"siteUrl":"http:\/\/unscene.us\/","imgPath":"http:\/\/unscene.us\/wp-content\/plugins\/pricing-table-ready\/img\/","loader":"http:\/\/unscene.us\/wp-content\/plugins\/pricing-table-ready\/img\/loading-cube.gif","close":"http:\/\/unscene.us\/wp-content\/plugins\/pricing-table-ready\/img\/cross.gif","ajaxurl":"http:\/\/unscene.us\/wp-admin\/admin-ajax.php","animationSpeed":null,"siteLang":[],"options":{"constructor":{"id":"1","code":"constructor","value":"1","label":"Number constructor","description":"Number constructor","htmltype_id":"1","params":"","cat_id":6,"sort_order":"0","value_type":"","htmltype":"text","cat_label":"Other"}},"PRT_CODE":"prt"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/pricing-table-ready/js/core.js?ver=3.8.1'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var MP_Ajax = {"ajaxUrl":"http:\/\/unscene.us\/wp-admin\/admin-ajax.php","emptyCartMsg":"Are you sure you want to remove all items from your cart?","successMsg":"Item(s) Added!","imgUrl":"http:\/\/unscene.us\/wp-content\/plugins\/marketpress\/marketpress-includes\/images\/loading.gif","addingMsg":"Adding to your cart...","outMsg":"In Your Cart","show_filters":"1"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/marketpress/marketpress-includes/js/ajax-cart.js?ver=2.8.8'></script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/adrotate/library/jquery.clicktracker.js?ver=0.5'></script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/slippy-slider-responsive-touch-navigation-slider/js/js-functions.js?ver=3.8.1'></script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/nextgen-gallery/js/jquery.cycle.all.min.js?ver=2.9995'></script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/nextgen-gallery/js/ngg.slideshow.min.js?ver=1.06'></script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/mp3-jplayer/js/jquery.jplayer.min2-5-0.js?ver=2.5.0'></script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/mp3-jplayer/js/mp3-jplayer-1.8.7.js?ver=1.8.7'></script>
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://unscene.us/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://unscene.us/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 3.8.1" />
-
-<!-- This site is using AdRotate v3.9.6 to display their advertisements - http://www.adrotateplugin.com/ -->
-<!-- AdRotate CSS -->
+.wccs-field-class {
+float:left;
+width: 47%;
+}
+.wccs-field-class:nth-child(2n+2) {
+padding-right: 3.4% !important;
+}
+.add_info_wccs {
+clear: both;
+}
+</style><link rel="alternate" type="application/rss+xml"  title="New products" href="http://indie.unscene.us/shop/feed/" /> <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
 <style type="text/css" media="screen">
-	.g { padding:0; position:relative; overflow:hidden; width:auto; height:auto; }
-	.b { padding:0; margin:0; overflow:hidden; clear:none; }
-	.a { clear:none; float:left; }
-	.b-1 { width:auto; height:auto; }
-	.a-1 { margin:0px; width:auto; height:auto; }
-	.clear { clear:both; }
-	.clear_l { clear:left; }
-	.clear_r { clear:right; }
+  html { margin-top: 32px !important; }
+  * html body { margin-top: 32px !important; }
+  @media screen and ( max-width: 782px ) {
+    html { margin-top: 46px !important; }
+    * html body { margin-top: 46px !important; }
+  }
 </style>
-<!-- /AdRotate CSS -->
-
-<!-- <meta name="NextGEN" version="1.9.13" /> -->
-	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 <!--contact tab-->
+<link type="text/css" rel="stylesheet" href="css/fix.css?=v1">
+
 <style type="text/css" media="screen">
-    
-    .panel {
-    position: fixed;
-    left: -15.625em; /*left or right and the width of your navigation panel*/
-    width: 15.625em; /*should match the above value*/
+.slide-out-div {
+  padding: 20px;
+  width: 250px;
+  background: #f2f2f2;
+  border: #29216d 2px solid;
+  color: black;
+  z-index: 999;
+}
+.panel {
+  position: fixed;
+  left: -15.625em; /*left or right and the width of your navigation panel*/
+  width: 15.625em; /*should match the above value*/
 }
 .page-container { 
-    position: relative; 
+  position: relative; 
 }
-	html {
-    margin-top: 0 !important;
-}
+html {margin-top: 0 !important; }
 
 
 #resume {
-overflow: hidden;
-background: url(http://unscene.us/wp-content/themes/zeus/images/who-is-unscene-graphic-designer-los-angeles.jpg) 50% 0 no-repeat fixed #eee;
-width: 100%;
-padding: 0;
+  overflow: hidden;
+  background: url(images/who-is-unscene-graphic-designer-los-angeles.jpg) 50% 0 no-repeat fixed #eee;
+  width: 100%;
+  padding: 0;
 }
-</style>
-<link type="text/css" rel="stylesheet" href="http://unscene.us/wp-content/themes/zeus/css/mobi.css?=v1" />
 
+#logo {
+  -moz-animation-duration: 2s;
+  -moz-animation-delay: 3s;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 3s;
+  -ms-animation-duration: 2s;
+  -ms-animation-delay: 3s;
+  -0-animation-duration: 2s;
+  -0-animation-delay: 3s;
+}
+#startEngin {
+  -moz-animation-duration: 2s;
+  -moz-animation-delay: 2s;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 2s;
+  -ms-animation-duration: 2s;
+  -ms-animation-delay: 2s;
+  -0-animation-duration: 2s;
+  -0-animation-delay: 2s;
+}
+#weDo {
+  -moz-animation-duration: 3s;
+  -moz-animation-delay: 0;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 0;
+  -ms-animation-duration: 3s;
+  -ms-animation-delay: 0;
+  -0-animation-duration: 3s;
+  -0-animation-delay: 0;
+}
+.lastbutnot {
+  -moz-animation-duration: 3s;
+  -moz-animation-delay: 4s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 4s;
+  -ms-animation-duration: 3s;
+  -ms-animation-delay: 4s;
+  -0-animation-duration: 3s;
+  -0-animation-delay: 4s;
+}
+
+</style>
 
 <script type="text/javascript">
-var $jf = jQuery.noConflict();
-$jf(document).ready(function(){
-
-    $jf('section[data-type="background"]').each(function(){
-        var $bgobj = $jf(this); // assigning the object
-        var $window = $jf(window);
-
-        $jf(window).scroll(function() {
-            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-             
-            // Put together our final background position
-            var coords = '50% '+ yPos + 'px';
- 
-            // Move the background
-            $bgobj.css({ backgroundPosition: coords });
-        });
-    });   
+var $jfs = jQuery.noConflict();
+$jfs(document).ready(function(){
+  $jfs('body').scrollTop(1);
 });  
 </script>
 
+<script>
+var $onlyDesktop = jQuery.noConflict();
 
+$onlyDesktop(window).load(function() {
+        var w = $(window).width();
 
+        if(w>400) {
+            $onlyDesktop('section[data-type="background"]').each(function(){
+                var $bgobj = $onlyDesktop(this); // assigning the object
+                var $window = $onlyDesktop('#snapcontent');
+
+                $onlyDesktop('#snapcontent').scroll(function() {
+                  var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+
+                    // Put together our final background position
+                    var round = '50% '+ yPos;
+                    var coords = round + 'px';
+
+                    // Move the background
+                    $bgobj.css({ backgroundPosition: coords });
+                });
+          });
+        }
+        else { }
+    });
+
+</script>
+
+<script>
+var $jj = jQuery.noConflict();
+$jj(document).ready(function(){
+    $jj('.smoothie[href^="#"]').on('click',function (e) {
+      e.preventDefault();
+      var target = this.hash,
+      $jjtarget = $jj(target);
+      $jj('#snapcontent').stop().animate({
+          'scrollTop': $jjtarget.offset().top - 0
+      }, 750, 'swing', function () {
+      });
+  });
+  });
+  </script>
 </head>
 
-<body id="home">
-<div class="page-container push">
-
-
-<!-- topwrap-->
-
-
-<!-- navigation bar -->
-<div id="headerfix">
-<div id="headerscroll" class="sticktop push"><!--header on scroll-->
-<div class="row ">
-      <div id="hd" class="columns">
-          <div id="logo">
-            <a href="#menu" class="menu-link"></a>
-          </div><!--logo-->
-          
-        <nav id="menu" class="panel" role="navigation">
-    <ul>
-        <li><a href="#menu" class="menu-link">Unscene Creative</a></li>
-        <li><a href="http://unscene.us/store"><i class="icon-store"></i> Store </a></li>
-        <li><a href="http://dev.unscene.us"><i class="icon-code"></i> Developer Tools</a></li>
-        <li><a href="http://photo.unscene.us"><i class="icon-insertpicture"></i> Photo Gallery</a></li>
-    </ul>
-</nav>
-         
-
- 
-
-<ul id="nav" class="no-mobi">
-            <li class="current"><a href="#about">Home</a></li>
-            <li><a href="#resume">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-<!--<li><a href="#blog">Articles</a></li> -->
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="/store/cart">Cart</a></li>
-        </ul><!--wrap--> 
-
-        
-
-
-
-
-
-
-
-
-      </div><!--nav-->
-
-
+<body id='blog' class="home-page home archive post-type-archive post-type-archive-product logged-in admin-bar no-customize-support woocommerce woocommerce-page fancy-product fpd-hidden-mobile no-js">
+ <!--header wrapper-->
+          <section id="header" class="wrapper page dk" data-type="background" data-speed="2">        
     
 
 
+
+<!--header-->
+<div id="headerfix">
+<div class="row">
+  <div class="columns">
+      <a href="#" id="logo"></a>
+      <a href="#" id="menu" class="ani"><i class="icon-menu" id="open-right"></i><i class="icon-circledelete" id="close-r"></i></a>
+    <div class="no-mobi lastbutnot anis"><ul id="menu-header" class="menu"><li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-53"><a href="/">Home</a></li>
+<li class="wpmenucartli wpmenucart-display-standard menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-53" id="wpmenucartli"><a class="wpmenucart-contents" href="http://indie.unscene.us/account/cart/" title="View your shopping cart"><i class="wpmenucart-icon-shopping-cart-0"></i><span class="cartcontents">1 item</span><span class="amount">&#36;&nbsp;0.00</span></a></li></ul></div>  </div><!--columns-->
 </div><!--row-->
-</div><!--header on scroll-->
-</div><!--end headerfix-->
-<!-- navigation bar -->
+</div><!--header-->
+</section><!--end headerfix-->
 
 
 
+
+
+  <div class="snap-drawers">
+   <div class="snap-drawer snap-drawer-left">
+      <div class="close-l" style="display:none; cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
+      <ul><li id="nav_menu-3" class="widget widget_nav_menu"><div class="menu-header-container"><ul id="menu-header-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-53"><a href="/">Home</a></li>
+<li class="wpmenucartli wpmenucart-display-standard menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-53" id="wpmenucartli"><a class="wpmenucart-contents" href="http://indie.unscene.us/account/cart/" title="View your shopping cart"><i class="wpmenucart-icon-shopping-cart-0"></i><span class="cartcontents">1 item</span><span class="amount">&#36;&nbsp;0.00</span></a></li></ul></div></li><li id="text-2" class="widget widget_text"><h3>Contact Us</h3>     <div class="textwidget"><div class="wpcf7" id="wpcf7-f43-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"></div>
+<form name="" action="/#wpcf7-f43-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="43" />
+<input type="hidden" name="_wpcf7_version" value="4.0.1" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f43-o1" />
+<input type="hidden" name="_wpnonce" value="39ebd07024" />
+</div>
+<p><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="your email" /></span> </p>
+<p><span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="subject" /></span> </p>
+<p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="message"></textarea></span> </p>
+<p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" /></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div></div>
+    </li></ul>
+   </div>
+   <div class="snap-drawer snap-drawer-right">
+            <div class="close-r" style="display:none; cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
+            <div id="selfie"><a href="/account/"><img src="http://indie.unscene.us/wp-content/uploads/avatars/1/21ebde227dd1a8f2d9a46c2f78fd4b5b-bpfull.jpg" class="avatar user-1-avatar avatar-120 photo" width="120" height="120" alt="Profile photo of abe" /></a></div>
+            <ul><li id="nav_menu-2" class="widget widget_nav_menu"><h3>Selected Garments</h3><div class="menu-rightbar-container"><ul id="menu-rightbar" class="menu"><li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71"><a href="http://indie.unscene.us/how-to/">How To</a></li>
+<li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-55"><a href="http://indie.unscene.us/product/pullover/">Pullover</a></li>
+</ul></div></li></ul>
+   </div>
+</div>  
+  
+
+
+   
+
+
+<!-- page container -->
+  <div class="page-container snap-content" id="snapcontent">
+      <script>
+
+var snameDefault = 'Homepage51740';
+
+jQuery(document).ready(function() {
+    var container = jQuery('.slippy-slider-Homepage51740').width();
+slippy_draggable(snameDefault);
+jQuery("#ssjp_countHomepage51740").val('1');
+jQuery('.ssjp_first').css('left','0');
+
+ jQuery('.slippy_slider_description').each(function( index ) {
+var leftpos =  jQuery(this).find('.ss_left').attr('id'); leftpos = parseInt(leftpos.replace('left-','')); 
+var toppos = jQuery(this).find('.ss_top').attr('id');
+toppos = parseInt(toppos.replace('top-','')); 
+startleft= leftpos/container*100;  starttop= toppos/container*100;  if(startleft>45){ jQuery(this).css({'left':'auto','right':'3%'});} else {jQuery(this).css('left',startleft+'%');}
+ jQuery(this).css('top',starttop+'%');
+});
+
+
+    
+});
+
+
+    </script>
+     <style type="text/css">
+  .tu-regimage img {
+    float: right;
+    vertical-align:bottom;
+    padding: 3px;
+  }
+  .ssjp_navigation {position:relative; }
+  
+  .ssjp_prev, .ssjp_next { background:url('http://indie.unscene.us/wp-content/plugins/slippy-slider-responsive-touch-navigation-slider/images/navigation-20px.png'); opacity:0.5; width:20px; height:20px; position:absolute; cursor:pointer; z-index:15;} 
+  .ssjp_prev:hover, .ssjp_next:hover {opacity:0.9;}
+  .ssjp_next {background-position:20px 0 !important; left:auto; right:7px; top:40%;  } .ssjp_prev { top:40%; left:7px;}
+  .tu-arrow {background:url('http://indie.unscene.us/wp-content/plugins/slippy-slider-responsive-touch-navigation-slider/images/navigation-20px.png');  width:20px; height:10px; display:block; position:absolute; bottom:-10px; left:20px; }
+  </style>
+        <div id="slippy-slider-container" class="slippy-slider-Homepage51740">
+      <div class="holder_Homepage51740" style="max-height:300px; width:400%; text-align:left;vertical-align:middle;text-decoration: none;overflow: hidden; position: relative; margin-left: 3px; " id="s_holder">
+      
+       <div id="s_draggable"  class="slippy_draggable" style="position:relative;"><div class='ssjp_div  ssjp_first' id='ssjp_div_1' style='position:relative;padding:1px 0px 1px 0px; float:left; max-height:300px; overflow:hidden; width: 25%;'><div class="ssjp_wrap">
+                  <div class="ssjp_desc slippy_slider_description" id="ssjp_desc_1" style=" display:inherit; left: 475px; top: 52px; width: 50%; " ><h2 style="color: black; ">Touch Navigation for Mobile and Desktop</h2><br><a href="http://wpicode.com/" target="_blank" class="ssjp_button ssjp_button_blue ssjp_button_large clearfix">Get Now</a>
+                  <span class="ss_left" id="left-475"></span><span class="ss_top" id="top-52"></span></div>
+                  </div><div class="slider-one-image-section" style="position:relative; ">
+    <img src="http://indie.unscene.us/wp-content/plugins/slippy-slider-responsive-touch-navigation-slider/images/slide1.jpg" style="width:100%;" /></div></div><div class='ssjp_div ' id='ssjp_div_2' style='position:relative;padding:1px 0px 1px 0px; float:left; max-height:300px; overflow:hidden; width: 25%;'><div class="ssjp_wrap">
+                  <div class="ssjp_desc slippy_slider_description" id="ssjp_desc_2" style=" display:none; left: 73px; top: 66px; width: 50%; " ><h2 style="color: black; ">HTML Content</h2><h2 style="color:#555; font-size: 18px;">with Headlines and Buttons HTML Generators</h2><br><a href="http://wpicode.com/store/" target="_blank" class="ssjp_button ssjp_button_black ssjp_button_small clearfix">Small Button</a>
+                  <span class="ss_left" id="left-73"></span><span class="ss_top" id="top-66"></span></div>
+                  </div><div class="slider-one-image-section" style="position:relative; ">
+    <img src="http://indie.unscene.us/wp-content/plugins/slippy-slider-responsive-touch-navigation-slider/images/slide2.jpg" style="width:100%;" /></div></div><div class='ssjp_div ' id='ssjp_div_3' style='position:relative;padding:1px 0px 1px 0px; float:left; max-height:300px; overflow:hidden; width: 25%;'><div class="ssjp_wrap">
+                  <div class="ssjp_desc slippy_slider_description" id="ssjp_desc_3" style=" display:none; left: 616px; top: 68px; width: 50%; " ><h2 style="color: black;">Autoplay Slideshow</h2><h2 style="color:#555; font-size: 18px;">with other Options and Simple backend</h2><a href="http://wpicode.com/wordpress-plugins/slippy-slider" target="_blank" class="ssjp_button ssjp_button_black ssjp_button_small clearfix">Read More</a>
+                  <span class="ss_left" id="left-616"></span><span class="ss_top" id="top-68"></span></div>
+                  </div><div class="slider-one-image-section" style="position:relative; ">
+    <img src="http://indie.unscene.us/wp-content/plugins/slippy-slider-responsive-touch-navigation-slider/images/slide3.jpg" style="width:100%;" /></div></div><div class='ssjp_div ' id='ssjp_div_4' style='position:relative;padding:1px 0px 1px 0px; float:left; max-height:300px; overflow:hidden; width: 25%;'><div class="ssjp_wrap">
+                  <div class="ssjp_desc slippy_slider_description" id="ssjp_desc_4" style=" display:none; left: 71px; top: 22px; width: 50%; " ><iframe width="640" height="360" src="http://www.youtube.com/embed/UxxajLWwzqY" frameborder="0" allowfullscreen ></iframe>
+                  <span class="ss_left" id="left-71"></span><span class="ss_top" id="top-22"></span></div>
+                  </div><div class="slider-one-image-section" style="position:relative; ">
+    <img src="http://indie.unscene.us/wp-content/plugins/slippy-slider-responsive-touch-navigation-slider/images/fin.jpg" style="width:100%;" /></div></div>      
+       </div>
+       </div>
+      <div class="ssjp_prev" onclick="slippy_prev('none','','Homepage51740')"></div>
+      <div class="ssjp_next" onclick="slippy_next('none','','Homepage51740')"></div>
+      
+     
+      <div id="s_navigation"><div><span onclick="jQuery('#ssjp_countHomepage51740').val('0');slippy_next('none','','Homepage51740')" style=" background:#369; "></span><span onclick="jQuery('#ssjp_countHomepage51740').val('1');slippy_next('none','','Homepage51740')" style=" "></span><span onclick="jQuery('#ssjp_countHomepage51740').val('2');slippy_next('none','','Homepage51740')" style=" "></span><span onclick="jQuery('#ssjp_countHomepage51740').val('3');slippy_next('none','','Homepage51740')" style=" "></span></div></div>
+      <input type="hidden" class="ssjp_count" id="ssjp_countHomepage51740" value="1"/> <input type="hidden" id="ssjp_count_allHomepage51740" value="4" />
+     
+    </div>
+
+
+
+          <div class="wrapper dk page"><div class="section-header">
+            <div class="row">
+            <div class="large-12 large-centered columns">
+              <ul class="breadcrumbs catlist">
+  <li class="cat-item"><a href="/shop">All</a></li>
+                  <li class="cat-item cat-item-7"><a href="http://indie.unscene.us/product-category/sweaters/" >Sweaters</a>
+</li>
+  <li class="cat-item cat-item-8"><a href="http://indie.unscene.us/product-category/pullovers/" >Pullovers</a>
+</li>
+  <li class="cat-item cat-item-10"><a href="http://indie.unscene.us/product-category/t-shirts/" >T-Shirts</a>
+</li>
+ 
+</ul>              </div>
+              </div>
+            </div></div>
+
+                      
+           
+
+            <!-- navigation bar -->
+ 
 
 <!-- body content -->
 
-<!-- about content -->
-<div id="about" class="wrapper">
-    <div class="row">
-
-    	
-      <div>
-        
-        <h1>I create websites</h1><br style="margin:0;"><h3 class="subheader">behind the scene.</h3>
-        <br>
-        <div class="hide-for-small">
-        <a title="Follow Unscene on Dribble" href="http://twitter.com/unscene_us" class="button" target="_blank"><i class="i icon-twitter"></i></a>
-        <a title="Follow Unscene on Dribble" href="http://instagram.com/unscene_us" class="button" target="_blank"><i class="i icon-instagramtwo"></i></a>
-        <a title="Follow Unscene on Dribble" href="http://twitter.com/unscene_us" class="button" target="_blank"><i class="i icon-dribbblealt"></i></a>
-        <a title="Inquire Help pay for my Student Loans" href="mailto:abe@unscene.us" class="button"><i class="i icon-paperplane"></i></a></div>
-        <div class="text-center show-for-small"><a class="button smoothie " title="Inquire! Help pay for my Student Loans" href="#contact"><i class="icon-paperplane"></i>Hire Me</a></div>
-         <!--<p>We're a team of creative geniuses, whose goal since day one was to create high quality multimedia/graphics for the innovative brands that will power tomorrow. From graphic designers, to web developers, to content curators, to photographers and videographers our passions in the entertainment  </p>
-        <p>Our talents in Graphic, Photo, and Web Design has given our brands we support a competitive edge in today's ever expanding media industry.</p>
-        
-        <p>I imagine you don't know much about me, and I like to keep it that way. You see, it's not that I don't like talking about myself, it's just that I want my creations, to surpass any bias from what I do on my spare time.</p>-->
-      </div>  
-	 <div class="clear"></div>
-
-    </div><!--row-->
-</div>
-<!--end about content-->
-
-
-
-
-
-
-<section id="resume" class="wrapper lt" data-type="background" data-speed="2">
-    <div id="sheet" class="wrapper">
-
-        <div class="section-header bl">
-            <div class="row"><div class="large-12 columns">
-            <h2>The Story</h2>
-            <span></span>
-        </div></div></div>
-
-
-            <div class="row">
-        
-        <div class="container ani">
-                <div class="large-4 columns avi hide-for-small">
-                    <img src="http://placehold.it/500x500" style="border-radius: 300px;opacity:0;" alt="profile image">
-                </div>
-                <div class="large-8 columns">
-                    <h2>I'm Unscene but you can call me Abe.</h2>
-                    <h3 class="subheader">Graphic designer turned Photographer, turned Web Developer, turned Digital Guru.</h3>
-                    <p>With about 6 years in the game, my creative intrest in graphic design has led me to attract the attract the likes of many other creatives who also understand the game. When it comes to E-Commerce sites, Integradable Wordpress Sites, Blog Sites, or Portfolio Sites, I can customize it for you to <strong> help your vision</strong> come to life. I've worked to create websites for people in education, fashion, entertainment, and even healthcare industry. There isn't a demographic I can't fine-tune, because in all honesty, I am right in the middle of it. </p>
-                     <div class="text-center show-for-small"><a class="button smoothie " title="Inquire! Help pay for my Student Loans" href="#contact"><i class="icon-paperplane"></i>Hire Me</a></div>
-                </div><br>
-                    <div class="clear"></div>
-
-
-                    <div class="large-8 large-offset-4 small-12">
-                        <div class="large-12 columns"><h3 class="subheader">Services I Provide</h3></div>
-                        <div class="large-6 small-12 columns">
-                            <h3>Online Stores</h3>
-                            <i class="icon-shoppingcartalt icon-sm"></i><p>Need to create a shopping cart to sell your products online? Big or small, I can set your company up with Paypal and get your customers ready to purchase your goods online.</p>
-                        </div>
-
-                        <div class="large-6 small-12 columns">
-                            <h3>Web Design</h3>
-                            <i class="icon-webpage icon-sm"></i><p>Need a webpage to showcase your latest work? Or need to update some of the mess left by an old designer? Let me know what your goals are and we can start from theres!</p>
-                        </div>
-
-                        <div class="large-6 small-12 columns">
-                            <h3>Graphic Design</h3>
-                            <i class="icon-pixelheart icon-sm"></i><p>Whether you just need a simple online banner, or a full fledged ad campaign that expands multiple banners and ad locations. Graphic Design is my cup of tea.</p>
-                        </div>
-
-                        <div class="large-6 small-12 columns">
-                            <h3>Printing</h3>
-                            <i class="icon-contact-businesscard icon-sm"></i><p>Having been in the business for a while, I've kept partnerships that will help my clients move forward. Let Mila© print your next flyer, banner, or business card.</p>
-                        </div>
-
-                        <div class="large-6 small-12 columns">
-                            <h3>Photography</h3>
-                            <i class="icon-lens icon-sm"></i><p>We all know that how to take 'candid' shots with our phone, but without an understanding of where the photos will end up, you could end up with 'pixelated' photos. Not Fun.</p>
-                        </div>
-
-                        <div class="large-6 small-12 columns">
-                            <h3>Photo Touchups</h3>
-                            <i class="icon-insertpicture icon-sm"></i><p>Nobody's perfect, we all know that, but there are times when just need a little confidence boost. That's where I come in and remove that pesky pimple from your nose.</p>
-                        </div>
-                    </div>
-                <br>
-            <div class="text-center"><a class="button smoothie" title="Inquire! Help pay for my Student Loans" href="#contact"><i class="icon-paperplane"></i>Hire Me</a></div>
-        </div>
-        <div class="clear"></div>
-    </div>
-</div>  <!-- end sheet wrapper -->
-</section><!-- end resume wrapper -->
-
-
-
-<div id="portfolio" class="wrapper dk ani">
-  
-        <div class="section-header bl">
-
-            <div class="row"> <div class="large-12 columns">
-
-            <h2>My Portfolio</h2>
-            <span></span>
-        </div></div></div>
-
-  <div class="row">
-                <div class="large-12 columns">
-                   <h3>Most Recent Work</h3><p>This is a preview of the type of work I do for my friends. I Create E-commerce Websites, portfolio sites, and amazing graphic designs. Starting with the online boutique <a title="Trustd Collective Apparel Company - Love All, Trust Few" href="http://trustdco.com/">Trustd Co</a>, our friends at the print shop <a title="Made In Los Angeles Printing" href="#contact" class="smoothie">Mila</a>, and the acupuncture clinic that I go to <a title="Los Angeles Acupuncture Clinic HLA Center" href="http://hlacenter.com/">HLA Center</a>.</p>
-                </div>
-      </div> <!-- end row -->
-
-
-                <div class="large-4 columns">
-                    <a title="View Trustd Collective Web Design Screenshot" href="http://unscene.us/wp-content/themes/zeus/images/trustd-web-designer-los-angeles.jpg"><img src="http://unscene.us/wp-content/themes/zeus/images/trustd-web-designer-los-angeles.jpg" alt="Trustd Collective E-Commerce"></a>
-                </div>
-               <div class="large-4 columns">
-                    <a title="View MILA Flyer Design Screenshot" href="http://unscene.us/wp-content/themes/zeus/images/mila-made-it-unscene-printing-los-angeles-final.jpg"><img src="http://unscene.us/wp-content/themes/zeus/images/mila-made-it-unscene-printing-los-angeles.jpg" alt="Mila Embroidery and Printing in Los Angeles"></a>
-                </div>
-                <div class="large-4 columns">
-                    <a title="View HLA Corporate Web Design Screenshot" href="http://unscene.us/wp-content/themes/zeus/images/portfolio-hla-center-1.jpg"><img src="http://unscene.us/wp-content/themes/zeus/images/portfolio-hla-center-1.jpg" alt="HLACenter.com Acupuncture"></a>
-                </div>
-               
-
+<div id="shop" class="wrapper lt woocommerce">
         <div class="row">
-                <div class="large-12 columns">
-                   <h3>Some more of my past work</h3>
-                </div>
-        </div> <!-- end row -->
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-2.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-2-th.jpg"></a></div>
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-3.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-3-th.jpg"></a></div>
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-4.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-4-th.jpg"></a></div>
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-5.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-5-th.jpg"></a></div>
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-6.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-6-th.jpg"></a></div>
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-7.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-7-th.jpg"></a></div>
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-8.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-8-th.jpg"></a></div>
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-9.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-9-th.jpg"></a></div>
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-10.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-10-th.jpg"></a></div>
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-11.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-11-th.jpg"></a></div>
-                <div class="large-2 small-4 columns text-center"><a href="http://unscene.us/wp-content/themes/zeus/images/Portfolio-12.jpg"><img alt="Swipe with your phone or Use Arrows" src="http://unscene.us/wp-content/themes/zeus/images/Portfolio-12-th.jpg"></a></div>
-        <div class="clear"></div>
-</div>
 
 
-<div id="blog" class="wrapper lt">
-
-
-
+          
+            
+        <div class="large-10 push-2 columns"><div id="container"><div id="content" role="main">
+    
 
     
-    <div class="section-header bl">
-        <div class="row"><div class="large-12 columns">
-            <h2>Latest Blog Posts</h2>
-            <span></span>
-        </div></div>
-    </div>
-        <div class="row">
-             
-            <div class="large-6 columns post">
-                <a href="http://unscene.us/uncategorized/145" data-transition="slide" title="Read More - " class="title">                 <div class="info">
-                <p>1 Jan 2014<i class="icon-clockalt-timealt"></i></p>
-                </div>
-                <div class="content">
-                <h3></h3>
-                <p>[easy_sign_up]</p>
-</div>
-                </a>
-            </div>
-             
-            <div class="large-6 columns post">
-                <a href="http://unscene.us/uncategorized/hello-world" data-transition="slide" title="Read More - Hello world!" class="title">                 <div class="info">
-                <p>7 Jul 2013<i class="icon-clockalt-timealt"></i></p>
-                </div>
-                <div class="content">
-                <h3>Hello world!</h3>
-                <p>&nbsp;</p>
-</div>
-                </a>
-            </div>
-            <div class="text-center button ani container"></div>        </div> <!-- end row -->
+    
+      <p class="woocommerce-result-count">
+  Showing all 3 results</p>
+<form class="woocommerce-ordering" method="get">
+  <select name="orderby" class="orderby">
+          <option value="popularity" >Sort by popularity</option>
+          <option value="rating" >Sort by average rating</option>
+          <option value="date" >Sort by newness</option>
+          <option value="price" >Sort by price: low to high</option>
+          <option value="price-desc" >Sort by price: high to low</option>
+      </select>
+  </form>
+
+      <ul class="products">
+        
+        
+          <li class="post-20 product type-product status-publish has-post-thumbnail first shipping-taxable purchasable product-type-variable product-cat-pullovers instock">
+
+  
+  <a href="http://indie.unscene.us/product/pullover/">
+
+    <img width="300" height="300" src="http://indie.unscene.us/wp-content/uploads/2014/11/pullover-300x300.png" class="attachment-shop_catalog wp-post-image" alt="pullover" />
+    <h3>Protected: Pullover</h3>
+
+    
+
+  <span class="price"><span class="amount">&#36;&nbsp;0.00</span></span>
+
+  </a>
+
+  <a href="http://indie.unscene.us/product/pullover/" rel="nofollow" data-product_id="20" data-product_sku="" class="button product_type_variable">Customize</a>
+</li>
+        
+          <li class="post-60 product type-product status-publish has-post-thumbnail shipping-taxable purchasable product-type-variable product-cat-sweaters instock">
+
+  
+  <a href="http://indie.unscene.us/product/pullover-girls/">
+
+    <img width="300" height="300" src="http://indie.unscene.us/wp-content/uploads/2014/11/pullover-300x300.png" class="attachment-shop_catalog wp-post-image" alt="pullover" />
+    <h3>Protected: Pullover (Girls)</h3>
+
+    
+
+  <span class="price"><span class="amount">&#36;&nbsp;0.00</span></span>
+
+  </a>
+
+  <a href="http://indie.unscene.us/product/pullover-girls/" rel="nofollow" data-product_id="60" data-product_sku="" class="button product_type_variable">Customize</a>
+</li>
+        
+          <li class="post-73 product type-product status-publish has-post-thumbnail shipping-taxable purchasable product-type-variable product-cat-t-shirts instock">
+
+  
+  <a href="http://indie.unscene.us/product/shirt/">
+
+    <img width="300" height="300" src="http://indie.unscene.us/wp-content/uploads/2014/11/pullover-300x300.png" class="attachment-shop_catalog wp-post-image" alt="pullover" />
+    <h3>Protected: Shirt</h3>
+
+    
+
+  <span class="price"><span class="amount">&#36;&nbsp;0.00</span></span>
+
+  </a>
+
+  <a href="http://indie.unscene.us/product/shirt/" rel="nofollow" data-product_id="73" data-product_sku="" class="button product_type_variable">Customize</a>
+</li>
+        
+      </ul>
+      
+    
+  </div></div></div>
+        
+
+
+<div class="large-2 pull-10 columns sidebar">
+            <ul class="store"></ul>
+          </div>
+
+
+
+
+            
+        </div> <!-- end row -->
 <div class="clear"></div>
 </div>
 
-
-
-<!-- <div id="network">
-<img width="40" src="http://weareunscene.com/wp-content/themes/responsive/images/unscene_logo.png" style="padding:0 10px; border-right:1px solid #333;">
-<img width="39" style="top:-2px;position:relative;padding:0 10px; border-right:1px solid #333;" src="images/lvld.png">
-<img height="20" style="top:-2px;position:relative;padding:0 10px; border-right:1px solid #333;" src="images/trustd.gif">
-<span style="float:right;">login</span></div> -->
-
-<!--contact content-->
-<div class="wrapper dk" id="contact">
-
-       <div class="section-header bl">
-
-            <div class="row"> <div class="large-12 columns">
-
-            <h2>Get In Touch</h2>
-            <span></span>
-        </div></div></div>
-
-<div class="row">
-          <div class="large-8 columns"><div class="wpcf7" id="wpcf7-f4-o1"><form action="/#wpcf7-f4-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="4" />
-<input type="hidden" name="_wpcf7_version" value="3.7.2" />
-<input type="hidden" name="_wpcf7_locale" value="" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f4-o1" />
-<input type="hidden" name="_wpnonce" value="205e9580bb" />
+      
+<section class="wrapper footer">
+  <!-- <div class="section-header gr">
+    <div class="row"> <div class="large-12 columns">
+        <h4 class="subheader alignleft">Going to be releasing new tees soon, follow my newsletter to cut in line early! </h4 class="subheader">
+        <a href="http://unscene.us/shop" class="btn alignright"><i class="icon-leaf"></i>Support the Artist!</a>
+    </div></div></div> -->
+  <div id="footer">
+    <div class="row">
+    <div class="columns large-12">
+ <p class="alignleft"><a href="/">Start FRSH</a></p> <p class="alignright">Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p>    </div>
 </div>
-<p><span class="wpcf7-form-control-wrap name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required third" aria-required="true" aria-invalid="false" placeholder="Your Name" /></span><br />
-<span class="wpcf7-form-control-wrap email"><input type="text" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required third" aria-required="true" aria-invalid="false" placeholder="Email" /></span><br />
-<span class="wpcf7-form-control-wrap subject"><input type="text" name="subject" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required third" aria-required="true" aria-invalid="false" placeholder="Subject" /></span><br />
-<span class="wpcf7-form-control-wrap message"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea third" aria-invalid="false" placeholder="MESSAGE"></textarea></span><br />
-<input type="hidden" name="_wpcf7_captcha_challenge_captcha-1" value="265958404" /><img class="wpcf7-form-control wpcf7-captchac wpcf7-captcha-captcha-1" width="72" height="24" alt="captcha" src="http://unscene.us/wp-content/uploads/wpcf7_captcha/265958404.png" /> <span>Are you a ZYBORG? Fill out the Captcha.</span> <br><span class="wpcf7-form-control-wrap captcha-1"><input type="text" name="captcha-1" value="" size="7" class="wpcf7-form-control wpcf7-captchar" aria-invalid="false" /></span><br />
-<input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit contact_submit" /></p>
-<div class="wpcf7-response-output wpcf7-display-none"></div></form></div></div>
-          <div class="large-4 columns">
-                <h3>Contact Details</h3>
-                <h2 class="subheader">Buy me Coffee <i class="icon-coffee r"></i></h2>
-                <p>No but really — if you want to be taken seriously as a client, you have to take my coffee drinking habit seriously too. Because if I could put in the extra hours of work with cups of coffee now, then you can expect more cups of coffee later.</p>
-                <p>Hate waiting? Get in touch with me at <a href="mailto:abe@unscene.us">abe@unscene.us</a> or call/text 626.261. juan ceben too four</p>
+  </div>
+</section>
+</div>
+    <!--end page-container-->
+<script type="text/javascript" src="js/snap.js"></script>
+<script type="text/javascript">
+var snapper = new Snap({
+    element: document.getElementById('snapcontent'),
+    dragger: document.getElementById('headerfix')
+});
+
+document.addEventListener("touchstart", function(){}, true);
+
+</script>
+<script type="text/javascript" src="js/demo.js"></script>
+
+<!-- Generated in 0.934 seconds. (122 q) -->
+
+  <script type='text/javascript' src='http://indie.unscene.us/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.4'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-includes/js/jquery/ui/jquery.ui.datepicker.min.js?ver=1.10.4'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-includes/js/admin-bar.min.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-content/plugins/adrotate/library/jquery.adrotate.clicktracker.js?ver=0.6'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/indie.unscene.us\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.4'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-includes/js/jquery/ui/jquery.ui.mouse.min.js?ver=1.10.4'></script>
+<script type='text/javascript' src='http://indie.unscene.us/wp-includes/js/jquery/ui/jquery.ui.draggable.min.js?ver=1.10.4'></script>
+<script type='text/javascript' src='//indie.unscene.us/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.60'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/indie.unscene.us\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif"};
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/indie.unscene.us\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//indie.unscene.us/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=2.2.8'></script>
+<script type='text/javascript' src='//indie.unscene.us/wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js?ver=1.3.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","fragment_name":"wc_fragments"};
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","fragment_name":"wc_fragments"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//indie.unscene.us/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=2.2.8'></script>
+<!-- AdRotate JS -->
+<script type="text/javascript">
+var tracker_url = 'http://indie.unscene.us/wp-content/plugins/adrotate/library/clicktracker.php';
+</script>
+<!-- /AdRotate JS -->
+
+  <script type="text/javascript">
+    (function() {
+      var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+      request = true;
+
+      b[c] = b[c].replace( rcs, ' ' );
+      b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+    }());
+  </script>
+      <div id="wpadminbar" class="nojq nojs" role="navigation">
+      <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+      <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Top navigation toolbar." tabindex="0">
+        <ul id="wp-admin-bar-root-default" class="ab-top-menu">
+    <li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://indie.unscene.us/wp-admin/about.php" title="About WordPress"><span class="ab-icon"></span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+    <li id="wp-admin-bar-about"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/about.php">About WordPress</a>   </li></ul><ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+    <li id="wp-admin-bar-wporg"><a class="ab-item"  href="https://wordpress.org/">WordPress.org</a>   </li>
+    <li id="wp-admin-bar-documentation"><a class="ab-item"  href="http://codex.wordpress.org/">Documentation</a>    </li>
+    <li id="wp-admin-bar-support-forums"><a class="ab-item"  href="https://wordpress.org/support/">Support Forums</a>   </li>
+    <li id="wp-admin-bar-feedback"><a class="ab-item"  href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a>    </li></ul></div>    </li>
+    <li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://indie.unscene.us/wp-admin/">FRSHFITS.com</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+    <li id="wp-admin-bar-dashboard"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/">Dashboard</a>    </li></ul><ul id="wp-admin-bar-appearance" class="ab-submenu">
+    <li id="wp-admin-bar-themes"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/themes.php">Themes</a>    </li>
+    <li id="wp-admin-bar-customize" class="hide-if-no-customize"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/customize.php?url=http%3A%2F%2Findie.unscene.us%2F">Customize</a>   </li>
+    <li id="wp-admin-bar-widgets"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/widgets.php">Widgets</a>   </li>
+    <li id="wp-admin-bar-menus"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/nav-menus.php">Menus</a>   </li>
+    <li id="wp-admin-bar-header"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/themes.php?page=custom-header">Header</a>   </li></ul></div>    </li>
+    <li id="wp-admin-bar-updates"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/update-core.php" title="3 Plugin Updates"><span class="ab-icon"></span><span class="ab-label">3</span><span class="screen-reader-text">3 Plugin Updates</span></a>   </li>
+    <li id="wp-admin-bar-comments"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/edit-comments.php" title="0 comments awaiting moderation"><span class="ab-icon"></span><span id="ab-awaiting-mod" class="ab-label awaiting-mod pending-count count-0">0</span></a>    </li>
+    <li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://indie.unscene.us/wp-admin/post-new.php" title="Add New"><span class="ab-icon"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+    <li id="wp-admin-bar-new-post"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/post-new.php">Post</a>    </li>
+    <li id="wp-admin-bar-new-media"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/media-new.php">Media</a>   </li>
+    <li id="wp-admin-bar-new-page"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/post-new.php?post_type=page">Page</a>   </li>
+    <li id="wp-admin-bar-new-product"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/post-new.php?post_type=product">Product</a>    </li>
+    <li id="wp-admin-bar-new-shop_coupon"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/post-new.php?post_type=shop_coupon">Coupon</a>   </li>
+    <li id="wp-admin-bar-new-user"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/user-new.php">User</a>    </li></ul></div>    </li>
+    <li id="wp-admin-bar-edit"><a class="ab-item"  href="http://indie.unscene.us/wp-admin/post.php?post=13&#038;action=edit">Edit Page</a>    </li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+    <li id="wp-admin-bar-search" class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://indie.unscene.us/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><input type="submit" class="adminbar-button" value="Search"/></form></div>   </li>
+    <li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item"  aria-haspopup="true" href="http://indie.unscene.us/members/station/profile/edit/" title="My Account">Howdy, station<img src="http://indie.unscene.us/wp-content/uploads/avatars/1/21ebde227dd1a8f2d9a46c2f78fd4b5b-bpthumb.jpg" class="avatar user-1-avatar avatar-26 photo" width="26" height="26" alt="Profile photo of abe" /></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class="ab-submenu">
+    <li id="wp-admin-bar-user-info"><a class="ab-item" tabindex="-1" href="http://indie.unscene.us/members/station/profile/edit/"><img src="http://indie.unscene.us/wp-content/uploads/avatars/1/21ebde227dd1a8f2d9a46c2f78fd4b5b-bpfull.jpg" class="avatar user-1-avatar avatar-64 photo" width="64" height="64" alt="Profile photo of abe" /><span class='display-name'>station</span></a>    </li>
+    <li id="wp-admin-bar-edit-profile"><a class="ab-item"  href="http://indie.unscene.us/members/station/profile/edit/">Edit My Profile</a>   </li>
+    <li id="wp-admin-bar-logout"><a class="ab-item"  href="http://indie.unscene.us/wp-login.php?action=logout&#038;_wpnonce=5b44baf6ae">Log Out</a>   </li></ul><ul id="wp-admin-bar-my-account-buddypress" class="ab-sub-secondary ab-submenu">
+    <li id="wp-admin-bar-my-account-activity" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://indie.unscene.us/members/station/activity/">Activity</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-my-account-activity-default" class="ab-submenu">
+    <li id="wp-admin-bar-my-account-activity-personal"><a class="ab-item"  href="http://indie.unscene.us/members/station/activity/">Personal</a>    </li>
+    <li id="wp-admin-bar-my-account-activity-mentions"><a class="ab-item"  href="http://indie.unscene.us/members/station/activity/mentions/">Mentions</a>   </li>
+    <li id="wp-admin-bar-my-account-activity-favorites"><a class="ab-item"  href="http://indie.unscene.us/members/station/activity/favorites/">Favorites</a>    </li></ul></div>    </li>
+    <li id="wp-admin-bar-my-account-xprofile" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://indie.unscene.us/members/station/profile/">Profile</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-my-account-xprofile-default" class="ab-submenu">
+    <li id="wp-admin-bar-my-account-xprofile-public"><a class="ab-item"  href="http://indie.unscene.us/members/station/profile/public/">View</a>    </li>
+    <li id="wp-admin-bar-my-account-xprofile-edit"><a class="ab-item"  href="http://indie.unscene.us/members/station/profile/edit/">Edit</a>    </li>
+    <li id="wp-admin-bar-my-account-xprofile-change-avatar"><a class="ab-item"  href="http://indie.unscene.us/members/station/profile/change-avatar/">Change Profile Photo</a>    </li></ul></div>    </li>
+    <li id="wp-admin-bar-my-account-notifications" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://indie.unscene.us/members/station/notifications/">Notifications</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-my-account-notifications-default" class="ab-submenu">
+    <li id="wp-admin-bar-my-account-notifications-unread"><a class="ab-item"  href="http://indie.unscene.us/members/station/notifications/">Unread</a>    </li>
+    <li id="wp-admin-bar-my-account-notifications-read"><a class="ab-item"  href="http://indie.unscene.us/members/station/notifications/read/">Read</a>   </li></ul></div>    </li>
+    <li id="wp-admin-bar-my-account-settings" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://indie.unscene.us/members/station/settings/">Settings</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-my-account-settings-default" class="ab-submenu">
+    <li id="wp-admin-bar-my-account-settings-general"><a class="ab-item"  href="http://indie.unscene.us/members/station/settings/general/">General</a>    </li>
+    <li id="wp-admin-bar-my-account-settings-notifications"><a class="ab-item"  href="http://indie.unscene.us/members/station/settings/notifications/">Email</a>    </li>
+    <li id="wp-admin-bar-my-account-settings-profile"><a class="ab-item"  href="http://indie.unscene.us/members/station/settings/profile/">Profile</a>    </li></ul></div>    </li></ul></div>    </li>
+    <li id="wp-admin-bar-bp-notifications" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://indie.unscene.us/members/station/notifications/"><span id="ab-pending-notifications" class="count no-alert">0</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-bp-notifications-default" class="ab-submenu">
+    <li id="wp-admin-bar-no-notifications"><a class="ab-item"  href="http://indie.unscene.us/members/station/notifications/">No new notifications</a>   </li></ul></div>    </li></ul>      </div>
+            <a class="screen-reader-shortcut" href="http://indie.unscene.us/wp-login.php?action=logout&#038;_wpnonce=5b44baf6ae">Log Out</a>
           </div>
-        <div class="clear"></div>
-    </div>
-</div>  
 
-<!--End contact content-->
-
-<div id="footer">
-<div class="container">
-<!-- <div class="row links">
-      <ul class="column large-3 small-6">
-        <lh>Unscene Us</lh>
-        <li><a href="./web-design">Web Design</a></li>
-        <li><a href="./graphic-design">Graphics</a></li>
-        <li><a href="./store/products">Marketplace</a></li>
-      </ul>
-
-      <ul class="column large-3 small-6">
-        <lh>About us</lh>
-        <li><a href="./our-team">Our Team</a></li>
-        <li><a href="./brand">Branding</a></li> 
-        <li><a href="./partners">Partners</a></li>
-        <li><a href="./press">Press</a></li>
-      </ul>
-
-      <ul class="column large-3 small-6">
-        <lh>Support</lh>
-        <li><a target="_blank" href="./forums">Forums</a></li>
-        <li><a href="./search">Search</a></li>
-        <li><a href="./contact">Contact Us</a></li>
-
-      </ul>
-      <ul class="column large-3 small-6">
-        <lh>Visit My Friends</lh>
-        <li><a target="_blank" href="http://mila.unscene.us">Mila</a></li>
-        <li><a target="_blank" href="http://trustdco.com">Search</a></li>
-      </ul>
-
-    </div>
- -->
- <p class="text-center">Created in Los Angeles by Abraham Perez © 2014. All rights reserved.</p></div>
-
-</div>
-</div><!--end page-container-->
-</body>
-	<!-- Start of StatCounter Code -->
-	<script type="text/javascript">
-	<!-- 
-		var sc_project=9428993; 
-		var sc_security="70ec3884"; 
-		var sc_invisible=1;
-	//-->
-	</script>
-	<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
-<noscript><div class="statcounter"><a title="web analytics" href="http://statcounter.com/"><img class="statcounter" src="http://c.statcounter.com/9428993/0/70ec3884/1/" alt="web analytics" /></a></div></noscript>	
-	<!-- End of StatCounter Code -->
-<script type='text/javascript'>jQuery(document).ready(function($) {  }); </script><script type='text/javascript'>
-/* <![CDATA[ */
-var pwal_data = {"debug":"false","options":{"post_default":"","page_default":"","custom_default":"","method":"automatic","excerpt":"100","admin":"true","home":"","multi":"","authorized":"true","level":"editor","bot":"true","cookie":"24","use_facebook":"true","use_linkedin":"true","use_twitter":"true","use_google":"true","url_to_like":"","salt":"517516073","sitewide":"","description":"To see the full content, share this page by clicking one of the buttons below","random":"","no_visit":"true","load_facebook":"true","load_linkedin":"true","load_twitter":"true","load_google":"true","show_facebook_comment_popup":"true"},"ajax_url":"http:\/\/unscene.us\/wp-admin\/admin-ajax.php","buttons":[],"ajax-nonce":"c75d67a8cc","is_cachable":"1"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/pay-with-a-like/js/pay-with-a-like.js?ver=1.1.5'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/unscene.us\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/ui/jquery.ui.tabs.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/ui/jquery.ui.mouse.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/ui/jquery.ui.resizable.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/ui/jquery.ui.draggable.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/ui/jquery.ui.button.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/ui/jquery.ui.position.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/ui/jquery.ui.dialog.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.50.0-2014.02.05'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/unscene.us\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
-/* ]]> */
-</script>
-<script type='text/javascript' src='http://unscene.us/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.7.2'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/ui/jquery.ui.slider.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://unscene.us/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2'></script>
+    </body>
 </html>
+

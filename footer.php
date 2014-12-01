@@ -13,16 +13,28 @@
 
       
 <section class="wrapper footer">
-	<!-- <div class="section-header gr">
-    <div class="row"> <div class="large-12 columns">
-        <h4 class="subheader alignleft">Going to be releasing new tees soon, follow my newsletter to cut in line early! </h4 class="subheader">
-        <a href="http://unscene.us/shop" class="btn alignright"><i class="icon-leaf"></i>Support the Artist!</a>
-    </div></div></div> -->
 	<div id="footer">
-    <div class="row">
-    <div class="columns large-12">
- <p class="alignleft"><a href="/">Start FRSH</a></p> <p class="alignright">Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p>    </div>
-</div>
+<div class="row links">
+      <ul class="columns large-3 small-6">
+        <lh>Create</lh>
+        <li><a href="/product/pullover">Pullover</a></li>
+        <li><a href="/product/pullover">Shirt</a></li> 
+        <li><a href="/product/pullover">Socks</a></li>
+        <li><a href="/product/pullover">Tanks</a></li></ul>
+        <ul class="columns large-3 small-6">
+        <lh>About</lh>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/about/faq">FAQ</a></li>
+        <li><a href="/about/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/contact-us">Contact</a></li></ul>
+      <ul class="columns large-3 small-6">
+        <lh>Connect With Us</lh>
+        <li><a target="_blank" href="http://bonoboville.com">Bonoboville Social</a></li>
+        <li><a target="_blank" href="http://trustdco.com">Trustd Collective</a></li></ul>
+        <ul class="columns large-3 small-6">
+        <lh></lh>
+        <li><p>Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p> </li></ul>
+    </div>
   </div>
 </section>
 </div>

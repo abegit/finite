@@ -16,7 +16,7 @@
 
 
 <div id="single" class="wrapper lt woocommerce">
-     
+
      <div class="row">
 
      	<?php
@@ -75,7 +75,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
       <div class="large-5 columns sidebar">
       		<div class="summary entry-summary">
-
 		<?php do_action( 'woocommerce_single_product_summary' ); ?>
 
 	</div><!-- .summary -->

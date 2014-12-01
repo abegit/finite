@@ -17,23 +17,25 @@
 
 <div class="row links">
       <ul class="columns large-3 small-6">
-        <lh>Unscene Us</lh>
-        <li><a href="./portfolio">Web Design</a></li>
-        <li><a href="./portfolio">Graphics</a></li>
-        <li><a href="./shop">Marketplace</a></li></ul>
+        <lh>Create</lh>
+        <li><a href="../product/pullover">Pullover</a></li>
+        <li><a href="../product/pullover">Shirt</a></li> 
+        <li><a href="../product/pullover">Socks</a></li>
+        <li><a href="../product/pullover">Tanks</a></li></ul>
       <ul class="columns large-3 small-6">
-        <lh>About us</lh>
-        <li><a href="./the-brands">Our Services</a></li>
-        <li><a href="./brand">Branding</a></li> 
-        <li><a href="./partners">Partners</a></li>
-        <li><a href="./press">Press</a></li></ul>
+        <lh>About</lh>
+        <li><a href="../about">About Us</a></li>
+        <li><a href="../about/faq">FAQ</a></li>
+        <li><a href="../about/privacy-policy">Privacy Policy</a></li>
+        <li><a href="../contact-us">Contact</a></li></ul>
+        <ul class="columns large-3 small-6">
+        <lh>About</lh>
+        <li><a href="../about">About Us</a></li>
+        <li><a href="../about/faq">FAQ</a></li>
+        <li><a href="../about/privacy-policy">Privacy Policy</a></li>
+        <li><a href="../contact-us">Contact</a></li></ul>
       <ul class="columns large-3 small-6">
-        <lh>Support</lh>
-        <li><a href="./forums">Forums</a></li>
-        <li><a href="./search">Search</a></li>
-        <li><a href="/for-business/contact">Contact Us</a></li></ul>
-      <ul class="columns large-3 small-6">
-        <lh>Visit My Friends</lh>
+        <lh>Connect With Us</lh>
         <li><a target="_blank" href="http://bonoboville.com">Bonoboville Social</a></li>
         <li><a target="_blank" href="http://trustdco.com">Trustd Collective</a></li></ul>
     </div>
