@@ -1,13 +1,16 @@
 <?php 
 
-wp_deregister_script( 'jquery' );
-
+// wp_deregister_script( 'jquery' );
 
 //custom fields for product posts
 add_action( 'init', 'add_custom_fields_to_product' );
 function add_custom_fields_to_product() {
 add_post_type_support( 'product', 'custom-fields' );
 }
+
+
+
+
 
 add_filter('widget_text', 'do_shortcode');
 

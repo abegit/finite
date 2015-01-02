@@ -15,7 +15,7 @@ addEvent(document.getElementById('menu'), 'click', function(){
         this.setAttribute('opend', 1);
     }
 });
-addEvent(document.getElementById('logo'), 'click', function(){
+addEvent(document.getElementById('open-left'), 'click', function(){
     if (this.hasAttribute('opend', 1)) {
         this.removeAttribute('opend', 1);
         snapper.close('left');

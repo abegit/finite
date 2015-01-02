@@ -42,7 +42,7 @@ get_header(); ?>
                 </div>
 
 
-                <div class="large-4 columns"><?php echo adrotate_group(1); ?></div>
+                <div class="large-4 columns"><?php dynamic_sidebar('blog'); ?> </div>
 
 
         

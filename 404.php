@@ -19,14 +19,7 @@
                 </div>
 
 
-                <div class="large-4 columns"><?php echo adrotate_group(1); ?>
-                        <?php dynamic_sidebar('blog'); ?>
-</div>
-
-
-        
-
-
+                <div class="large-4 columns"><?php dynamic_sidebar('blog'); ?> </div>
         </div> <!-- end row -->
 
         <div class="clear"></div>

@@ -13,8 +13,10 @@
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 
-    <!--font-awesome-->
-    <link href="<?php bloginfo('template_directory'); ?>/css/whhg.css" rel="stylesheet">
+    <!--icomoon-->
+    <link href="<?php bloginfo('template_directory'); ?>/css/ico.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_directory'); ?>/css/animate.css" rel="stylesheet">
+
 
     <!--scroll to-->
     <script src="<?php bloginfo('template_directory'); ?>/js/easing.js"></script>
@@ -22,7 +24,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.nav.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v2">
-    <style>
+     <style>
     #logo {background-image:url('<?php header_image(); ?>') !important;}
     </style>
 <!--Google Analytics-->
@@ -62,55 +64,6 @@
 }
 html {margin-top: 0 !important; }
 
-
-#resume {
-  overflow: hidden;
-  background: url(<?php bloginfo('template_directory'); ?>/images/who-is-unscene-graphic-designer-los-angeles.jpg) 50% 0 no-repeat fixed #eee;
-  width: 100%;
-  padding: 0;
-}
-
-#logo {
-  -moz-animation-duration: 2s;
-  -moz-animation-delay: 3s;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 3s;
-  -ms-animation-duration: 2s;
-  -ms-animation-delay: 3s;
-  -0-animation-duration: 2s;
-  -0-animation-delay: 3s;
-}
-#startEngin {
-  -moz-animation-duration: 2s;
-  -moz-animation-delay: 2s;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 2s;
-  -ms-animation-duration: 2s;
-  -ms-animation-delay: 2s;
-  -0-animation-duration: 2s;
-  -0-animation-delay: 2s;
-}
-#weDo {
-  -moz-animation-duration: 3s;
-  -moz-animation-delay: 0;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 0;
-  -ms-animation-duration: 3s;
-  -ms-animation-delay: 0;
-  -0-animation-duration: 3s;
-  -0-animation-delay: 0;
-}
-.lastbutnot {
-  -moz-animation-duration: 3s;
-  -moz-animation-delay: 4s;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 4s;
-  -ms-animation-duration: 3s;
-  -ms-animation-delay: 4s;
-  -0-animation-duration: 3s;
-  -0-animation-delay: 4s;
-}
-
 </style>
 
 <script type="text/javascript">
@@ -120,33 +73,7 @@ $jfs(document).ready(function(){
 });  
 </script>
 
-<script>
-var $onlyDesktop = jQuery.noConflict();
 
-$onlyDesktop(window).load(function() {
-        var w = $(window).width();
-
-        if(w>400) {
-            $onlyDesktop('section[data-type="background"]').each(function(){
-                var $bgobj = $onlyDesktop(this); // assigning the object
-                var $window = $onlyDesktop('#snapcontent');
-
-                $onlyDesktop('#snapcontent').scroll(function() {
-                  var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-
-                    // Put together our final background position
-                    var round = '50% '+ yPos;
-                    var coords = round + 'px';
-
-                    // Move the background
-                    $bgobj.css({ backgroundPosition: coords });
-                });
-          });
-        }
-        else { }
-    });
-
-</script>
 
 <script>
 var $jj = jQuery.noConflict();
@@ -164,12 +91,8 @@ $jj(document).ready(function(){
   </script>
 </head>
 
-<body
-<?php global $blog_id;  if ( is_home() ) {echo "id='blog" . $blog_id . "'" ?> <?php body_class( 'home' ); }
-  elseif ( is_single()) { echo "id='blog" . $blog_id . "'" ?> " <?php body_class( 'home' ); }
-  else { echo 'id="blog' . $blog_id . "'" ?> " <?php body_class( 'home woocommerce' ); ?> <?php } ?> >
-
- <!-- header wrapper-->
+<body id='blog' <?php body_class( "home woocommerce" ); ?>>
+ <!--header wrapper-->
 <?php if ( is_home() ) { ?> 
         <section id="header" class="wrapper page dk" data-type="background" data-speed="2">
 <?php } elseif (is_page_template('page-enter.php')) { ?> 
@@ -202,8 +125,9 @@ $jj(document).ready(function(){
 <div id="headerfix">
 <div class="row">
   <div class="columns">
-      <a href="#" id="logo"></a>
-      <a href="#" id="menu" class="ani"><i class="icon-menu" id="open-right"></i><i class="icon-circledelete" id="close-r"></i></a>
+      <a href="/" id="logo"></a>
+      <a href="#" id="open-left" style="display: inline-block; float: left; height: 40px; line-height: 40px; margin-bottom: 10px !important; margin-left: 10px; margin-right: 10px; margin-top: 10px !important; position: relative; text-align: center; color:#8a8a8a; vertical-align: middle; width: 30px;"><i class="icon-layers icon-sm"></i></a>
+      <a href="#" id="menu" class="ani"><i class="icon-menu icon-sm" id="open-right"></i><i class="icon-cross icon-sm" id="close-r"></i></a>
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'no-mobi lastbutnot anis' ) ); ?>
   </div><!--columns-->
 </div><!--row-->
@@ -214,8 +138,8 @@ $jj(document).ready(function(){
 
 
 
-    <?php get_template_part('/inc/snapdrawers'); ?>
-
+  <?php get_template_part('/inc/snapdrawers'); ?>
+  
   
 
 
@@ -223,26 +147,39 @@ $jj(document).ready(function(){
 
 
 <!-- page container -->
-  <div class="page-container snap-content" id="snapcontent">
-  <?php 
-    if ( is_archive('product') && is_front_page()) { 
+<div class="page-container snap-content" id="snapcontent">
+  <?php if ( is_front_page() && is_archive('product')) {
+            // cond1 - fire if product archive AND frontpage
         $paged = $wp_query->get( 'paged' );
-        if ( ! $paged || $paged < 2 ) {  
-            slippy_slider_init('Homepage','widget', '1024px','300px'); ?>
-  <?php } ?>
+              if ( ! $paged || $paged < 2 ) {  
+                  // cond1 inner if homepage basicically
+                slippy_slider_init('Homepage','widget', '1024px','300px'); ?>
+            <?php } // close inner ?>
+<?php } elseif (is_category()) { ?>
+          <div class="wrapper dk page"><div class="section-header">
+            <div class="row">
+              <div class="large-12 large-centered columns"> <?php get_template_part('/inc/catcrumbs');?> </div>
+            </div>
+          </div></div>
+      <?php } elseif (is_archive('product')) { ?>
+          <div class="wrapper dk page"><div class="section-header">
+            <div class="row">
+              <div class="large-12 large-centered columns"> <?php get_template_part('/inc/shopcrumbs');?> </div>
+            </div>
+          </div></div>
+      <?php } elseif (!is_singular('product')) { ?>
         <div class="wrapper dk page"><div class="section-header">
             <div class="row">
-            <div class="large-12 large-centered columns">
-              <?php get_template_part('/inc/shopcrumbs');?>
-              </div>
-              </div>
-            </div></div>
-<?php } elseif (is_singular('product')) { ?>
-            
-      <?php  // end if first page
-          } else { ?>
-        
-       <?php } ?>
+              <div class="large-12 large-centered columns"> <?php get_template_part('/inc/breadcrumbs');?> </div>
+            </div>
+          </div></div>
+       <?php } else { ?>
+        <div class="wrapper dk page"><div class="section-header">
+          <div class="row">
+            <div class="large-12 large-centered columns"> <?php get_template_part('/inc/breadcrumbs');?> </div>
+          </div>
+        </div></div>
+       <?php }?>
 
            <?php if (!is_singular('product') && !is_page_template('page-enter.php') && !is_archive() && !is_home()) { ?>
                 <?php if (has_post_thumbnail( $post->ID ) ) { ?>

@@ -1,10 +1,10 @@
-<?php get_header('shop'); ?>
+<?php get_header(); ?>
 
  
 
 <!-- body content -->
 
-<div id="shop" class="wrapper lt woocommerce">
+<section id="shop" class="wrapper lt woocommerce" data-type="elements" data-speed="2">
         <div class="row">
 
 
@@ -74,9 +74,9 @@
         
 
 
-<!-- <div class="large-2 pull-10 columns sidebar">
+<div class="large-12 columns sidebar">
 		      	<ul class="store"><?php dynamic_sidebar( 'storeside' ); ?></ul>
-        	</div> -->
+        	</div>
 
 
 
@@ -84,7 +84,7 @@
             
         </div> <!-- end row -->
 <div class="clear"></div>
-</div>
+</section>
 
 <?php get_footer( 'shop' ); ?>
 

@@ -42,3 +42,24 @@
      -moz-transition:all $numb ease-in-out;
        -o-transition:all $numb ease-in-out;
           transition:all $numb ease-in-out;}
+
+@mixin animate($numb, $numb2, $numb3, $numb4){-moz-animation-duration: $numb2;
+ -moz-animation-delay: $numb3;
+ -moz-animation-iteration-count: $numb4;
+ -moz-animation-name: $numb;
+ -o-animation-duration: $numb2;
+ -o-animation-delay: $numb3;
+ -o-animation-iteration-count: $numb4;
+ -o-animation-name: $numb;
+ animation-duration: $numb2;
+ animation-delay: $numb3;
+ animation-iteration-count: $numb4;
+ animation-name: $numb;
+}
+
+
+#yourElement {
+  -vendor-animation-duration: 3s;
+  -vendor-animation-delay: 2s;
+  -vendor-animation-iteration-count: infinite;
+}

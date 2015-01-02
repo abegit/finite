@@ -13,7 +13,8 @@
                     <?php the_content(); ?>
                     </div>
                     <?php endwhile; ?>
-    <?php endif; ?>
+                    <?php endif; ?>
+                <!-- <div class="text-center button ani container"><?php next_post_link( '<strong>%link</strong>' ); ?><?php previous_post_link( '<strong>%link</strong>' ); ?></div> -->
                 </div>
 
 
@@ -24,6 +25,7 @@
         <?php endif; ?>
         
         <ul><?php dynamic_sidebar( 'blog' ); ?></ul>
+
     </div>
 
 

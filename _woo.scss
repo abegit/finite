@@ -1,5 +1,13 @@
 #shop { background: #2a2a2a;}
-
+.home-page.archive {
+	#shop:before{background: none repeat scroll 0 0 #2a2a2a;
+    content: "";
+    display: block;
+    height: 140px;
+    margin: -6% -5% -7%;
+    transform: rotate(4deg);
+    width: 110%;}
+}
 /*productlist*/
 
 .products {

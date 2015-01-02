@@ -22,7 +22,7 @@
         <li><a href="/product/pullover">Tanks</a></li></ul>
         <ul class="columns large-3 small-6">
         <lh>About</lh>
-        <li><a href="/about">About Us</a></li>
+        <li><a href="/about-us">About Us</a></li>
         <li><a href="/about/faq">FAQ</a></li>
         <li><a href="/about/privacy-policy">Privacy Policy</a></li>
         <li><a href="/contact-us">Contact</a></li></ul>
@@ -32,12 +32,48 @@
         <li><a target="_blank" href="http://trustdco.com">Trustd Collective</a></li></ul>
         <ul class="columns large-3 small-6">
         <lh></lh>
-        <li><p>Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p> </li></ul>
+        <li><p>Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p>
+
+        <?php $user_role = get_queried_object()->roles;
+
+if( in_array( strtolower('Shop Manager'), $user_role ) ) {
+    echo 'one';
+}elseif( in_array( strtolower('Customer'), $user_role ) ) { 
+    echo 'two';
+}
+ ?> </li></ul>
     </div>
   </div>
 </section>
 </div>
     <!--end page-container-->
+    <script>
+var $onlyDesktop = jQuery.noConflict();
+
+$onlyDesktop(window).load(function() {
+        var w = $(window).width();
+
+        if(w>400) {
+            $onlyDesktop('section[data-type="elements"]').each(function(){
+                var $bgobj = $onlyDesktop(this); // assigning the object
+                var $window = $onlyDesktop('#snapcontent');
+
+                $onlyDesktop('#snapcontent').scroll(function() {
+                  var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+
+                    // Put together our final background position
+                    // var round = '50% '+ yPos;
+                    var coords = yPos + 'px';
+
+                    // Move the background
+                    $('section[data-type="elements"] .products').css( 'top' , coords );
+                });
+          });
+        }
+        else { }
+    });
+
+</script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/snap.js"></script>
 <script type="text/javascript">
 var snapper = new Snap({

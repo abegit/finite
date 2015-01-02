@@ -18,7 +18,7 @@
 
     <!--scroll to-->
     <script src="<?php bloginfo('template_directory'); ?>/js/easing.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/jquery.scrollTo.js"></script>
+    <script src="<?php bloginfo('templatse_directory'); ?>/js/jquery.scrollTo.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.nav.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v6">
