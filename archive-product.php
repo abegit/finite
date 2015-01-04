@@ -75,6 +75,7 @@
 
 
 <div class="large-12 columns sidebar">
+				<?php echo do_shortcode('[easy_sign_up title="Put in your own title here"]') ?>
 		      	<ul class="store"><?php dynamic_sidebar( 'storeside' ); ?></ul>
         	</div>
 

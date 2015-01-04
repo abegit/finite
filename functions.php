@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 // wp_deregister_script( 'jquery' );
 
 //custom fields for product posts
@@ -8,7 +7,20 @@ function add_custom_fields_to_product() {
 add_post_type_support( 'product', 'custom-fields' );
 }
 
-
+// custom rss feed 
+add_action( 'after_setup_theme', 'my_rss_template' );
+/**
+* Register custom RSS template.
+*/
+function my_rss_template() {
+add_feed( 'short', 'my_custom_rss_render' );
+}
+/**
+* Custom RSS template callback.
+*/
+function my_custom_rss_render() {
+get_template_part( 'feed', 'short' );
+} 
 
 
 
@@ -266,4 +278,4 @@ function yourtheme_admin_header_style() {
         width: <?php echo HEADER_IMAGE_WIDTH; ?>px; }
     #headimg h1, #headimg #desc {display: none; }
     </style>
-<?php } endif; ?>
+<?php } endif;

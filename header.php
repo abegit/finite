@@ -65,6 +65,24 @@
 html {margin-top: 0 !important; }
 
 </style>
+<script>
+
+var jQmau = jQuery.noConflict();
+jQmau(document).ready(function(){
+  jQmau('#open-sesame').click(function(){
+        var X=jQmau(this).attr('data-uri');
+          if(X==1){
+            jQmau(this).removeClass('selected');
+            jQmau(this).find('.message').removeClass('visible');
+            jQmau(this).attr('data-uri', '0');
+          } else{
+            jQmau(this).addClass('selected');
+            jQmau(this).find('.message').addClass('visible');
+            jQmau(this).attr('data-uri', '1');
+          }
+   });
+    });
+</script>
 
 <script type="text/javascript">
 var $jfs = jQuery.noConflict();
@@ -126,7 +144,8 @@ $jj(document).ready(function(){
 <div class="row">
   <div class="columns">
       <a href="/" id="logo"></a>
-      <a href="#" id="open-left" style="display: inline-block; float: left; height: 40px; line-height: 40px; margin-bottom: 10px !important; margin-left: 10px; margin-right: 10px; margin-top: 10px !important; position: relative; text-align: center; color:#8a8a8a; vertical-align: middle; width: 30px;"><i class="icon-layers icon-sm"></i></a>
+      <div id="open-sesame" style="display: inline-block; float: left; height: 40px; line-height: 40px; margin-bottom: 10px !important; margin-left: 10px; margin-right: 10px; margin-top: 10px !important; position: relative; text-align: center; color:#8a8a8a; vertical-align: middle; width: 30px;"><i class="icon-layers icon-sm"></i>
+        <div class="message">hello there</div></div>
       <a href="#" id="menu" class="ani"><i class="icon-menu icon-sm" id="open-right"></i><i class="icon-cross icon-sm" id="close-r"></i></a>
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'no-mobi lastbutnot anis' ) ); ?>
   </div><!--columns-->
