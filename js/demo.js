@@ -1,3 +1,4 @@
+var element = '';
 var addEvent = function addEvent(element, eventName, func) {
 	if (element.addEventListener) {
     	return element.addEventListener(eventName, func, false);

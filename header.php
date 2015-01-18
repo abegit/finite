@@ -15,6 +15,9 @@
 
     <!--icomoon-->
     <link href="<?php bloginfo('template_directory'); ?>/css/ico.css" rel="stylesheet">
+      <!--[if lt IE 8]><!-->
+      <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/ie7.css">
+      <!--<![endif]-->
     <link href="<?php bloginfo('template_directory'); ?>/css/animate.css" rel="stylesheet">
 
 
@@ -153,18 +156,8 @@ $jj(document).ready(function(){
 </div><!--header-->
 </section><!--end headerfix-->
 
-
-
-
-
   <?php get_template_part('/inc/snapdrawers'); ?>
   
-  
-
-
-   
-
-
 <!-- page container -->
 <div class="page-container snap-content" id="snapcontent">
   <?php if ( is_front_page() && is_archive('product')) {

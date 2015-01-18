@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 	return;
 	 }
 ?>
-           <div class="large-8 columns small-wall">
+           <div class="large-12 columns small-wall">
 		
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -71,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		</div>
 
 
-      <div class="large-4 columns sidebar">
+      <div class="large-12 columns sidebar">
       		<div class="summary entry-summary" style="width:100% !important;">
 
 		<?php

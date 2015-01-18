@@ -1,39 +1,57 @@
 <?php
-// wp_deregister_script( 'jquery' );
-
 //custom fields for product posts
 add_action( 'init', 'add_custom_fields_to_product' );
 function add_custom_fields_to_product() {
 add_post_type_support( 'product', 'custom-fields' );
 }
 
-// custom rss feed 
-add_action( 'after_setup_theme', 'my_rss_template' );
-/**
-* Register custom RSS template.
-*/
-function my_rss_template() {
-add_feed( 'short', 'my_custom_rss_render' );
-}
-/**
-* Custom RSS template callback.
-*/
-function my_custom_rss_render() {
-get_template_part( 'feed', 'short' );
-} 
 
+/**
+ * Redirect user after successful login.
+ *
+ * @param string $redirect_to URL to redirect to.
+ * @param string $request URL the user is coming from.
+ * @param object $user Logged user's data.
+ * @return string
+ */
+function my_login_redirect( $redirect_to, $request, $user ) {
+    //is there a user to check?
+    // global $user;
+    // if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+    //     //check for admins
+    //     if ( in_array( 'administrator', $user->roles ) ) {
+    //         // redirect them to the default place
+    //         return $redirect_to;
+    //     } if ( in_array( 'author', $user->roles ) ) {
+    //         // redirect them to the default place
+    //         return $redirect_to;
+    //     } elseif ( in_array( 'customer', $user->roles ) ) {
+    //         // redirect them to the default place
+    //         return home_url().'/activity';
+    //     } elseif ( in_array( 'subscriber', $user->roles ) ) {
+    //         // redirect them to the default place
+    //         return home_url().'/activity';
+    //     } else {
+    //         return home_url().'/activity';
+    //     }
+    // } else {
+    //     return $redirect_to;
+    // }
+    return home_url();
+}
+add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
 
 
 add_filter('widget_text', 'do_shortcode');
 
 if ( function_exists('register_sidebar') ) {
 register_sidebar(array(
-	'name'          =>  'Blog',
-	'class'         => '',
-	'before_widget' => '<li id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</li>',
-	'before_title'  => '<h5>',
-	'after_title'   => '</h5>'
+    'name'          =>  'Blog',
+    'class'         => '',
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</li>',
+    'before_title'  => '<h5>',
+    'after_title'   => '</h5>'
 ));
 
 register_sidebar(array(
@@ -86,15 +104,21 @@ register_sidebar(array(
     'before_title'  => '<h5>',
     'after_title'   => '</h5>'
 ));
+register_sidebar(array(
+    'name'          =>  'Footer',
+    'class'         => '',
+    'before_widget' => '<li id="%1$s" class="widget %2$s columns large-3 small-6">',
+    'after_widget'  => '</li>',
+    'before_title'  => '<h5>',
+    'after_title'   => '</h5>'
+));
 }
 
 
 function register_my_menus() {
   register_nav_menus(
     array(
-      'main-menu' => __( 'Header Menu' ),
-      'left-menu' => __( 'Left Sidebar Menu' )
-    )
+      'main-menu' => __( 'Header Menu' )    )
   );
 }
 add_action( 'init', 'register_my_menus' );
@@ -112,14 +136,14 @@ add_shortcode('mp-cart-shortcode', 'mp_cart_shortcode');
 
 //disable ajax mp
 if (function_exists('add_theme_support')) {
-	add_theme_support('post-thumbnails');
-		set_post_thumbnail_size(640, 145, true); // Normal post thumbnails
-				add_image_size('block_1', 200, 200, true );
-				add_image_size('left_image', 800, 1200, false );
-				add_image_size('video', 290, 163, true );
-				add_image_size('blog', 650, 290, true );
-				add_image_size('blogsingle', 800, 350, true );			
-}	
+    add_theme_support('post-thumbnails');
+        set_post_thumbnail_size(640, 145, true); // Normal post thumbnails
+                add_image_size('block_1', 200, 200, true );
+                add_image_size('left_image', 800, 1200, false );
+                add_image_size('video', 290, 163, true );
+                add_image_size('blog', 650, 290, true );
+                add_image_size('blogsingle', 800, 350, true );          
+}   
 
 
 // Changing excerpt length
@@ -136,7 +160,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 
     function custom_pagination( $html_id ) {
-    	global $wp_query; //sonar pagination
+        global $wp_query; //sonar pagination
 
     $pages = ''; $range = 3;   /* handle pagination for post pages*/
         $showitems = ($range * 2)+1;  
@@ -176,7 +200,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
     }
 
 
-
+add_theme_support( 'woocommerce' );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs');
 
@@ -207,9 +231,7 @@ function my_template_redirect_2322()
     }
 }
 
-?>
 
-<?php
 /** Tell WordPress to run yourtheme_setup() when the 'after_setup_theme' hook is run. */
 add_action( 'after_setup_theme', 'yourtheme_setup' );
 if ( ! function_exists('yourtheme_setup') ):
@@ -223,7 +245,6 @@ function yourtheme_setup() {
     // This theme uses post thumbnails
     add_theme_support( 'post-thumbnails' );
     // Your changeable header business starts heree
-    define( 'HEADER_TEXTCOLOR', '' );
     // No CSS, just IMG call. The %s is a placeholder for the theme template directory URI.
     define( 'HEADER_IMAGE', '%s/images/headers/forestfloor.jpg' );
     // The height and width of your custom header. You can hook into the theme's own filters to change these values.
@@ -233,7 +254,7 @@ function yourtheme_setup() {
 
     // We'll be using post thumbnails for custom header images on posts and pages.
     // We want them to be 940 pixels wide by 198 pixels tall (larger images will be auto-cropped to fit).
-    set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
+    set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, false );
     // Don't support text inside the header image.
     define( 'NO_HEADER_TEXT', true );
     // Add a way for the custom header to be styled in the admin panel that controls
@@ -243,7 +264,7 @@ function yourtheme_setup() {
     // Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
     register_default_headers( array (
         'berries' => array (
-        'url' => '%s/images/unscene-logo-200-40.png',
+        'url' => '%s/images/frsh-fits-logo.gif',
         'thumbnail_url' => '%s/images/unscene-logo-200-40.png',
         'description' => __( 'Berries', 'yourtheme' )
         ),
@@ -278,4 +299,4 @@ function yourtheme_admin_header_style() {
         width: <?php echo HEADER_IMAGE_WIDTH; ?>px; }
     #headimg h1, #headimg #desc {display: none; }
     </style>
-<?php } endif;
+<?php } endif; ?>

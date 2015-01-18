@@ -1,6 +1,17 @@
 <?php get_header(); ?>
 
- 
+<script>
+	// search popup
+var jaMn = jQuery.noConflict();
+	// search popup
+jaMn(document).ready(function() {
+		// When clicking on the button close or the mask layer the popup closed
+		jaMn(window).load(function() {
+			jaMn('#list .product').fadeOut('1500');
+		});
+});
+
+</script>
 
 <!-- body content -->
 
@@ -10,7 +21,7 @@
 
         	
             
-        <div class="large-12 columns"><?php
+        <div class="large-10 columns push-2" id="list"><?php
 		/**
 		 * woocommerce_before_main_content hook
 		 *
@@ -24,44 +35,7 @@
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 
-		<?php if ( have_posts() ) : ?>
-
-			<?php
-				/**
-				 * woocommerce_before_shop_loop hook
-				 *
-				 * @hooked woocommerce_result_count - 20
-				 * @hooked woocommerce_catalog_ordering - 30
-				 */
-				do_action( 'woocommerce_before_shop_loop' );
-			?>
-
-			<?php woocommerce_product_loop_start(); ?>
-
-				<?php woocommerce_product_subcategories(); ?>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php wc_get_template_part( 'content', 'product' ); ?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			<?php woocommerce_product_loop_end(); ?>
-
-			<?php
-				/**
-				 * woocommerce_after_shop_loop hook
-				 *
-				 * @hooked woocommerce_pagination - 10
-				 */
-				do_action( 'woocommerce_after_shop_loop' );
-			?>
-
-		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
-
-			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
-
-		<?php endif; ?>
+		<?php woocommerce_content(); ?>
 
 	<?php
 		/**
@@ -74,8 +48,7 @@
         
 
 
-<div class="large-12 columns sidebar">
-				<?php echo do_shortcode('[easy_sign_up title="Put in your own title here"]') ?>
+<div class="large-2 columns sidebar pull-10">
 		      	<ul class="store"><?php dynamic_sidebar( 'storeside' ); ?></ul>
         	</div>
 
@@ -87,5 +60,5 @@
 <div class="clear"></div>
 </section>
 
-<?php get_footer( 'shop' ); ?>
+<?php get_footer(); ?>
 

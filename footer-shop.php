@@ -14,23 +14,8 @@
 <section class="wrapper footer">
 	<div id="footer">
 <div class="row links">
-      <ul class="columns large-3 small-6">
-        <lh>Create</lh>
-        <li><a href="/product/pullover">Pullover</a></li>
-        <li><a href="/product/pullover">Shirt</a></li> 
-        <li><a href="/product/pullover">Socks</a></li>
-        <li><a href="/product/pullover">Tanks</a></li></ul>
-        <ul class="columns large-3 small-6">
-        <lh>About</lh>
-        <li><a href="/about-us">About Us</a></li>
-        <li><a href="/about/faq">FAQ</a></li>
-        <li><a href="/about/privacy-policy">Privacy Policy</a></li>
-        <li><a href="/contact-us">Contact</a></li></ul>
-      <ul class="columns large-3 small-6">
-        <lh>Connect With Us</lh>
-        <li><a target="_blank" href="http://bonoboville.com">Bonoboville Social</a></li>
-        <li><a target="_blank" href="http://trustdco.com">Trustd Collective</a></li></ul>
-        <ul class="columns large-3 small-6">
+      <ul class="columns large-9 small-12"><?php dynamic_sidebar( 'Footer' ); ?></ul>
+        <ul class="columns large-3 small-12">
         <lh></lh>
         <li><p>Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p>
 
@@ -47,6 +32,7 @@ if( in_array( strtolower('Shop Manager'), $user_role ) ) {
 </section>
 </div>
     <!--end page-container-->
+
     <script>
 var $onlyDesktop = jQuery.noConflict();
 
