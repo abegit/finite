@@ -421,24 +421,23 @@ br{clear:both;
 body.snapjs-right, body.snapjs-left{
 #snapcontent{cursor:pointer;}
   #snapcontent{
-    &> *{opacity:0.05 !important;}
-    &> #header{opacity:1 !important;}
+    &> * {
+    opacity:0.5 !important;
+    }
   }
-  #headerfix #menu #closee{display:block; opacity:1;}
+  #headerfix #menu #close-r{display:block; opacity:1;}
   #headerfix #open-right{display:none !important;}
 }
 
 body.snapjs-left{
   #snapcontent:before{
     left:0;}
-
     #snapcontent:after{
     left:0;}
 }
 body.snapjs-right{
   #snapcontent:before{
     right:20px;}
-
     #snapcontent:after{
     right:20px;}
 }
@@ -1258,8 +1257,10 @@ input, select, textarea{
     }
 }
 
+.create-account {clear: both;}
 @import "links";
 @import "woo";
+@import "productdesigner";
 @import "mobi";
 
 

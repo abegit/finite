@@ -70,30 +70,33 @@ Tags:fixed-width, flexible-width, custom-background, custom-colors, custom-heade
 
 /* styles */
 .snap-content {
-  background: #1C1C1C; }
+  background: #1C1C1C;
+  padding-top: 60px; }
 
 .snap-drawers {
   background: #BEBEBE; }
 
-.snap-drawer #selfie {
-  text-align: center; }
-  .snap-drawer #selfie a {
-    border-bottom: 1px solid #ffffff;
-    display: inline-block;
-    min-width: 70% !important; }
-  .snap-drawer #selfie img {
-    -webkit-border-radius: 1000px;
-    -moz-border-radius: 1000px;
-    border-radius: 1000px;
-    margin: 20px auto; }
-    .snap-drawer #selfie img:hover {
-      -webkit-box-shadow: 0 0 0 4px #404040;
-      -moz-box-shadow: 0 0 0 4px #404040;
-      box-shadow: 0 0 0 4px #404040; }
-.snap-drawer > *:last-child {
-  margin-bottom: 60px; }
-.snap-drawer .g {
-  line-height: 0; }
+.snap-drawer {
+  padding-top: 60px; }
+  .snap-drawer #selfie {
+    text-align: center; }
+    .snap-drawer #selfie a {
+      border-bottom: 1px solid #ffffff;
+      display: inline-block;
+      min-width: 70% !important; }
+    .snap-drawer #selfie img {
+      -webkit-border-radius: 1000px;
+      -moz-border-radius: 1000px;
+      border-radius: 1000px;
+      margin: 20px auto; }
+      .snap-drawer #selfie img:hover {
+        -webkit-box-shadow: 0 0 0 4px #404040;
+        -moz-box-shadow: 0 0 0 4px #404040;
+        box-shadow: 0 0 0 4px #404040; }
+  .snap-drawer > *:last-child {
+    margin-bottom: 60px; }
+  .snap-drawer .g {
+    line-height: 0; }
 
 .snap-drawer h3 {
   font-size: 18px;
@@ -127,7 +130,6 @@ Tags:fixed-width, flexible-width, custom-background, custom-colors, custom-heade
   padding-left: 5px; }
 
 .snap-drawer p {
-  padding: 15px;
   font-size: 12px; }
 
 /*css reset*/
@@ -1533,6 +1535,17 @@ table {
     .btn:hover *, button[type="submit"]:hover *, #enter p a:hover *, #enter .textwidget a:hover *, .section-header.store li ul a:hover *, .woocommerce .woocommerce-message .button.wc-forward:hover *, .woocommerce .woocommerce-info .button.wc-forward:hover *, .woocommerce .woocommerce-error .button.wc-forward:hover *, .woocommerce .button:hover *, .button:hover *, button:hover * {
       color: #fff; }
 
+/*contact form*/
+div.wpcf7-mail-sent-ok {
+  border: 2px solid #398f14;
+  background: #398f14;
+  position: absolute;
+  top: 20%;
+  width: 130%;
+  margin: 0 -15%;
+  height: auto;
+  vertical-align: middle; }
+
 #shop {
   background: #fff; }
 
@@ -1621,7 +1634,15 @@ table {
     box-shadow: none !important; }
 
 h1.product_title {
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 300; }
+
+p.price {
+  margin: 5px 0; }
+
+.sku_wrapper {
+  display: none; }
 
 .summary {
   font-family: lato; }
