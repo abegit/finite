@@ -7,12 +7,22 @@
 								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
 								<img src="<?php echo $image[0]; ?>" width="95" style="height:auto; amrgin:0 !important; float:left; vertical-align:middle;"><?php } ?>
 				            	<?php get_template_part('/inc/title');?>
-				            	<div style="color:#999"><a href="http://unscene.us/tag/wordpress">Wordpress Plugins</a></div>
+									<?php $tags = get_tags('exclude=107,108,109,110,111');
+									$html = '<div class="post_tags" style="color:#999"> tagged: ';
+									foreach ( $tags as $tag ) {
+										$tag_link = get_tag_link( $tag->term_id );
+												
+										$html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
+										$html .= "#{$tag->name}</a> ";
+									}
+									$html .= '</div>';
+									echo $html; ?>
 				            </div>
 				            <div class="columns large-3 small-12 title_info">
 				            	<p>The Goods!</p>
 				            	<a class="btn" href="http://unscene.us/download/itunes-podcast-creator.zip">Download</a>
-				            	<?php echo do_shortcode('[paypal-donation purpose="To continue working on Podcast Creator" reference="AbePlugins"]') ?>
+				            	<?php $playTitle = get_the_title(); ?>
+				            	<?php echo do_shortcode('[paypal-donation purpose="To continue working on '.$playTitle.'" reference="AbePlugins"]') ?>
 				            	</div>
 			              </div>
 			        </div>

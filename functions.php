@@ -1,7 +1,7 @@
 <?php 
 
 wp_deregister_script( 'jquery' );
-
+add_filter('show_admin_bar', '__return_false');
 
 //custom fields for product posts
 add_action( 'init', 'add_custom_fields_to_product' );

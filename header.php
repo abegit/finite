@@ -106,10 +106,8 @@ $jfs(document).ready(function(){
   $jfs('body').scrollTop(1);
 });  
 </script>
-
-<script>
+ <script type="text/javascript">
 var $onlyDesktop = jQuery.noConflict();
-
 $onlyDesktop(window).load(function() {
         var w = $(window).width();
 
@@ -130,25 +128,24 @@ $onlyDesktop(window).load(function() {
                 });
           });
         }
-        else { }
+        else {
+
+        }
+
+    $onlyDesktop('.smoothie[href^="#"]').on('click',function (e) {
+      e.preventDefault();
+      var target = this.hash,
+      $onlyDesktoptarget = $onlyDesktop(target);
+      $onlyDesktop('#snapcontent').stop().animate({
+          'scrollTop': $onlyDesktoptarget.offset().top - 0
+      }, 750, 'swing', function () {
+      });
+    });
+        
     });
 
 </script>
 
-<script>
-var $jj = jQuery.noConflict();
-$jj(document).ready(function(){
-    $jj('.smoothie[href^="#"]').on('click',function (e) {
-      e.preventDefault();
-      var target = this.hash,
-      $jjtarget = $jj(target);
-      $jj('#snapcontent').stop().animate({
-          'scrollTop': $jjtarget.offset().top - 0
-      }, 750, 'swing', function () {
-      });
-  });
-  });
-  </script>
     <script type="text/javascript">
     var $dd = jQuery.noConflict();
 
