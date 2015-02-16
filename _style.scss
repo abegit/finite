@@ -474,69 +474,6 @@ body.snapjs-right{
 
 
 
-/*header*/
-#headerfix{
-    height:60px;
-    width:100%;
-    z-index:999;
-    position:relative;
-    border-bottom:1px solid #606060;
-  .container{padding:0;}
-  .row{padding:0;} 
-  .menu, .menu ul{
-    float:right;
-    margin:0;
-      li{display:inline-block;
-          list-style:none outside none;
-          float:left;
-        a{@include latomd;
-              color:#CFCFCF !important;
-              display:inline-block;
-              line-height:60px;
-              padding:0 20px;
-              border-color:#606060 #606060 rgba(0, 0, 0, 0);
-              border-style:solid;
-              border-width:0 0 0 1px;}
-        a:hover{@include box-shadow(0 3px 0 #808080);}
-        &.current-menu-item a{@include box-shadow(0 3px 0 #808080);font-weight:600;}
-        &#menu-item-334{border-left:#606060 solid 1px;
-          a{background:none $grn;
-            border-bottom:medium none !important;
-            @include border-radius($myrad);
-            @include box-shadow(0 5px 0 $grn - 30);
-            color:#FFFFFF !important;
-            font-weight:900;
-            line-height:40px;
-            position:relative;
-            top:-2px !important;
-            margin:10px 20px;
-            border-left:0;}
-        }
-      }
-  }
-      #menu{
-          border-color:rgba(0, 0, 0, 0) #606060;
-          border-style:none solid;
-          border-width:1px;
-          color:#808080;
-          float:right;
-          right:0;
-          font-size:20px;
-          z-index:10;
-          i{margin:0; vertical-align:middle;display:block;
-            padding:20px 35px;}
-          #closee{display:none; opacity:0;}
-          &:hover{color:#B0B0B0;} }
-      #logo{ float:left; position:relative; z-index:10;
-        display:inline-block;
-        margin:10px 0;
-        background-image:url("images/unscene-logo.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height:40px;
-        width:160px;}
-}
 
 
 
@@ -623,6 +560,69 @@ body.snapjs-right{
     @include box-shadow(2px 3px 0 #606060);}
   }
 
+/*header*/
+#headerfix{
+  background: #343333;
+    height:60px;
+    width:100%;
+    z-index:999;
+    position:relative;
+  .container{padding:0;}
+  .row{padding:0;} 
+  .menu, .menu ul{
+    float:right;
+    margin:0;
+      li{display:inline-block;
+          list-style:none outside none;
+          float:left;
+        a{@include latomd;
+              color:#CFCFCF !important;
+              display:inline-block;
+              line-height:60px;
+              padding:0 20px;
+              border-color:#606060 #606060 rgba(0, 0, 0, 0);
+              border-style:solid;
+              border-width:0 0 0 1px;}
+        a:hover{@include box-shadow(0 3px 0 #808080);}
+        &.current-menu-item a{@include box-shadow(0 3px 0 #808080);font-weight:600;}
+        &#menu-item-334{border-left:#606060 solid 1px;
+          a{background:none $grn;
+            border-bottom:medium none !important;
+            @include border-radius($myrad);
+            @include box-shadow(0 5px 0 $grn - 30);
+            color:#FFFFFF !important;
+            font-weight:900;
+            line-height:40px;
+            position:relative;
+            top:-2px !important;
+            margin:10px 20px;
+            border-left:0;}
+        }
+      }
+  }
+      #menu{
+          border-color:rgba(0, 0, 0, 0) #606060;
+          border-style:none solid;
+          border-width:1px;
+          color:#808080;
+          float:right;
+          right:0;
+          font-size:20px;
+          z-index:10;
+          i{margin:0; vertical-align:middle;display:block;
+            padding:20px 35px;}
+          #closee{display:none; opacity:0;}
+          &:hover{color:#B0B0B0;} }
+      #logo{ float:left; position:relative; z-index:10;
+        display:inline-block;
+        margin:10px 0;
+        background-image:url("images/unscene-logo.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height:40px;
+        width:160px;}
+}
 
 /*end nav*/
 
@@ -630,6 +630,10 @@ body.snapjs-right{
 
 #content.widecolumn {padding-top:80px; min-height: 590px;}
 #enter{background:url('images/enter.gif') center top #383838;
+#headerfix {
+  background:none;
+  border-bottom: 1px solid #606060;
+}
   .ngg-slideshow{float:right; position:absolute; right:0; width:70% !important; margin-right:-20%;
     img{height:auto !important; width:100% !important;display:block !important;
       &:first-child{position:relative !important;}
@@ -786,11 +790,11 @@ body.snapjs-right{
   
 }
 
-.page.wrapper{background:url('images/enter.gif') repeat fixed top center / cover  #383838;}
+.page.wrapper{background: #201f1f; color:#999;}
 
-.single.wrapper{background:url('images/enter.gif') repeat fixed top center / cover  #383838;}
+.single.wrapper{background: repeat fixed top center / cover  #383838;}
 
-.image.wrapper{background:url('images/enter.gif') repeat fixed top center / cover  #383838;}
+.image.wrapper{background: repeat fixed top center / cover  #383838;}
 
 .product.wrapper{
 .breadcrumbs{margin-top:0;}

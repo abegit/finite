@@ -186,25 +186,21 @@ body {
 @-ms-keyframes spin {
   from {
     -ms-transform: rotate(0deg); }
-
   to {
     -ms-transform: rotate(360deg); } }
 @-moz-keyframes spin {
   from {
     -moz-transform: rotate(0deg); }
-
   to {
     -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg); }
-
   to {
     -webkit-transform: rotate(360deg); } }
 @keyframes spin {
   from {
     transform: rotate(0deg); }
-
   to {
     transform: rotate(360deg); } }
 /*colors*/
@@ -217,7 +213,7 @@ body {
     line-height: 34px !important; }
 
 .gr {
-  background: #20e9ad;
+  background: #20E9AD;
   color: #000; }
   .gr h1, .gr h2, .gr h3, .gr h4, .gr h5 {
     margin: 0; }
@@ -315,7 +311,7 @@ ol {
 
 blockquote {
   background: none #FFFFFF;
-  border-left: 4px solid #20e9ad;
+  border-left: 4px solid #20E9AD;
   font-family: lato;
   font-size: 30px;
   position: relative;
@@ -394,7 +390,7 @@ input[type="checkbox"], input[type="radio"] {
 
 input[type="checkbox"]:checked + span:before {
   background: #030303;
-  color: #20e9ad;
+  color: #20E9AD;
   content: "✓"; }
 
 input[type="checkbox"] + span:before, input[type="radio"] + span:before, input[type="radio"] + label:before {
@@ -483,7 +479,7 @@ input, select, textarea {
   width: 100%; }
   input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active {
     outline: none;
-    border-color: #20e9ad !important;
+    border-color: #20E9AD !important;
     background: #fff;
     -webkit-box-shadow: inset 0 0 3px #0cd599, 0 0 5px #3effcb;
     -moz-box-shadow: inset 0 0 3px #0cd599, 0 0 5px #3effcb;
@@ -492,10 +488,10 @@ input, select, textarea {
   input::-moz-focus-inner, select::-moz-focus-inner, textarea::-moz-focus-inner {
     border: 0; }
   input[type=submit], select[type=submit], textarea[type=submit] {
-    background: #20e9ad;
+    background: #20E9AD;
     color: #fff; }
     input[type=submit]:hover, select[type=submit]:hover, textarea[type=submit]:hover {
-      border-color: #20e9ad;
+      border-color: #20E9AD;
       background: #2af3b7; }
 
 br {
@@ -583,97 +579,6 @@ body.snapjs-right #snapcontent:after {
         font-weight: 900;
         padding: 40px !important; }
 
-/*header*/
-#headerfix {
-  height: 60px;
-  width: 100%;
-  z-index: 999;
-  position: relative;
-  border-bottom: 1px solid #606060; }
-  #headerfix .container {
-    padding: 0; }
-  #headerfix .row {
-    padding: 0; }
-  #headerfix .menu, #headerfix .menu ul {
-    float: right;
-    margin: 0; }
-    #headerfix .menu li, #headerfix .menu ul li {
-      display: inline-block;
-      list-style: none outside none;
-      float: left; }
-      #headerfix .menu li a, #headerfix .menu ul li a {
-        font-family: lato;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 400 !important;
-        font-size: 13px !important;
-        letter-spacing: 1px;
-        color: #CFCFCF !important;
-        display: inline-block;
-        line-height: 60px;
-        padding: 0 20px;
-        border-color: #606060 #606060 transparent;
-        border-style: solid;
-        border-width: 0 0 0 1px; }
-      #headerfix .menu li a:hover, #headerfix .menu ul li a:hover {
-        -webkit-box-shadow: 0 3px 0 gray;
-        -moz-box-shadow: 0 3px 0 gray;
-        box-shadow: 0 3px 0 gray; }
-      #headerfix .menu li.current-menu-item a, #headerfix .menu ul li.current-menu-item a {
-        -webkit-box-shadow: 0 3px 0 gray;
-        -moz-box-shadow: 0 3px 0 gray;
-        box-shadow: 0 3px 0 gray;
-        font-weight: 600; }
-      #headerfix .menu li#menu-item-334, #headerfix .menu ul li#menu-item-334 {
-        border-left: #606060 solid 1px; }
-        #headerfix .menu li#menu-item-334 a, #headerfix .menu ul li#menu-item-334 a {
-          background: none #20e9ad;
-          border-bottom: medium none !important;
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
-          border-radius: 5px;
-          -webkit-box-shadow: 0 5px 0 #02cb8f;
-          -moz-box-shadow: 0 5px 0 #02cb8f;
-          box-shadow: 0 5px 0 #02cb8f;
-          color: #FFFFFF !important;
-          font-weight: 900;
-          line-height: 40px;
-          position: relative;
-          top: -2px !important;
-          margin: 10px 20px;
-          border-left: 0; }
-  #headerfix #menu {
-    border-color: transparent #606060;
-    border-style: none solid;
-    border-width: 1px;
-    color: #808080;
-    float: right;
-    right: 0;
-    font-size: 20px;
-    z-index: 10; }
-    #headerfix #menu i {
-      margin: 0;
-      vertical-align: middle;
-      display: block;
-      padding: 20px 35px; }
-    #headerfix #menu #closee {
-      display: none;
-      opacity: 0; }
-    #headerfix #menu:hover {
-      color: #B0B0B0; }
-  #headerfix #logo {
-    float: left;
-    position: relative;
-    z-index: 10;
-    display: inline-block;
-    margin: 10px 0;
-    background-image: url("images/unscene-logo.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 40px;
-    width: 160px; }
-
 #wpadminbar {
   display: none; }
 
@@ -755,6 +660,97 @@ body.snapjs-right #snapcontent:after {
   -moz-box-shadow: 2px 3px 0 #606060;
   box-shadow: 2px 3px 0 #606060; }
 
+/*header*/
+#headerfix {
+  background: #343333;
+  height: 60px;
+  width: 100%;
+  z-index: 999;
+  position: relative; }
+  #headerfix .container {
+    padding: 0; }
+  #headerfix .row {
+    padding: 0; }
+  #headerfix .menu, #headerfix .menu ul {
+    float: right;
+    margin: 0; }
+    #headerfix .menu li, #headerfix .menu ul li {
+      display: inline-block;
+      list-style: none outside none;
+      float: left; }
+      #headerfix .menu li a, #headerfix .menu ul li a {
+        font-family: lato;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 400 !important;
+        font-size: 13px !important;
+        letter-spacing: 1px;
+        color: #CFCFCF !important;
+        display: inline-block;
+        line-height: 60px;
+        padding: 0 20px;
+        border-color: #606060 #606060 transparent;
+        border-style: solid;
+        border-width: 0 0 0 1px; }
+      #headerfix .menu li a:hover, #headerfix .menu ul li a:hover {
+        -webkit-box-shadow: 0 3px 0 #808080;
+        -moz-box-shadow: 0 3px 0 #808080;
+        box-shadow: 0 3px 0 #808080; }
+      #headerfix .menu li.current-menu-item a, #headerfix .menu ul li.current-menu-item a {
+        -webkit-box-shadow: 0 3px 0 #808080;
+        -moz-box-shadow: 0 3px 0 #808080;
+        box-shadow: 0 3px 0 #808080;
+        font-weight: 600; }
+      #headerfix .menu li#menu-item-334, #headerfix .menu ul li#menu-item-334 {
+        border-left: #606060 solid 1px; }
+        #headerfix .menu li#menu-item-334 a, #headerfix .menu ul li#menu-item-334 a {
+          background: none #20E9AD;
+          border-bottom: medium none !important;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          -webkit-box-shadow: 0 5px 0 #02cb8f;
+          -moz-box-shadow: 0 5px 0 #02cb8f;
+          box-shadow: 0 5px 0 #02cb8f;
+          color: #FFFFFF !important;
+          font-weight: 900;
+          line-height: 40px;
+          position: relative;
+          top: -2px !important;
+          margin: 10px 20px;
+          border-left: 0; }
+  #headerfix #menu {
+    border-color: transparent #606060;
+    border-style: none solid;
+    border-width: 1px;
+    color: #808080;
+    float: right;
+    right: 0;
+    font-size: 20px;
+    z-index: 10; }
+    #headerfix #menu i {
+      margin: 0;
+      vertical-align: middle;
+      display: block;
+      padding: 20px 35px; }
+    #headerfix #menu #closee {
+      display: none;
+      opacity: 0; }
+    #headerfix #menu:hover {
+      color: #B0B0B0; }
+  #headerfix #logo {
+    float: left;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    margin: 10px 0;
+    background-image: url("images/unscene-logo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 160px; }
+
 /*end nav*/
 #content.widecolumn {
   padding-top: 80px;
@@ -762,6 +758,9 @@ body.snapjs-right #snapcontent:after {
 
 #enter {
   background: url("images/enter.gif") center top #383838; }
+  #enter #headerfix {
+    background: none;
+    border-bottom: 1px solid #606060; }
   #enter .ngg-slideshow {
     float: right;
     position: absolute;
@@ -798,13 +797,13 @@ body.snapjs-right #snapcontent:after {
   #enter p {
     margin: 0; }
     #enter p a {
-      border-color: #20e9ad !important;
+      border-color: #20E9AD !important;
       -webkit-border-radius: 0 !important;
       -moz-border-radius: 0 !important;
       border-radius: 0 !important;
-      color: #20e9ad !important; }
+      color: #20E9AD !important; }
       #enter p a:first-child {
-        background: #20e9ad !important;
+        background: #20E9AD !important;
         color: #000 !important; }
       #enter p a:hover {
         background: #3effcb !important;
@@ -828,7 +827,7 @@ body.snapjs-right #snapcontent:after {
       color: #fff !important;
       border-color: transparent !important; }
       #enter .textwidget a:hover {
-        color: #20e9ad !important;
+        color: #20E9AD !important;
         background: none !important; }
   #enter h1 {
     color: #CFCFCF;
@@ -961,13 +960,14 @@ body.snapjs-right #snapcontent:after {
       position: absolute; }
 
 .page.wrapper {
-  background: url("images/enter.gif") repeat fixed top center/cover #383838; }
+  background: #201f1f;
+  color: #999; }
 
 .single.wrapper {
-  background: url("images/enter.gif") repeat fixed top center/cover #383838; }
+  background: repeat fixed top center / cover  #383838; }
 
 .image.wrapper {
-  background: url("images/enter.gif") repeat fixed top center/cover #383838; }
+  background: repeat fixed top center / cover  #383838; }
 
 .product.wrapper .breadcrumbs {
   margin-top: 0; }
@@ -1049,7 +1049,7 @@ body.snapjs-right #snapcontent:after {
     transition: all 300ms ease-in-out;
     -moz-osx-font-smoothing: grayscale;
     background: none repeat scroll 0 0 #000000;
-    border-top: 3px solid #20e9ad;
+    border-top: 3px solid #20E9AD;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -1147,7 +1147,7 @@ body.snapjs-right #snapcontent:after {
   .ngg-gallery-thumbnail-box:hover .ngg-gallery-thumbnail {
     opacity: .7; }
   .ngg-gallery-thumbnail-box:hover {
-    background: #20e9ad; }
+    background: #20E9AD; }
 
 div.ps-toolbar, div.ps-caption {
   background: none #FFFFFF !important;
@@ -1208,7 +1208,7 @@ div.ps-toolbar, div.ps-caption {
       text-decoration: none; }
 
 h1 b {
-  color: #20e9ad;
+  color: #20E9AD;
   font-weight: 500;
   text-shadow: 0 4px 0 rgba(90, 230, 255, 0.3), 0 0 20px rgba(90, 230, 255, 0.6); }
 
@@ -1292,7 +1292,7 @@ h1 b {
   .section-header.gr:before {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 10px solid #20e9ad;
+    border-top: 10px solid #20E9AD;
     bottom: -10px;
     content: "";
     height: 0;
@@ -1494,7 +1494,7 @@ table {
       color: #838383;
       margin-right: 10px; }
       .footer #footer a:first-child {
-        color: #20e9ad; }
+        color: #20E9AD; }
   .footer ul * {
     line-height: 31px;
     color: #646464;
@@ -1502,7 +1502,7 @@ table {
   .footer ul li a {
     color: #838383; }
     .footer ul li a:hover {
-      color: #20e9ad; }
+      color: #20E9AD; }
 
 .btn, button[type="submit"], #enter p a, #enter .textwidget a, .section-header.store li ul a, .woocommerce .woocommerce-message .button.wc-forward, .woocommerce .woocommerce-info .button.wc-forward, .woocommerce .woocommerce-error .button.wc-forward, .woocommerce .button, .woocommerce .button[type="submit"], .button, button {
   font-family: lato;
@@ -1628,7 +1628,7 @@ h1.product_title {
   .summary div[itemprop="description"] li:before {
     content: "✓";
     color: #fff;
-    background: #20e9ad;
+    background: #20E9AD;
     -webkit-border-radius: 200px;
     -moz-border-radius: 200px;
     border-radius: 200px;
@@ -1878,7 +1878,7 @@ h1.product_title {
       width: 100% !important; }
 
   section#resume {
-    background: url("images/who-is-unscene-graphic-designer-los-angeles.jpg") no-repeat fixed center center #eeeeee !important; }
+    background: url("images/who-is-unscene-graphic-designer-los-angeles.jpg") no-repeat fixed center center #EEEEEE !important; }
     section#resume .icon-shoppingcartalt {
       color: #FFA941; }
     section#resume .icon-webpage {

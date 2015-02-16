@@ -6,7 +6,7 @@
 
 <!-- enter content -->
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-<div id="blog <?php $post->ID; ?>" class="wrapper lt">
+<div id="page" class="wrapper lt">
 
      <div class="row">    
 
