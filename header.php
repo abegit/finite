@@ -21,7 +21,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.scrollTo.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.nav.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
-    <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v2">
+    <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v4.3">
     <style>
     #logo {background-image:url('<?php header_image(); ?>') !important;}
     </style>
@@ -227,13 +227,23 @@ function createDropDown(){
   elseif ( is_single()) { echo "id='blog" . $blog_id . "'" ?> " <?php body_class( 'home' ); }
   else { echo 'id="blog' . $blog_id . "'" ?> " <?php body_class( 'home woocommerce' ); ?> <?php } ?> >
 
- <!-- header wrapper-->
+
+
+
+
+
+
+
+
+<!-- page container -->
+  <div class="page-container snap-content" id="snapcontent">
+    <!-- header wrapper-->
 <?php if ( is_home() ) { ?> 
-        <section id="header" class="wrapper page dk" data-type="background" data-speed="2">
+        <section id="header" class="wrapper page dk">
 <?php } elseif (is_page_template('page-enter.php')) { ?> 
-        <section id="header" class="wrapper home" data-type="background" data-speed="2">
+        <section id="header" class="wrapper home">
 <?php } elseif (is_category()) { ?>
-        <section id="header" class="wrapper page category dk" data-type="background" data-speed="2">
+        <section id="header" class="wrapper page category dk">
 <?php } elseif (is_search()) { ?> 
             <section id="header" class="wrapper page dk" data-type="background" data-speed="2">
 <?php } elseif (is_category()) { ?> 
@@ -249,88 +259,22 @@ function createDropDown(){
         <?php } ?>
  <?php } elseif (is_archive('product') ) { ?>
           <section id="header" class="wrapper page dk" data-type="background" data-speed="2">        
-    <?php } else { ?> <section id="header" class="wrapper page dk" data-type="background" data-speed="2">
+    <?php } else { ?> 
+      <section id="header" class="wrapper page dk">
 <?php } ?>
-
-
-
-
 
 <!--header-->
 <div id="headerfix">
 <div class="row">
   <div class="columns">
-      <a href="#" id="logo"></a>
-      <a href="#" id="menu" class="ani"><i class="icon-menu" id="open-right"></i><i class="icon-circledelete" id="close-r"></i></a>
+      <a href="./" id="logo"></a>
+      <a href="#" id="menu" class="ani"><i class="icon-menu" id="open-right"></i><i class="icon-circledelete" id="closee"></i></a>
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'no-mobi lastbutnot anis' ) ); ?>
   </div><!--columns-->
 </div><!--row-->
 </div><!--header-->
+
+<?php get_template_part('inc/titlebar') ?>
+<?php if (is_home()) { ?> <div class="clear mobi"></div><a href="#feed" class="wrapper mobi smoothie text-center"><i class="icon-circledown"></i></a><?php } ?>
 </section><!--end headerfix-->
-
-
-
-
-
-  <div class="snap-drawers">
-   <div class="snap-drawer snap-drawer-left">
-      <div class="close-l" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
-      <ul><?php dynamic_sidebar( 'Leftbar' ); ?></ul>
-   </div>
-   <div class="snap-drawer snap-drawer-right">
-            <div class="close-r" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
-            <div id="selfie"><a href="/"><img src="http://placehold.it/120"></a></div>
-            <ul><?php dynamic_sidebar( 'Rightbar' ); ?></ul>
-   </div>
-</div>
-  
-
-
-   
-
-
-<!-- page container -->
-  <div class="page-container snap-content" id="snapcontent">
-  <?php 
-    if ( is_archive('product') && is_front_page()) { 
-        $paged = $wp_query->get( 'paged' );
-        if ( ! $paged || $paged < 2 ) {  
-            slippy_slider_init('Homepage','widget', '1024px','300px'); ?>
-  <?php } ?>
-        <div class="wrapper dk page"><div class="section-header">
-            <div class="row">
-            <div class="large-12 large-centered columns">
-              <?php get_template_part('/inc/shopcrumbs');?>
-              </div>
-              </div>
-            </div></div>
-<?php } elseif (is_singular('product')) { ?>
-            <section class="wrapper product">
-            <div class="section-header">
-            <div class="row">
-            <div class="large-12 large-centered columns">
-            <?php get_template_part('/inc/productcrumbs'); ?>
-            </div></div></div>
-            </section>
-      <?php  // end if first page
-          } else { ?>
-        <div class="wrapper dk page"><div class="section-header">
-            <div class="row">
-            <div class="large-12 large-centered columns">
-              <?php get_template_part('/inc/title');?>
-              <?php get_template_part('/inc/shopcrumbs');?>
-              </div>
-              </div>
-            </div></div>
-       <?php } ?>
-
-           <?php if (!is_singular('product') && !is_page_template('page-enter.php') && !is_archive() && !is_home()) { ?>
-                <?php if (has_post_thumbnail( $post->ID ) ) { ?>
-                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-                <img src="<?php echo $image[0]; ?>" class="scrollme mobi"><?php } ?>
-           <?php } ?>
-           
-           <?php if (is_home()) { ?> <div class="clear mobi"></div><a href="#feed" class="wrapper mobi smoothie text-center"><i class="icon-circledown"></i></a><?php } ?>
-
-
             <!-- navigation bar -->

@@ -1,6 +1,3 @@
-
-
-
 <!-- initial title -->
 <h1 class="subheader<?php if(is_home()){ ?> text-center home<?php } ?>"<?php if(is_search()){ ?> style="margin-bottom:0;"<?php } ?>>  
 <?php if( is_home() ) {  echo get_bloginfo( 'description' ); }

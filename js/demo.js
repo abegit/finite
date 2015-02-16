@@ -15,15 +15,16 @@ addEvent(document.getElementById('menu'), 'click', function(){
         this.setAttribute('opend', 1);
     }
 });
-addEvent(document.getElementById('logo'), 'click', function(){
-    if (this.hasAttribute('opend', 1)) {
-        this.removeAttribute('opend', 1);
-        snapper.close('left');
-    } else {
+addEvent(document.getElementById('open-left'), 'click', function(){
         snapper.open('left');
-        this.setAttribute('opend', 1);
-    }
 });
+addEvent(document.getElementById('close-l'), 'click', function(){
+        snapper.close('left');
+});
+addEvent(document.getElementById('close-r'), 'click', function(){
+        snapper.close('right');
+});
+
 
 
 
