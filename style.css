@@ -76,27 +76,25 @@ Tags:fixed-width, flexible-width, custom-background, custom-colors, custom-heade
 .snap-drawers {
   background: #BEBEBE; }
 
-.snap-drawer {
-  padding-top: 60px; }
-  .snap-drawer #selfie {
-    text-align: center; }
-    .snap-drawer #selfie a {
-      border-bottom: 1px solid #ffffff;
-      display: inline-block;
-      min-width: 70% !important; }
-    .snap-drawer #selfie img {
-      -webkit-border-radius: 1000px;
-      -moz-border-radius: 1000px;
-      border-radius: 1000px;
-      margin: 20px auto; }
-      .snap-drawer #selfie img:hover {
-        -webkit-box-shadow: 0 0 0 4px #404040;
-        -moz-box-shadow: 0 0 0 4px #404040;
-        box-shadow: 0 0 0 4px #404040; }
-  .snap-drawer > *:last-child {
-    margin-bottom: 60px; }
-  .snap-drawer .g {
-    line-height: 0; }
+.snap-drawer #selfie {
+  text-align: center; }
+  .snap-drawer #selfie a {
+    border-bottom: 1px solid #ffffff;
+    display: inline-block;
+    min-width: 70% !important; }
+  .snap-drawer #selfie img {
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    border-radius: 1000px;
+    margin: 20px auto; }
+    .snap-drawer #selfie img:hover {
+      -webkit-box-shadow: 0 0 0 4px #404040;
+      -moz-box-shadow: 0 0 0 4px #404040;
+      box-shadow: 0 0 0 4px #404040; }
+.snap-drawer > *:last-child {
+  margin-bottom: 60px; }
+.snap-drawer .g {
+  line-height: 0; }
 
 .snap-drawer h3 {
   font-size: 18px;
@@ -539,10 +537,8 @@ br {
 body.snapjs-right #snapcontent, body.snapjs-left #snapcontent {
   cursor: pointer; }
 body.snapjs-right #snapcontent > *, body.snapjs-left #snapcontent > * {
-  opacity: 0.05 !important; }
-body.snapjs-right #snapcontent > #header, body.snapjs-left #snapcontent > #header {
-  opacity: 1 !important; }
-body.snapjs-right #headerfix #menu #closee, body.snapjs-left #headerfix #menu #closee {
+  opacity: 0.5 !important; }
+body.snapjs-right #headerfix #menu #close-r, body.snapjs-left #headerfix #menu #close-r {
   display: block;
   opacity: 1; }
 body.snapjs-right #headerfix #open-right, body.snapjs-left #headerfix #open-right {
@@ -1506,6 +1502,9 @@ table {
     .footer ul li a:hover {
       color: #20E9AD; }
 
+.create-account {
+  clear: both; }
+
 .btn, button[type="submit"], #enter p a, #enter .textwidget a, .section-header.store li ul a, .woocommerce .woocommerce-message .button.wc-forward, .woocommerce .woocommerce-info .button.wc-forward, .woocommerce .woocommerce-error .button.wc-forward, .woocommerce .button, .woocommerce .button[type="submit"], .button, button {
   font-family: lato;
   text-decoration: none;
@@ -1814,6 +1813,9 @@ p.price {
   top: 1px !important; }
 
 /*end product single*/
+.fpd-sidebar {
+  margin: 0 !important; }
+
 @media only screen and (min-width: 940px) {
   .item.content {
     padding: 20px;

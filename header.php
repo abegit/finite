@@ -23,8 +23,7 @@
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v2">
     <style>
-    #header.wrapper {background-image:url('<?php header_image(); ?>') !important;}
-    #logo {background-image:url('<?php bloginfo('template_directory'); ?>/images/logo.png') !important;}
+    #logo {background-image:url('<?php header_image(); ?>') !important;}
     </style>
 <!--Google Analytics-->
 <meta name="google-site-verification" content="3C5HGnbFsnL5Asr2pr3GVBmIrIjtawd8cXJ6aMwVNlg" />
@@ -226,7 +225,7 @@ function createDropDown(){
 <body
 <?php global $blog_id;  if ( is_home() ) {echo "id='blog" . $blog_id . "'" ?> <?php body_class( 'home' ); }
   elseif ( is_single()) { echo "id='blog" . $blog_id . "'" ?> " <?php body_class( 'home' ); }
-  else { echo 'id="blog' . $blog_id . "'" ?> " <?php body_class( 'home' ); ?> <?php } ?> >
+  else { echo 'id="blog' . $blog_id . "'" ?> " <?php body_class( 'home woocommerce' ); ?> <?php } ?> >
 
   <div class="snap-drawers">
    <div class="snap-drawer snap-drawer-left">
