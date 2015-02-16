@@ -1260,17 +1260,14 @@ input, select, textarea{
     line-height:normal;
     text-decoration:none;
     width:100%;
-    #footer {border-bottom:1px solid #606060;
-      a{color:#838383;
-        margin-right:10px;
-      &:first-child {color:$grn;}}
-    }
-    ul *{
-      line-height:31px;
-      color:#646464;
-      list-style-type:none;}
-
-    ul li a {color: #838383;
+    #footer {border-bottom:1px solid #606060;}
+    ul a {color: #646464;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 31px;
+    list-style-type: none;}
+    ul lh {border-bottom: solid 2px $grn; display:block;}
+    ul li a {
       &:hover{color:$grn;}
     }
 }
