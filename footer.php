@@ -12,6 +12,11 @@
       <?php } ?>
       
 <section class="wrapper footer">
+  <div class="section-header gr">
+    <div class="row"> <div class="large-12 columns">
+        <h4 class="subheader alignleft">Want to get ahead of the game? Get in my newsletter. </h4 class="subheader">
+        <a href="http://unscene.us/register" class="btn alignright"><i class="icon-leaf"></i>Become Your Own Artist!</a>
+    </div></div></div>
   <div id="footer">
 <div class="row links">
       <ul class="columns large-9 small-12"><?php dynamic_sidebar( 'Footer' ); ?></ul>
@@ -21,11 +26,12 @@
 
         <?php if (current_user_can('shop_manager')) {
         // redirect them to the default place
-       echo '<a class="btn-tip" title="Access Admin?" data-text="Continue onto the backend area to manage orders." href="' . home_url() . '/wp-admin">Backend</a>';
+       echo '<a href="' . home_url() . '/wp-admin">Backend</a>';
       } ?>
-
+      
         <?php if (is_user_logged_in()){
-            echo '<a href="'.wp_logout_url( get_permalink() ).'&redirect_to=http://finite.us" title="Logout">Logout</a>';
+              global $current_user;
+            echo '<a class="btn-tip" title="Logout @'.$current_user->user_login.'?" data-text="Continue to Log out of your account." href="'.wp_logout_url( get_permalink() ).'" title="Logout">Logout</a>';
             } else {
             echo '<a class="btn-tip" title="Why Don\'t You Have an Account?" data-text="You need to have an account to make shirts with us." href="' . home_url() . '/register">Sign Up</a>';
         } ?> </li></ul>
@@ -33,11 +39,7 @@
   </div>
 </section>
 <section class="wrapper footer" id="footer">
-	<!-- <div class="section-header gr">
-    <div class="row"> <div class="large-12 columns">
-        <h4 class="subheader alignleft">Going to be releasing new tees soon, follow my newsletter to cut in line early! </h4 class="subheader">
-        <a href="http://unscene.us/shop" class="btn alignright"><i class="icon-leaf"></i>Support the Artist!</a>
-    </div></div></div> -->
+	
     
 
     <div class="row links">

@@ -68,12 +68,7 @@ get_header( 'question' );
 </div>
 
 
-                <div class="large-4 columns">
-        <?php if ( is_active_sidebar( 'newsletter' ) ) : ?>
-        <div style="background: url('<?php bloginfo('template_directory'); ?>/images/dont-be-square.jpg') no-repeat scroll 0px 0px / contain  rgb(249, 249, 249); padding: 50% 8% 8%;">
-        <div style="background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 20px;"><?php dynamic_sidebar( 'newsletter' ); ?></div></div>
-        <?php endif; ?>
-        
+                <div class="large-4 columns">        
         <ul><?php dynamic_sidebar( 'blog' ); ?></ul>
 
         </div>

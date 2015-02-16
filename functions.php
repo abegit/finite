@@ -497,25 +497,7 @@ register_sidebar(array(
     'after_title'   => '</h3>',
     'id'            => 'sidebar-rightbar'
 ));
-register_sidebar(array(
-    'name'          => 'Newsletter',
-    'class'         => 'newsletter',
-    'before_widget' => '',
-    'after_widget'  => '',
-    'before_title'  => '',
-    'after_title'   => '',
-    'id'            => 'sidebar-newsletter'
-));
 
-register_sidebar(array(
-    'name'          =>  'Home Footer',
-    'class'         => 'home-footer',
-    'before_widget' => '',
-    'after_widget'  => '',
-    'before_title'  => '<h5>',
-    'after_title'   => '</h5>',
-    'id'            => 'sidebar-homefooter'
-));
 register_sidebar(array(
     'name'          =>  'Store',
     'class'         => '',
@@ -525,20 +507,10 @@ register_sidebar(array(
     'after_title'   => '</h5>',
     'id'            => 'sidebar-store'
 ));
-
-register_sidebar(array(
-    'name'          =>  'StoreSide',
-    'class'         => '',
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h5>',
-    'after_title'   => '</h5>',
-    'id'            => 'sidebar-storeside'
-));
 register_sidebar(array(
     'name'          =>  'Footer',
     'class'         => '',
-    'before_widget' => '<li id="%1$s" class="widget %2$s columns large-3 small-6">',
+    'before_widget' => '<li id="%1$s" class="widget %2$s columns large-6 small-12">',
     'after_widget'  => '</li>',
     'before_title'  => '<h5>',
     'after_title'   => '</h5>',

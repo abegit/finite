@@ -1,17 +1,5 @@
 <?php get_header(); ?>
 
-<script>
-	// search popup
-var jaMn = jQuery.noConflict();
-	// search popup
-jaMn(document).ready(function() {
-		// When clicking on the button close or the mask layer the popup closed
-		jaMn(window).load(function() {
-			jaMn('#list .product').fadeOut('1500');
-		});
-});
-
-</script>
 
 <!-- body content -->
 
@@ -49,7 +37,7 @@ jaMn(document).ready(function() {
 
 
 <div class="large-2 columns sidebar pull-10">
-		      	<ul class="store"><?php dynamic_sidebar( 'storeside' ); ?></ul>
+		      	<ul class="store"><?php dynamic_sidebar( 'blog' ); ?></ul>
         	</div>
 
 

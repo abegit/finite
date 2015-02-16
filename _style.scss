@@ -1272,6 +1272,15 @@ input, select, textarea{
       &:hover{color:$grn;}
     }
     .menu {margin:0;}
+    .jr-insta-thumb {
+        &> ul {padding:0;}
+         &> ul > li {float: right; margin: 0 !important; padding: 3px !important; width: 16.7%; }
+         &> ul > li img {margin: 25px; padding: 0; width: 100% !important; display: block !important; }
+         &> ul > li:nth-child(6n+2) {width: 33%; }
+       .thumbnails {padding: 0; }
+       li:nth-child(4n+8) {float: left !important; }
+    }
+
 }
 
 .create-account {clear: both;}
