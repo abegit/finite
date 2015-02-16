@@ -54,6 +54,17 @@
 </section>
 </div>
     <!--end page-container-->
+<div class="snap-drawers">
+   <div class="snap-drawer snap-drawer-left">
+      <div id="close-l" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
+      <ul><?php dynamic_sidebar( 'Leftbar' ); ?></ul>
+   </div>
+   <div class="snap-drawer snap-drawer-right">
+            <div id="close-r" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
+            <div id="selfie"><a href="/"><img src="<?php bloginfo('template_directory'); ?>/images/abe-avatar.jpg"></a></div>
+            <ul><?php dynamic_sidebar( 'Rightbar' ); ?></ul>
+   </div>
+</div>
 
 
     <script>

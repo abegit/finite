@@ -93,10 +93,8 @@ $jfs(document).ready(function(){
   $jfs('body').scrollTop(1);
 });  
 </script>
-
-<script>
+ <script type="text/javascript">
 var $onlyDesktop = jQuery.noConflict();
-
 $onlyDesktop(window).load(function() {
         var w = $(window).width();
 
@@ -117,25 +115,81 @@ $onlyDesktop(window).load(function() {
                 });
           });
         }
-        else { }
-    });
+        else {
 
-</script>
+        }
 
-<script>
-var $jj = jQuery.noConflict();
-$jj(document).ready(function(){
-    $jj('.smoothie[href^="#"]').on('click',function (e) {
+    $onlyDesktop('.smoothie[href^="#"]').on('click',function (e) {
       e.preventDefault();
       var target = this.hash,
-      $jjtarget = $jj(target);
-      $jj('#snapcontent').stop().animate({
-          'scrollTop': $jjtarget.offset().top - 0
+      $onlyDesktoptarget = $onlyDesktop(target);
+      $onlyDesktop('#snapcontent').stop().animate({
+          'scrollTop': $onlyDesktoptarget.offset().top - 0
       }, 750, 'swing', function () {
       });
   });
   });
   </script>
+    });
+        
+    });
+
+</script>
+
+    <script type="text/javascript">
+    var $dd = jQuery.noConflict();
+
+        $dd(document).ready(function() {
+            createDropDown();
+            
+
+            $dd(".selectwrap .dropdown dt a").click(function() {
+                //inside select wrapper only toggle ul inside wrapper
+                $dd(this).closest('.selectwrap').find("dd ul").toggle();
+            });
+
+            $dd(document).bind('click', function(e) {
+                var $ddclicked = $dd(e.target);
+                //if you click and the parent does not have dropdown then hide dropdowns
+                if (! $ddclicked.parents().hasClass("dropdown"))
+                    $dd(".dropdown dd ul").hide();
+            });
+                        
+            $dd(".dropdown dd ul li a").click(function() {
+                var text = $dd(this).html();
+                var selfie = $dd(this).closest(".dropdown").attr('class').split(' ')[1];
+
+                $dd('.dropdown.' + selfie + ' dt a').html(text);
+                $dd('.dropdown.' + selfie + ' dd ul').hide();
+                
+                var source = $dd('select#' + selfie);
+                source.val($dd(this).find("span.value").html())
+            });
+
+
+        });
+        
+function createDropDown(){
+    $dd("select").each(function() {
+        var source = $dd(this);
+        var selected = source.find("option[selected]");
+        var options = $dd("option", source);
+        var self = $dd(this).attr('id');
+        $dd(this).wrap( '<div class="selectwrap ' + self + '"></div>')
+        $dd(this).after('<dl class="dropdown ' + self + '"></dl>')
+
+        $dd('.dropdown.' + self).append('<dt><a href="#">' + selected.text() + 
+            '<i class="icon-chevron-down right"></i><span class="value">' + selected.val() + 
+            '</span></a></dt>')
+        $dd('.dropdown.' + self).append('<dd><ul></ul></dd>')
+
+        options.each(function(){
+            $dd('.dropdown.' + self + ' dd ul').append('<li><a href="#">' + 
+                $dd(this).text() + '<span class="value">' + 
+                $dd(this).val() + '</span></a></li>');
+        });
+    });
+
 
 
 </head>

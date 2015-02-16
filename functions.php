@@ -416,6 +416,8 @@ function mynewtheme_admin() {
 <?php } 
 // end function mynewtheme_admin()
 
+wp_deregister_script( 'jquery' );
+add_filter('show_admin_bar', '__return_false');
 
 ////////// end
 
