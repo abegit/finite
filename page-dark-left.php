@@ -24,7 +24,7 @@ get_header(); ?>
 
 
                 <div class="large-4 columns">
-	            	<?php echo do_shortcode('[easy_sign_up title="Need This Installed?" fnln="0" phone="0" esu_label="On iTunes Download Page" esu_class="itunes" esu_r_url="unscene.us/contact"]') ?>
+	            	<?php echo do_shortcode('[easy_sign_up title="Want Professional Help?" fnln="0" phone="0" esu_label="On iTunes Download Page" esu_class="itunes" esu_r_url="unscene.us/contact"]') ?>
                 	<h3>Changelog</h3>
 					<?php $specialPosts = new WP_Query();
 					$specialPosts->query('tag=itunes-podcast-creator&showposts=4'); ?>

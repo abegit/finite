@@ -192,9 +192,7 @@ function my_template_redirect_2322()
     }
 }
 
-?>
-
-<?php
+ 
 /** Tell WordPress to run yourtheme_setup() when the 'after_setup_theme' hook is run. */
 add_action( 'after_setup_theme', 'yourtheme_setup' );
 if ( ! function_exists('yourtheme_setup') ):
@@ -262,4 +260,4 @@ function yourtheme_admin_header_style() {
         width: <?php echo HEADER_IMAGE_WIDTH; ?>px; }
     #headimg h1, #headimg #desc {display: none; }
     </style>
-<?php } endif; ?>
+<?php } endif;

@@ -1,5 +1,4 @@
-
-
+<?php get_header(); ?>
 
 
 
@@ -9,7 +8,7 @@
         <div class="row">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
             <div class="large-6 columns post">
-                <a href="<?php the_permalink() ?>" data-transition="slide" title="<?php the_title_attribute(); ?>" class="title"> <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+                <a href="<?php the_permalink() ?>" data-transition="slide" title="<?php the_title_attribute(); ?>" class="title"> <?php if ( has_post_thumbnail() ) { the_post_thumbnail('blog'); } ?>
                 <div class="info">
                 <p><?php the_time('n M Y') ?><i class="icon-clockalt-timealt"></i></p>
                 </div>

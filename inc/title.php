@@ -4,6 +4,7 @@
   elseif (is_category() ) { echo single_cat_title(); }
   elseif (is_singular('product') || is_page_template('page-enter.php')) {}
   elseif (is_single() || is_page() || is_cart()) { the_title(); }
+  elseif (is_404()) { echo "Sorry not found"; }
   elseif (is_search()) { ?>
     <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
     <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />

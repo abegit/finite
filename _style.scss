@@ -63,12 +63,6 @@ body{
 
 
 
-/*colors*/
-$blu:#427aac;
-$grn:#20E9AD;
-$upc:#b678aa;
-$myrad:5px;
-
 
 
 .bl{
@@ -82,9 +76,10 @@ $myrad:5px;
   h1, h2, h3, h4, h5{margin:0;}
   *{line-height:34px !important;}
 }
-.lt{background:#EEEEEE;}
+.lt{background: url('images/brushed_alu.png')#EEEEEE;}
 
 .dk{background:#343333;
+  @include box-shadow(0 0 20px #202020 inset);
   h1, h2, h3, h4, h5{color:#fff;}
   em {color: #999;}
   p{color:#929292;}
@@ -220,7 +215,7 @@ blockquote{background:none #FFFFFF;
 
 /*content specific*/
 .content{background:#fff;
-  padding:20px;display:inline-block;
+  padding:20px;display:inline-block; min-width: 100%;
 ul{
   position:relative;
   li:before{
@@ -752,10 +747,9 @@ body.snapjs-right{
     position:absolute;
     right:-40px; }
   .section-header{
-      h1.subheader{margin:0;}
+      h1.subheader{margin:0 0 18px;}
     .row{padding:20px 0;}
   }
-  .breadcrumbs{margin-top:18px;}
 }
 
 .home.wrapper{
@@ -971,7 +965,7 @@ div.ps-toolbar, div.ps-caption{
 
 
 
-.info{
+.title_info{
   position:absolute;right: 0; top:0;
   form, form * { line-height: 0 !important;
     margin: 0 !important;
@@ -981,6 +975,11 @@ div.ps-toolbar, div.ps-caption{
     a {float:left; margin:0 10px 0 0;}
   p {margin-top:50px;}
 }
+.info{right: 0; top:0;
+  background: #bdbdbd; padding:10px;
+  p {margin:0;}
+}
+
 .title {
     font-size: 16px;
     line-height: 16px;
@@ -1176,7 +1175,6 @@ h1 b{
 }
 div.breadcrumbs{
     &:before{content:"You\'re Here :"; float:left; font-size:0.6875em; margin-right:10px; text-transform:uppercase;}
-    .current-item, a:last-child{display:none;}
 }
 
 

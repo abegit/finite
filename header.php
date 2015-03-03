@@ -254,7 +254,7 @@ function createDropDown(){
 <div id="headerfix">
 <div class="row">
   <div class="columns">
-      <a href="./" id="logo"></a>
+      <a href="/" id="logo"></a>
       <a href="#" id="menu" class="ani"><i class="icon-menu" id="open-right"></i><i class="icon-circledelete" id="closee"></i></a>
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'no-mobi lastbutnot anis' ) ); ?>
   </div><!--columns-->
