@@ -49,7 +49,7 @@ var snapper = new Snap({
 document.addEventListener("touchstart", function(){}, true);
 
 </script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/demo.js?ver=2"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/demo.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

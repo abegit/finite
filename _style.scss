@@ -558,23 +558,25 @@ body.snapjs-right{
     position:relative;
   .container{padding:0;}
   .row{padding:0;} 
-  .menu, .menu ul{
+  .menu {
     float:right;
     margin:0;
       li{display:inline-block;
           list-style:none outside none;
           float:left;
-        a{@include latomd;
+        a {@include latomd;
               color:#CFCFCF !important;
               display:inline-block;
               line-height:60px;
+              float:right;
               padding:0 20px;
               border-color:#606060 #606060 rgba(0, 0, 0, 0);
               border-style:solid;
               border-width:0 0 0 1px;}
         a:hover{@include box-shadow(0 3px 0 #808080);}
         &.current-menu-item a{@include box-shadow(0 3px 0 #808080);font-weight:600;}
-        &#menu-item-334{border-left:#606060 solid 1px;
+        &.primary {border-left:#606060 solid 1px;
+          line-height: 80px !important;
           a{background:none $grn;
             border-bottom:medium none !important;
             @include border-radius($myrad);
@@ -606,7 +608,7 @@ body.snapjs-right{
         display:inline-block;
         margin:10px 0;
         background-image:url("images/unscene-logo.png");
-        background-position: center center;
+        background-position: center left;
         background-repeat: no-repeat;
         background-size: contain;
         height:40px;
@@ -758,12 +760,12 @@ body.snapjs-right{
     border-bottom:1px solid #5f5f5f;
     background:transparent;
     height:80px; 
-    .menu, .menu ul{
+    .menu {
       li {
-        &#menu-item-334{border-left:#606060 solid 1px;
+        a {line-height: 80px;}
+        &.primary {border-left:#606060 solid 1px;
           a{line-height:40px;
             margin:20px;} }
-        a{line-height: 80px;}
       }
     }
     #menu i{padding:30px 35px;}
@@ -927,21 +929,21 @@ input#s{padding-right:80px;}
 /*photoswipe*/
   .ngg-gallery-thumbnail-box{width:25%;
   *{@extend .anis;}
-  background:$blu;
  
   .ngg-gallery-thumbnail{
+    text-align: center;
   margin:0 !important;
-  opacity:.2;
+  opacity:.8;
   width:100%;
   img{border:medium none !important;
      max-width:100%;
      height:auto;
+     background:transparent !important;
     margin:0 !important;
     padding:0 !important;}
   }
 
-  &:hover .ngg-gallery-thumbnail{opacity:.7;}
-  &:hover{  background:$grn;}
+  &:hover .ngg-gallery-thumbnail{opacity:1;}
 
    }
 
@@ -1189,6 +1191,7 @@ div.breadcrumbs{
   max-width:1100px;}
 
 #contact{
+  background:url('images/labg_green.jpg') repeat fixed center center / cover  rgba(0, 0, 0, 0);
   br{
     margin:4px;
     }
@@ -1241,8 +1244,9 @@ table{
 #contact{
 input, select, textarea{
   background:rgba(255, 255, 255, 0.14);
-  width:100%;
-&:focus{background:rgba(255, 255, 255, 0.14);}}
+&:focus{background:rgba(255, 255, 255, 0.14);}
+}
+select.large-9 {position: unset;}
 
 }
 

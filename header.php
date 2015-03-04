@@ -144,7 +144,7 @@ $jj(document).ready(function(){
       $jjtarget = $jj(target);
       $jj('#snapcontent').stop().animate({
           'scrollTop': $jjtarget.offset().top - 0
-      }, 750, 'swing', function () {
+      }, 1000, 'swing', function () {
       });
   });
   });

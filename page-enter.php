@@ -32,6 +32,10 @@ get_header(); ?>
         <!--end enter content-->
 </section>
 <div id="services" class="wrapper dk ani woocommerce">
+    <div class="section-header bl">
+    <div class="row"> <div class="large-12 columns">
+        <h2>Offering World-Class Customer Service</h2>
+    </div></div></div>
 <div class="row anis">   
      <div class="large-12 columns">
 
@@ -82,16 +86,47 @@ get_header(); ?>
     </div></div>
         <div class="clear"></div>
 </div>
-</div>
 <div id="dark_centered" class="wrapper dk ani woocommerce">
    <?php echo do_shortcode('[nggallery id=1]'); ?>
        
 
         <div class="clear"></div>
-</div>        </div> <!-- end dark_centered -->
+</div><!-- end dark_centered -->
+<div id="team" class="wrapper dk ani woocommerce">
+    <div class="section-header bl">
+    <div class="row"> <div class="large-12 columns">
+        <h2>Meet the Team</h2>
+    </div></div></div>
+<div class="row anis">   
+     <div class="large-10 columns large-centered text-center">
+         
+            <div class="large-4 small-6 columns post">
+                <div class="item ani">
+                <a href="../for-business/contact/"><img src="http://placehold.it/200" style="border-radius:200px;"></a>
+                <div style="overflow:hidden;display:block;"><h3>Terry</h3>
+                <p>CEO / Marketing Coordinator</p>
+                </div></div>
+            </div>
+            <div class="large-4 small-6 columns post">
+                <div class="item ani">
+                <a href="../for-business/contact/"><img src="http://placehold.it/200" style="border-radius:200px;"></a>
+                <div style="overflow:hidden;display:block;"><h3>Chris</h3>
+                <p>Head of Sales Department</p>
+                </div></div>
+            </div>
+            <div class="large-4 small-6 columns post">
+                <div class="item ani">
+                <a href="../for-business/contact/"><img src="http://placehold.it/200" style="border-radius:200px;"></a>
+                <div style="overflow:hidden;display:block;"><h3>Abe</h3>
+                <p>Head of Technology</p>
+                </div></div>
+            </div>
 
+     </div></div>
+        <div class="clear"></div>
+</div>
 
             
             <?php endif; ?>      
 
-<?php get_footer(); ?>
+<?php get_footer('contact'); ?>
