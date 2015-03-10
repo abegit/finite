@@ -1322,9 +1322,14 @@ h1 b {
   width: 100%;
   color: #000;
   z-index: 99;
-  position: relative; }
+  position: relative;
+  padding-top: 100px; }
   .section-header .row {
     position: relative; }
+  .section-header h1, .section-header h2, .section-header h3, .section-header h4 {
+    font-weight: 100 !important;
+    text-align: center;
+    text-transform: uppercase; }
   .section-header.gr * {
     color: #000; }
   .section-header.gr:before {
@@ -1672,6 +1677,9 @@ div.wpcf7-mail-sent-ok {
 /*product single*/
 .images {
   width: 100% !important; }
+  .images img {
+    margin: 0 auto;
+    width: unset !important; }
   .images * {
     box-shadow: none !important; }
 

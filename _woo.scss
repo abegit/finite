@@ -75,6 +75,7 @@
 
 /*product single*/
 .images {width: 100% !important;
+	img {margin: 0 auto; width: unset !important; }
 * {box-shadow: none !important;}
 }
 h1.product_title {

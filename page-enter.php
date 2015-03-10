@@ -32,9 +32,9 @@ get_header(); ?>
         <!--end enter content-->
 </section>
 <div id="services" class="wrapper dk ani woocommerce">
-    <div class="section-header bl">
+    <div class="section-header">
     <div class="row"> <div class="large-12 columns">
-        <h2>Offering World-Class Customer Service</h2>
+        <h3>Offering World-Class Customer Service</h3>
     </div></div></div>
 <div class="row anis">   
      <div class="large-12 columns">
@@ -93,9 +93,9 @@ get_header(); ?>
         <div class="clear"></div>
 </div><!-- end dark_centered -->
 <div id="team" class="wrapper dk ani woocommerce">
-    <div class="section-header bl">
+    <div class="section-header">
     <div class="row"> <div class="large-12 columns">
-        <h2>Meet the Team</h2>
+        <h3>Meet the Team</h3>
     </div></div></div>
 <div class="row anis">   
      <div class="large-10 columns large-centered text-center">

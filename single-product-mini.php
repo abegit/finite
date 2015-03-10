@@ -1,4 +1,4 @@
-<?php get_header('shop');
+<?php get_header();
 
     global $eXternl;
 	$eXternl = 'yes';

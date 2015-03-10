@@ -1084,7 +1084,9 @@ h1 b{
   color:#000;
   z-index:99;
   position:relative;
+  padding-top: 100px;
   .row{position:relative;}
+  h1, h2, h3, h4 {font-weight: 100 !important; text-align: center; text-transform: uppercase; }
   &.gr{
     *{color:#000;}
     &:before{

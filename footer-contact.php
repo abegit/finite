@@ -38,7 +38,7 @@
  
 <!--contact content-->
 <div class="wrapper dk" id="contact">
- <div class="section-header bl">
+ <div class="section-header">
     <div class="row"> <div class="large-12 columns">
         <h2>Take the Leap</h2>
     </div></div></div>
