@@ -78,7 +78,7 @@ body{
 }
 .lt{background: url('images/brushed_alu.png')#EEEEEE;}
 
-.dk{background:#343333;
+.dk{background:rgba(0,0,0,0.85);
   @include box-shadow(0 0 20px #202020 inset);
   h1, h2, h3, h4, h5{color:#fff;}
   em {color: #999;}
@@ -494,7 +494,7 @@ body.snapjs-right{
   float:left;
   z-index: 99;
   width:100%;
-  &> .row{padding:70px 0;}
+  &> .row{}
 }
 .mu_register{
   .row{}
@@ -618,7 +618,7 @@ body.snapjs-right{
 
 
 #content.widecolumn {padding-top:80px; min-height: 590px;}
-#enter{background:url('images/enter.gif') center top #383838;
+#enter{ min-height: 90vh;
 #headerfix {
   background:none;
   border-bottom: 1px solid #606060;
@@ -767,7 +767,7 @@ body.snapjs-right{
       }
     }
     #menu i{padding:30px 35px;}
-  #logo{height:40px;
+  #logo{height:84px; @include box-shadow(0 0 0 20px $blu); background:$blu;
         width:200px; margin:20px 0;}
   #logo:after {
     content:"";

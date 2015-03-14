@@ -12,9 +12,9 @@ get_header(); ?>
 
     <?php if (has_post_thumbnail( $post->ID ) ) { ?>
     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-        <section id="enter" class="wrapper" style="background-image: url('<?php echo $image[0]; ?>')"  data-type="background" data-speed="2">
+        <section id="enter" class="wrapper dk" style="background-image: url('<?php echo $image[0]; ?>')"  data-type="background" data-speed="2">
     <?php } else { ?>
-        <section id="enter" class="wrapper" data-type="background" data-speed="2">
+        <section id="enter" class="wrapper dk" data-type="background" data-speed="2">
     <?php } ?>
     <div class="row" id="weDo">
         <div class="large-12 columns">
