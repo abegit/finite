@@ -6,18 +6,31 @@ var addEvent = function addEvent(element, eventName, func) {
     }
 };
 
-addEvent(document.getElementById('open-right'), 'click', function(){
-    snapper.open('right');
+addEvent(document.getElementById('menu'), 'click', function(){
+    if (this.hasAttribute('opend', 1)) {
+        this.removeAttribute('opend', 1);
+        snapper.close('right');
+    } else {
+        snapper.open('right');
+        this.setAttribute('opend', 1);
+    }
 });
 addEvent(document.getElementById('open-left'), 'click', function(){
-    snapper.open('left');
+        snapper.open('left');
 });
-addEvent(document.getElementById('closee'), 'click', function(){
-    snapper.close('right');
+addEvent(document.getElementById('close-l'), 'click', function(){
+        snapper.close('left');
 });
-addEvent(document.getElementById('closeee'), 'click', function(){
-    snapper.close('right');
+addEvent(document.getElementById('close-r'), 'click', function(){
+        snapper.close('right');
 });
+
+
+
+
+
+
+
 
 
 /* Prevent Safari opening links when viewing as a Mobile App */

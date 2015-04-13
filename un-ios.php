@@ -33,7 +33,7 @@
 <!-- iOS 7 iPad (retina) --> <link href="<?php bloginfo('template_directory'); ?>/images/ios/icon-152.png"sizes="152x152"rel="apple-touch-icon"> 
 <!-- iOS 6 iPad (retina) --> <link href="<?php bloginfo('template_directory'); ?>/images/ios/icon-144.png"sizes="144x144"rel="apple-touch-icon"> 
 <!-- iOS 7 iPhone (retina) --> <link href="<?php bloginfo('template_directory'); ?>/images/ios/icon-120.png"sizes="120x120"rel="apple-touch-icon"> 
-<!-- iOS 6 iPhone (retina) --> <link href="<?php bloginfo('template_directory'); ?>/images/ios/icon-114.png"sizes="114x114"a rel="apple-touch-icon"> 
+<!-- iOS 6 iPhone (retina) --> <link href="<?php bloginfo('template_directory'); ?>/images/ios/icon-114.png"sizes="114x114" rel="apple-touch-icon"> 
 <!-- iOS 7 iPad --> <link href="<?php bloginfo('template_directory'); ?>/images/ios/icon-76.png"sizes="76x76"rel="apple-touch-icon"> 
 <!-- iOS 6 iPad --> <link href="<?php bloginfo('template_directory'); ?>/images/ios/icon-72.png"sizes="72x72"rel="apple-touch-icon"> 
 <!-- iOS 6 iPhone --> <link href="<?php bloginfo('template_directory'); ?>/images/ios/icon-57.png"sizes="57x57"rel="apple-touch-icon"> 

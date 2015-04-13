@@ -1,38 +1,37 @@
-
-
 <?php get_header(); ?>
-
 <!-- body content -->
-<div id="blog <?php $post->ID; ?>" class="wrapper lt">
 
-     <div class="row">    
+<div id="category" class="wrapper dk">
 
-
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-
-                <div class="large-8 columns">
-                                    <h1 class="subheader"><?php the_title(); ?></h1>  
-                    <?php the_content(); ?>
-                    <?php endwhile; ?>
-    <?php endif; ?>
-                    
+        <div class="row">
+            
+        <div class="large-9 columns">
+            <div class="large-6 columns">
+                <a href="<?php the_permalink() ?>" data-transition="slide" title="<?php the_title_attribute(); ?>" class="title"> <?php if ( has_post_thumbnail() ) { the_post_thumbnail('blog'); } ?>
+                <div class="info">
+                <p><?php the_time('n M Y') ?><i class="icon-clockalt-timealt"></i></p>
                 </div>
-
-
-                <div class="large-4 columns"><?php echo adrotate_group(1); ?>
-                        <?php dynamic_sidebar('blog'); ?>
-</div>
-
-
+                <div class="content">
+                <h3><?php the_title(); ?></h3>
+                <?php echo the_excerpt(); ?></div>
+                </a>
+            </div>
+            <div class="large-12 columns text-center ani">
+                <?php custom_pagination( $html_id ); ?>
+            </div>
+        </div>
+        <div class="large-3 columns sidebar">
+        <?php if ( is_active_sidebar( 'newsletter' ) ) : ?>
+        <div style="background: url('<?php bloginfo('template_directory'); ?>/images/dont-be-square.jpg') no-repeat scroll 0px 0px / contain  rgb(249, 249, 249); padding: 50% 8% 8%;">
+        <div style="background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 20px;"><?php dynamic_sidebar( 'newsletter' ); ?></div></div>
+        <?php endif; ?>
         
+        <ul><?php dynamic_sidebar( 'blog' ); ?></ul>
 
-
+        </div>            
         </div> <!-- end row -->
-
-        <div class="clear"></div>
-    </div>
-
-
+<div class="clear"></div>
+</div>
 
 
 <?php get_footer(); ?>

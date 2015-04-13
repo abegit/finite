@@ -5,7 +5,8 @@
      <div class="row">  
            <div class="large-8 columns post">  
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <?php if ( has_post_thumbnail() ) { the_post_thumbnail('blogsingle', array('class' => 'no-mobi')); } ?>
+                    <?php get_template_part('/inc/title');?>
+                    <?php if ( has_post_thumbnail() ) { the_post_thumbnail('blogsingle', array('class' => 'no-mobi')); } ?>
                     <div class="info">
                         <p>by <?php the_author_link(); ?> <span style="float:right;"><?php the_time('n M Y') ?><i class="icon-clockalt-timealt"></i></span></p>
                     </div>

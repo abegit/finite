@@ -192,9 +192,7 @@ function my_template_redirect_2322()
     }
 }
 
-?>
-
-<?php
+ 
 /** Tell WordPress to run yourtheme_setup() when the 'after_setup_theme' hook is run. */
 add_action( 'after_setup_theme', 'yourtheme_setup' );
 if ( ! function_exists('yourtheme_setup') ):
@@ -213,8 +211,8 @@ function yourtheme_setup() {
     define( 'HEADER_IMAGE', '%s/images/headers/forestfloor.jpg' );
     // The height and width of your custom header. You can hook into the theme's own filters to change these values.
     // Add a filter to yourtheme_header_image_width and yourtheme_header_image_height to change these values.
-    define( 'HEADER_IMAGE_WIDTH', apply_filters( 'yourtheme_header_image_width', 200 ) );
-    define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'yourtheme_header_image_height',  40 ) );
+    define( 'HEADER_IMAGE_WIDTH', apply_filters( 'yourtheme_header_image_width', 1920 ) );
+    define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'yourtheme_header_image_height',  1080 ) );
     // We'll be using post thumbnails for custom header images on posts and pages.
     // We want them to be 940 pixels wide by 198 pixels tall (larger images will be auto-cropped to fit).
     set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
@@ -262,4 +260,4 @@ function yourtheme_admin_header_style() {
         width: <?php echo HEADER_IMAGE_WIDTH; ?>px; }
     #headimg h1, #headimg #desc {display: none; }
     </style>
-<?php } endif; ?>
+<?php } endif;

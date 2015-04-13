@@ -1,7 +1,7 @@
 /* mandatory */
-.snap-content {position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: auto; height: auto; z-index: 2; overflow: auto; -webkit-overflow-scrolling: touch; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.snap-content {top: 0; right: 0; bottom: 0; left: 0; width: auto; height: auto; z-index: 2; overflow: auto; -webkit-overflow-scrolling: touch; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .snap-drawers {top: 0; right: 0; bottom: 0; left: 0; width: auto; height: auto; }
-.snap-drawer {position: absolute; top: 0; right: auto; bottom: 0; left: auto; width: 265px; height: auto; overflow: auto; -webkit-overflow-scrolling: touch; -webkit-transition: width 0.3s ease; -moz-transition: width 0.3s ease; -ms-transition: width 0.3s ease; -o-transition: width 0.3s ease; transition: width 0.3s ease; }
+.snap-drawer {position: absolute; top: 0; right: auto; bottom: 0; left: auto; width: 265px; height: 100vh ; overflow: auto; -webkit-overflow-scrolling: touch; -webkit-transition: width 0.3s ease; -moz-transition: width 0.3s ease; -ms-transition: width 0.3s ease; -o-transition: width 0.3s ease; transition: width 0.3s ease; }
 .snap-drawer-left {left: 0; z-index: 1; }
 .snap-drawer-right {right: 0; z-index: 1; }
 .snapjs-left .snap-drawer-right,
@@ -64,6 +64,5 @@
 .snap-drawer li > a:hover {padding-left: 5px; }
 
 .snap-drawer p {
-  padding: 15px;
   font-size: 12px;
 }

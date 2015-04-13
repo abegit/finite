@@ -1,9 +1,4 @@
-
-
 <?php get_header(); ?>
-
-
-
 <!-- body content -->
 
 <div id="category" class="wrapper lt">
@@ -13,7 +8,7 @@
         <div class="large-9 columns">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
             <div class="large-6 columns post">
-                <a href="<?php the_permalink() ?>" data-transition="slide" title="<?php the_title_attribute(); ?>" class="title"> <?php if ( has_post_thumbnail() ) { the_post_thumbnail('blogsingle'); } ?>
+                <a href="<?php the_permalink() ?>" data-transition="slide" title="<?php the_title_attribute(); ?>" class="title"> <?php if ( has_post_thumbnail() ) { the_post_thumbnail('blog'); } ?>
                 <div class="info">
                 <p><?php the_time('n M Y') ?><i class="icon-clockalt-timealt"></i></p>
                 </div>
@@ -36,15 +31,7 @@
         
         <ul><?php dynamic_sidebar( 'blog' ); ?></ul>
 
-        </div>
-
-
-
-
-
-
-
-            
+        </div>            
         </div> <!-- end row -->
 <div class="clear"></div>
 </div>
