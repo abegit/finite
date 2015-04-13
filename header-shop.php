@@ -162,7 +162,7 @@ $jj(document).ready(function(){
   });
   });
   </script>
-    <script type="text/javascript">
+<script type="text/javascript">
     var $dd = jQuery.noConflict();
 
         $dd(document).ready(function() {
@@ -218,7 +218,7 @@ function createDropDown(){
 
 
 }
-    </script>
+</script>
 
 </head>
 
