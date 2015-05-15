@@ -12,65 +12,74 @@ add_post_type_support( 'product', 'custom-fields' );
 add_filter('widget_text', 'do_shortcode');
 
 if ( function_exists('register_sidebar') ) {
-register_sidebar(array(
-	'name'          =>  'Blog',
-	'class'         => '',
-	'before_widget' => '<li id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</li>',
-	'before_title'  => '<h5>',
-	'after_title'   => '</h5>'
-));
+    register_sidebar(array(
+    	'name'          =>  'Blog',
+    	'class'         => '',
+    	'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    	'after_widget'  => '</li>',
+    	'before_title'  => '<h5>',
+    	'after_title'   => '</h5>'
+    ));
 
-register_sidebar(array(
-    'name'          => 'Leftbar',
-    'class'         => 'leftbar',
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
-));
-register_sidebar(array(
-    'name'          => 'Rightbar',
-    'class'         => 'rightbar',
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>'
-));
-register_sidebar(array(
-    'name'          => 'Newsletter',
-    'class'         => 'newsletter',
-    'before_widget' => '',
-    'after_widget'  => '',
-    'before_title'  => '',
-    'after_title'   => ''
-));
+    register_sidebar(array(
+        'name'          => 'Leftbar',
+        'class'         => 'leftbar',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
+    ));
+    register_sidebar(array(
+        'name'          => 'Rightbar',
+        'class'         => 'rightbar',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
+    ));
+    register_sidebar(array(
+        'name'          => 'Newsletter',
+        'class'         => 'newsletter',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => ''
+    ));
 
-register_sidebar(array(
-    'name'          =>  'Home Footer',
-    'class'         => 'home-footer',
-    'before_widget' => '',
-    'after_widget'  => '',
-    'before_title'  => '<h5>',
-    'after_title'   => '</h5>'
-));
-register_sidebar(array(
-    'name'          =>  'Store',
-    'class'         => '',
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h5>',
-    'after_title'   => '</h5>'
-));
+    register_sidebar(array(
+        'name'          =>  'Home Footer',
+        'class'         => 'home-footer',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>'
+    ));
+    register_sidebar(array(
+        'name'          =>  'Store',
+        'class'         => '',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>'
+    ));
 
-register_sidebar(array(
-    'name'          =>  'StoreSide',
-    'class'         => '',
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h5>',
-    'after_title'   => '</h5>'
-));
+    register_sidebar(array(
+        'name'          =>  'StoreSide',
+        'class'         => '',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>'
+    ));
+    register_sidebar(array(
+        'name'          =>  'Only Footer',
+        'id'            =>  8,
+        'class'         => 'only-footer',
+        'before_widget' => '<ul id="%1$s" class="columns large-3 small-6 widget %2$s">',
+        'after_widget'  => '</ul>',
+        'before_title'  => '<lh>',
+        'after_title'   => '</lh>'
+    ));
 }
 
 
@@ -261,3 +270,18 @@ function yourtheme_admin_header_style() {
     #headimg h1, #headimg #desc {display: none; }
     </style>
 <?php } endif;
+
+
+
+
+// #11 - AdRotate integration
+require_once WP_PLUGIN_DIR . DIRECTORY_SEPARATOR . 'adrotate' . DIRECTORY_SEPARATOR . 'adrotate-widget.php';
+
+class unsceneRotator extends adrotate_widgets {
+
+    function unsceneRotator() { // or just __construct if you're on PHP5
+        parent::WP_Widget(false, 'My not blocked AdRotate widget', array('description' => "Show unlimited ads in the sidebar."));
+    }
+}
+add_action('widgets_init', create_function('', 'return register_widget("unsceneRotator");'));
+

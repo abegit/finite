@@ -83,6 +83,22 @@ body{
   h1, h2, h3, h4, h5{color:#fff;}
   em {color: #999;}
   p{color:#929292;}
+  code {
+      color: #8d8d8d;
+      font-family: monospace;
+      margin: 0 10px;
+  }
+  ul.circle {
+    background: none repeat scroll 0 0 #2d2d2d;
+    margin: 0;
+    padding: 0;
+    @include border-radius($myrad*2);
+    overflow: hidden;
+    border: solid 3px #272727;@include trans(500ms);
+    &:hover {border: solid 3px $grn;}
+    li {padding: 0 0 0 50px; display: block; width: 100% !important; }
+    li:nth-child(2n) {background: none repeat scroll 0 0 #373737;}
+  }
   &.image{
   #headerfix, .section-header{background:none rgba(0, 0, 0, 0.8);}}
 }
@@ -793,8 +809,11 @@ body.snapjs-right{
 
 
 
-.columns.sidebar{
+
+.sidebar{
   ul{margin-left:0; list-style-type:none;}
+  a {font-size: 13px; line-height: 17px; }
+  h5 {font-size: 13px; line-height: 19px; margin-bottom: 0; margin-top: 20px; text-transform: uppercase; }
   .widget ul{
     list-style:none outside none;
     margin:0 auto !important;
@@ -1260,7 +1279,7 @@ input, select, textarea{
     line-height:normal;
     text-decoration:none;
     width:100%;
-    #footer {border-bottom:1px solid #606060;}
+    .row {padding:0;}
     ul a {color: #646464;
       display: block;
     font-size: 1rem;
@@ -1271,6 +1290,7 @@ input, select, textarea{
     ul li a {
       &:hover{color:$grn;}
     }
+    .menu {margin:0;}
 }
 
 .create-account {clear: both;}
