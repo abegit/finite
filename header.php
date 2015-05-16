@@ -26,7 +26,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.scrollTo.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.nav.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
-    <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v2">
+    <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v6">
      <style>
     #logo {background-image:url('<?php header_image(); ?>') !important;}
     </style>
@@ -82,7 +82,7 @@ jQmau(document).ready(function(){
             jQmau(this).addClass('selected');
             jQmau(this).find('.message').addClass('visible');
             jQmau(this).attr('data-uri', '1');
-          }
+}
    });
     });
 </script>
@@ -94,7 +94,33 @@ $jfs(document).ready(function(){
 });  
 </script>
 
+<script>
+var $onlyDesktop = jQuery.noConflict();
 
+$onlyDesktop(window).load(function() {
+        var w = $(window).width();
+
+        if(w>400) {
+            $onlyDesktop('section[data-type="background"]').each(function(){
+                var $bgobj = $onlyDesktop(this); // assigning the object
+                var $window = $onlyDesktop('#snapcontent');
+
+                $onlyDesktop('#snapcontent').scroll(function() {
+                  var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+
+                    // Put together our final background position
+                    var round = '50% '+ yPos;
+                    var coords = round + 'px';
+
+                    // Move the background
+                    $bgobj.css({ backgroundPosition: coords });
+                });
+          });
+        }
+        else { }
+    });
+
+</script>
 
 <script>
 var $jj = jQuery.noConflict();
@@ -110,6 +136,65 @@ $jj(document).ready(function(){
   });
   });
   </script>
+
+<script type="text/javascript">
+    var $dd = jQuery.noConflict();
+
+        $dd(document).ready(function() {
+            createDropDown();
+            
+
+            $dd(".selectwrap .dropdown dt a").click(function() {
+                //inside select wrapper only toggle ul inside wrapper
+                $dd(this).closest('.selectwrap').find("dd ul").toggle();
+            });
+
+            $dd(document).bind('click', function(e) {
+                var $ddclicked = $dd(e.target);
+                //if you click and the parent does not have dropdown then hide dropdowns
+                if (! $ddclicked.parents().hasClass("dropdown"))
+                    $dd(".dropdown dd ul").hide();
+            });
+                        
+            $dd(".dropdown dd ul li a").click(function() {
+                var text = $dd(this).html();
+                var selfie = $dd(this).closest(".dropdown").attr('class').split(' ')[1];
+
+                $dd('.dropdown.' + selfie + ' dt a').html(text);
+                $dd('.dropdown.' + selfie + ' dd ul').hide();
+                
+                var source = $dd('select#' + selfie);
+                source.val($dd(this).find("span.value").html())
+            });
+
+
+        });
+        
+function createDropDown(){
+    $dd("select").each(function() {
+        var source = $dd(this);
+        var selected = source.find("option[selected]");
+        var options = $dd("option", source);
+        var self = $dd(this).attr('id');
+        $dd(this).wrap( '<div class="selectwrap ' + self + '"></div>')
+        $dd(this).after('<dl class="dropdown ' + self + '"></dl>')
+
+        $dd('.dropdown.' + self).append('<dt><a href="#">' + selected.text() + 
+            '<i class="icon-chevron-down right"></i><span class="value">' + selected.val() + 
+            '</span></a></dt>')
+        $dd('.dropdown.' + self).append('<dd><ul></ul></dd>')
+
+        options.each(function(){
+            $dd('.dropdown.' + self + ' dd ul').append('<li><a href="#">' + 
+                $dd(this).text() + '<span class="value">' + 
+                $dd(this).val() + '</span></a></li>');
+        });
+    });
+
+
+}
+</script>
+
 </head>
 
 <body id='blog' <?php body_class( "home woocommerce" ); ?>>
@@ -141,7 +226,6 @@ $jj(document).ready(function(){
 
 
 
-
 <!--header-->
 <div id="headerfix">
 <div class="row">
@@ -156,50 +240,43 @@ $jj(document).ready(function(){
 </div><!--header-->
 </section><!--end headerfix-->
 
-  <?php get_template_part('/inc/snapdrawers'); ?>
+
+ <?php get_template_part('/inc/snapdrawers'); ?>
+
+
   
 <!-- page container -->
-<div class="page-container snap-content" id="snapcontent">
-  <?php if ( is_front_page() && is_archive('product')) {
-            // cond1 - fire if product archive AND frontpage
-        $paged = $wp_query->get( 'paged' );
-              if ( ! $paged || $paged < 2 ) {  
-                  // cond1 inner if homepage basicically
-                slippy_slider_init('Homepage','widget', '1024px','300px'); ?>
-            <?php } // close inner ?>
-<?php } elseif (is_category()) { ?>
-          <div class="wrapper dk page"><div class="section-header">
-            <div class="row">
-              <div class="large-12 large-centered columns"> <?php get_template_part('/inc/catcrumbs');?> </div>
-            </div>
-          </div></div>
-      <?php } elseif (is_archive('product')) { ?>
-          <div class="wrapper dk page"><div class="section-header">
-            <div class="row">
-              <div class="large-12 large-centered columns"> <?php get_template_part('/inc/shopcrumbs');?> </div>
-            </div>
-          </div></div>
-      <?php } elseif (!is_singular('product')) { ?>
-        <div class="wrapper dk page"><div class="section-header">
-            <div class="row">
-              <div class="large-12 large-centered columns"> <?php get_template_part('/inc/breadcrumbs');?> </div>
-            </div>
-          </div></div>
-       <?php } else { ?>
-        <div class="wrapper dk page"><div class="section-header">
-          <div class="row">
-            <div class="large-12 large-centered columns"> <?php get_template_part('/inc/breadcrumbs');?> </div>
-          </div>
-        </div></div>
-       <?php }?>
+  <div class="page-container snap-content" id="snapcontent">
 
-           <?php if (!is_singular('product') && !is_page_template('page-enter.php') && !is_archive() && !is_home()) { ?>
-                <?php if (has_post_thumbnail( $post->ID ) ) { ?>
-                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-                <img src="<?php echo $image[0]; ?>" class="scrollme mobi"><?php } ?>
-           <?php } ?>
-           
-           <?php if (is_home()) { ?> <div class="clear mobi"></div><a href="#feed" class="wrapper mobi smoothie text-center"><i class="icon-circledown"></i></a><?php } ?>
+      <?php if ( is_archive('product') && is_front_page()) {
+            $paged = $wp_query->get( 'paged' );
+                  if ( ! $paged || $paged < 2 ) {  
+                    echo do_shortcode('[featured numbers=2 post_type=sliders type=coverflow]');
+                      // slippy_slider_init('Homepage','widget', '1024px','300px'); ?>
+              <?php } else { ?>
+                  <div class="wrapper dk page"><div class="section-header">
+                      <div class="row">
+                      <div class="large-12 large-centered columns">
+                        <?php get_template_part('/inc/shopcrumbs');?>
+                        </div>
+                        </div>
+                  </div></div> <?php }
+           } elseif (is_singular('product')) { ?>
+            <div class="wrapper dk product">
+              <?php get_template_part('/inc/titlebar'); ?>
+            </div>
+          <?php } else { ?>
+        <div class="wrapper dk page">
+           <?php get_template_part('/inc/titlebar'); ?>
+        </div>
+<?php } ?>
 
+
+     <?php if (!is_singular('product') && has_post_thumbnail( $post->ID ) && !is_page_template('page-enter.php') && !is_archive() && !is_home()) { ?>
+          <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+          <img src="<?php echo $image[0]; ?>" class="scrollme mobi">
+     <?php } ?>
+        
+<?php if (is_home()) { ?> <div class="clear mobi"></div><a href="#feed" class="wrapper mobi smoothie text-center"><i class="icon-circledown"></i></a><?php } ?>
 
             <!-- navigation bar -->

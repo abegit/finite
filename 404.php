@@ -1,12 +1,9 @@
-
-
 <?php get_header(); ?>
-
 <!-- body content -->
-<div id="blog <?php $post->ID; ?>" class="wrapper lt">
 
-     <div class="row">    
+<div id="category" class="wrapper dk">
 
+        <div class="row">
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
 
@@ -24,8 +21,6 @@
 
         <div class="clear"></div>
     </div>
-
-
 
 
 <?php get_footer(); ?>

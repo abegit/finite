@@ -1,6 +1,7 @@
-var element = '';
+
 var addEvent = function addEvent(element, eventName, func) {
-	if (element.addEventListener) {
+	var element;
+    if (element.addEventListener) {
     	return element.addEventListener(eventName, func, false);
     } else if (element.attachEvent) {
         return element.attachEvent("on" + eventName, func);
@@ -25,12 +26,12 @@ addEvent(document.getElementById('open-left'), 'click', function(){
         this.setAttribute('opend', 1);
     }
 });
-
-
-
-
-
-
+addEvent(document.getElementById('close-l'), 'click', function(){
+        snapper.close('left');
+});
+addEvent(document.getElementById('close-r'), 'click', function(){
+        snapper.close('right');
+});
 
 
 /* Prevent Safari opening links when viewing as a Mobile App */
@@ -45,3 +46,6 @@ addEvent(document.getElementById('open-left'), 'click', function(){
         }, !1)
     }
 })(document, window.navigator, "standalone");
+
+
+

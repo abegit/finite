@@ -63,12 +63,6 @@ body{
 
 
 
-/*colors*/
-$blu:#427aac;
-$grn:#20E9AD;
-$upc:#b678aa;
-$myrad:5px;
-
 
 
 .bl{
@@ -95,6 +89,29 @@ $myrad:5px;
   h1, h2, h3, h4, h5{color:#999;}
   em {color: #999;}
   p{color:#999;}
+}
+
+.dk{background:#343333;
+  @include box-shadow(0 0 20px #202020 inset);
+  h1, h2, h3, h4, h5{color:#fff;}
+  em {color: #999;}
+  p{color:#929292;}
+  code {
+      color: #8d8d8d;
+      font-family: monospace;
+      margin: 0 10px;
+  }
+  ul.circle {
+    background: none repeat scroll 0 0 #2d2d2d;
+    margin: 0;
+    padding: 0;
+    @include border-radius($myrad*2);
+    overflow: hidden;
+    border: solid 3px #272727;@include trans(500ms);
+    &:hover {border: solid 3px $grn;}
+    li {padding: 0 0 0 50px; display: block; width: 100% !important; }
+    li:nth-child(2n) {background: none repeat scroll 0 0 #373737;}
+  }
   &.image{
   #headerfix, .section-header{background:none rgba(0, 0, 0, 0.8);}}
 }
@@ -231,6 +248,7 @@ blockquote{background:none #FFFFFF;
   padding:20px;display:inline-block;
   min-width: 100%;
 ul{position:relative;
+  padding:20px;display:inline-block; min-width: 100%;
   li:before{
     content:"-";
     left:-18px;
@@ -427,15 +445,14 @@ br{clear:both;
 
 
 body.snapjs-right, body.snapjs-left{
-#snapcontent{cursor:pointer;}
-  #snapcontent{
-    &> * {
-    opacity:0.5 !important;
+  #snapcontent{cursor:pointer;}
+    #snapcontent{
+      &> *:nth-child(n+2) {opacity:0.5 !important; }
+      #headerfix #menu #closee{display:block; opacity:1;}
+      #headerfix #open-right{display:none !important;}
     }
-  }
-  #headerfix #menu #close-r{display:block; opacity:1;}
-  #headerfix #open-right{display:none !important;}
 }
+
 
 body.snapjs-left{
   #snapcontent:before{
@@ -448,14 +465,19 @@ body.snapjs-right{
     right:20px;}
   #snapcontent:after{
     right:20px;}
+    #snapcontent:before{left:0;}
+    #snapcontent:after{left:0;}
+}
+body.snapjs-right{
+    #snapcontent:before{right:20px;}
+    #snapcontent:after{right:20px;}
 }
 
 
 
 
 
-.row.choice{
-    bottom:0;
+.row.choice {bottom:0;
     margin:0 !important;
     padding:0 !important;
     position:absolute;
@@ -573,6 +595,7 @@ body.snapjs-right{
   clear:both;
   position:relative;
   display:block;
+  overflow:hidden;
   float:left;
   z-index: 99;
   width:100%;
@@ -596,6 +619,10 @@ body.snapjs-right{
 
 #content.widecolumn {padding-top:80px; min-height: 590px;}
 #enter{background:url('images/enter.gif') center top #383838;
+#headerfix {
+  background:none;
+  border-bottom: 1px solid #606060;
+}
   .ngg-slideshow{float:right; position:absolute; right:0; width:70% !important; margin-right:-20%;
     img{height:auto !important; width:100% !important;display:block !important;
       &:first-child{position:relative !important;}
@@ -711,7 +738,7 @@ body.snapjs-right{
 
 .wrapper{
   .section-header{
-      h1.subheader{margin:0;}
+      h1.subheader{margin:0 0 18px;}
     .row{padding:20px 0;}
   }
 }
@@ -763,8 +790,11 @@ body.snapjs-right{
     }
 }
 
-.columns.sidebar{
+
+.sidebar{
   ul{margin-left:0; list-style-type:none;}
+  a {font-size: 13px; line-height: 17px; }
+  h5 {font-size: 13px; line-height: 19px; margin-bottom: 0; margin-top: 20px; text-transform: uppercase; }
   .widget ul{
     list-style:none outside none;
     margin:0 auto !important;
@@ -928,22 +958,50 @@ div.ps-toolbar, div.ps-caption{
 
 
 
-.info{
-  background:none #F9F9F9;
-    width:100%;
-    p{color:#AAAAAA;
-    font-size:13px;
-    font-weight:800;
-    line-height:13px;
-    margin:0;
-    padding:20px;
-    text-transform:uppercase;} 
-    i{float:right; margin-left:10px;}
+.title_info{
+  position:absolute;right: 0; top:0;
+  form, form * { line-height: 0 !important;
+    margin: 0 !important;
+    padding: 0; display: inline-block;
+    float: none !important;
+    width: auto !important;}
+    a {float:left; margin:0 10px 0 0;}
+  p {margin-top:50px;}
+}
+.info{right: 0; top:0;
+  background: #bdbdbd; padding:10px;
+  p {margin:0;}
+}
+
+.title {
+    font-size: 16px;
+    line-height: 16px;
+}
+.date {
+    display: none;
+}
+.caption {
+    bottom: 0;
+    box-shadow: 0 -60px 30px -30px #000000 inset;
+    font-size: 11px;
+    padding: 0 7px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.sidebar .large-6.columns img {
+    min-width: 100% !important;
+    padding: 0;
+    width: 100% !important;
 }
 
 
 
-
+.paypal-donations > input {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: right;
+    padding:5px !important;
+}
 
 
 
@@ -1109,18 +1167,8 @@ h1 b{
   a:hover{text-decoration:underline;}
 }
 div.breadcrumbs{
-    &:before{ background: none repeat scroll 0 0 rgba(255, 255, 255, 0.2);
-    content: "";
-    float: left;
-    -moz-osx-font-smoothing:grayscale;
-    osx-font-smoothing:grayscale;
-    font-family: icomoon;
-    font-size: 1em;
-    line-height: 23px;
-    margin-right: 10px;
-    padding: 0 6px;
-    text-transform: uppercase;}
     a {line-height: 23px;}
+    &:before{content:"You\'re Here :"; float:left; font-size:0.6875em; margin-right:10px; text-transform:uppercase;}
 }
 
 
@@ -1189,7 +1237,7 @@ input, select, textarea{
 
 /*-------------footer-----------*/
 .footer{
-    background:none #202020;
+    background:#202020;
     bottom:0;
     color:#000000;
     display:block;
@@ -1211,9 +1259,19 @@ input, select, textarea{
       color:#646464;
       list-style-type:none;}
 
-    ul li a {color: #838383;
+    ul li a {color: #838383;}
+    .row {padding:0;}
+    ul a {color: #646464;
+      display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 31px;
+    list-style-type: none;}
+    ul lh {border-bottom: solid 2px $grn; display:block;}
+    ul li a {
       &:hover{color:$grn;}
     }
+    .menu {margin:0;}
 }
 
 .create-account {clear: both;}
@@ -1224,5 +1282,3 @@ input, select, textarea{
 @import "woo";
 @import "productdesigner";
 @import "mobi";
-
-
