@@ -11,41 +11,23 @@
  </div></div></div></div>
       <?php } ?>
 
-<section class="wrapper footer">
+<section class="wrapper footer" id="footer">
 	<!-- <div class="section-header gr">
     <div class="row"> <div class="large-12 columns">
         <h4 class="subheader alignleft">Going to be releasing new tees soon, follow my newsletter to cut in line early! </h4 class="subheader">
         <a href="http://unscene.us/shop" class="btn alignright"><i class="icon-leaf"></i>Support the Artist!</a>
     </div></div></div> -->
-	<div id="footer">
+    
 
     <div class="row links">
-      <ul class="columns large-3 small-6">
-        <li>Unscene Us</li>
-      </ul>
-        <ul class="columns large-3 small-6">
-        <lh>Prime Services</lh>
-        <li><a href="./portfolio">Web Design</a></li>
-        <li><a href="./portfolio">Graphics</a></li>
-        <li><a href="./shop">Marketplace</a></li></ul>
-      <ul class="columns large-3 small-6">
-        <lh>About us</lh>
-        <li><a href="./the-brands">Our Services</a></li>
-        <li><a href="./brand">Branding</a></li> 
-        <li><a href="./partners">Partners</a></li>
-        <li><a href="./press">Press</a></li></ul>
-      <ul class="columns large-3 small-6">
-        <lh>Support</lh>
-        <li><a href="./forums">Forums</a></li>
-        <li><a href="./search">Search</a></li>
-        <li><a href="/for-business/contact">Contact Us</a></li></ul>
+      <?php dynamic_sidebar('only-footer'); ?>
     </div>
 
     <div class="row">
     <div class="columns large-12">
- <p class="alignleft"><a href="#" id="open-left">Contact!</a></p> <p class="alignright">Startup by Abraham Perez in Los Angeles &copy; 2014. All rights reserved.</p>    </div>
+ <p class="alignleft"><a href="#" id="open-left">Contact Us</a></p> <p class="alignright"><?php echo get_bloginfo( 'description' ); ?> &copy; 2015. All rights reserved.</p>    </div>
 </div>
-  </div>
+
 </section>
 </div>
     <!--end page-container-->
