@@ -2,7 +2,7 @@
 /*
 Theme Name: ZZMerch
 Theme URI: http://unscene.us/ZZMerch
-Author: Abraham Perez
+Author:Abraham Perez
 Description: When you want to get Premiere clothing for use with marketing and promotion, ZZMerch has your pick!
 Version:1.0
 License:GNU General Public License
@@ -116,49 +116,11 @@ Tags:fixed-width, flexible-width, custom-background, custom-colors, custom-heade
 .snap-drawer {
   padding-top: 60px; }
   .snap-drawer #selfie {
-    text-align: center;
-    /*end selfie link*/ }
+    text-align: center; }
     .snap-drawer #selfie a {
       border-bottom: 1px solid #ffffff;
       display: inline-block;
       min-width: 70% !important; }
-      .snap-drawer #selfie a:after {
-        align-items: center;
-        background: #ffffff none repeat scroll 0 0;
-        border: 2px solid #afafaf;
-        -webkit-border-radius: 8px;
-        -moz-border-radius: 8px;
-        border-radius: 8px;
-        box-shadow: 0 0 20px #3d3d3d;
-        content: "Going Hard Since 1992";
-        left: 60%;
-        padding: 6px;
-        position: absolute;
-        top: 30px;
-        @inlude trans(1s);
-        opacity: 0; }
-      .snap-drawer #selfie a:before {
-        -moz-border-bottom-colors: none;
-        -moz-border-left-colors: none;
-        -moz-border-right-colors: none;
-        -moz-border-top-colors: none;
-        border-bottom-color: transparent;
-        border-image: none;
-        border-left-color: transparent !important;
-        border-left-style: solid;
-        border-left-width: 20px;
-        border-right: 20px solid transparent;
-        border-top: 20px solid #ffffff;
-        content: "";
-        display: block;
-        height: 20px;
-        left: 60%;
-        position: absolute;
-        top: 30px;
-        width: 20px;
-        @inlude trans(2s)
-    opacity: 0;
-        margin-top: 40px; }
     .snap-drawer #selfie img {
       -webkit-border-radius: 1000px;
       -moz-border-radius: 1000px;
@@ -173,12 +135,11 @@ Tags:fixed-width, flexible-width, custom-background, custom-colors, custom-heade
   .snap-drawer .g {
     line-height: 0; }
 
-.snapjs-right #selfie a:after, .snapjs-right #selfie a:before {
-  opacity: 1;
-  top: 0;
-  transition-delay: 1s; }
-
 .snap-drawer .widget h3 {
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
   border-bottom: dotted 1px #ddd;
   font-size: 12px;
   font-weight: normal;
@@ -187,6 +148,8 @@ Tags:fixed-width, flexible-width, custom-background, custom-colors, custom-heade
   padding: 5px 0 !important;
   text-align: center;
   text-transform: uppercase; }
+.snap-drawer .widget:hover h3 {
+  background-color: rgba(0, 0, 0, 0.16); }
 
 .snap-drawer > ul {
   padding: 0;
