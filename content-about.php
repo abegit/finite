@@ -1,19 +1,3 @@
-<?php 
-/*
-Template Name: About Template
-*/
-
-get_header(); ?>
-
-
-
-
-
-<?php get_header(); ?>
-
-<!-- body content -->
-
-
 <section id="resume" class="wrapper lt" data-type="background" data-speed="2">
             <div class="row">
         
@@ -68,6 +52,3 @@ get_header(); ?>
         <div class="clear"></div>
     </div>
 </section>
-
-
-<?php get_footer(); ?>

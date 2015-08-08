@@ -23,46 +23,47 @@
   padding-top: 60px;
   #selfie {
     text-align: center;
-    a {border-bottom: 1px solid #ffffff;
-    display: inline-block;
+    a { border-bottom: 1px solid #ffffff;
+    display: flex;
     min-width: 70% !important;
-      &:after {
-    align-items: center;
-    background: #ffffff none repeat scroll 0 0;
-    border: 2px solid #afafaf;
-    @include border-radius(8px);
-    box-shadow: 0 0 20px #3d3d3d;
-    content: "Going Hard Since 1992";
-    left: 60%;
-    padding: 6px;
-    position: absolute;
-    top: 30px;
-    @inlude trans(1s);
-    opacity: 0;
-}
-&:before {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-bottom-color: rgba(0, 0, 0, 0);
-    border-image: none;
-    border-left-color: rgba(0, 0, 0, 0) !important;
-    border-left-style: solid;
-    border-left-width: 20px;
-    border-right: 20px solid rgba(0, 0, 0, 0);
-    border-top: 20px solid #ffffff;
-    content: "";
-    display: block;
-    height: 20px;
-    left: 60%;
-    position: absolute;
-    top: 30px;
-    width: 20px;
-    @inlude trans(2s)
-    opacity: 0;
-    margin-top: 40px;
-}
+    position: relative;
+        &:after {
+          align-items: center;
+          background: #ffffff none repeat scroll 0 0;
+          border: 2px solid #afafaf;
+          @include border-radius(8px);
+          box-shadow: 0 0 20px #3d3d3d;
+          content: "Going Hard Since 1992";
+          left: 60%;
+          padding: 6px;
+          position: absolute;
+          top: 30px;
+          @include trans(1s);
+          opacity: 0;
+      }
+      &:before {
+          -moz-border-bottom-colors: none;
+          -moz-border-left-colors: none;
+          -moz-border-right-colors: none;
+          -moz-border-top-colors: none;
+          border-bottom-color: rgba(0, 0, 0, 0);
+          border-image: none;
+          border-left-color: rgba(0, 0, 0, 0) !important;
+          border-left-style: solid;
+          border-left-width: 20px;
+          border-right: 20px solid rgba(0, 0, 0, 0);
+          border-top: 20px solid #ffffff;
+          content: "";
+          display: block;
+          height: 20px;
+          left: 60%;
+          position: absolute;
+          top: 30px;
+          width: 20px;
+          @include trans(1s);
+          opacity: 0;
+          margin-top: 40px;
+      }
     } /*end selfie link*/
     img {@include border-radius(1000px); margin:20px auto;
       &:hover {@include box-shadow(0 0 0 4px #404040)}
@@ -71,15 +72,6 @@
   &> *:last-child {margin-bottom: 60px;}
   .g {line-height: 0;}
 }
-
-.snap-drawer h3 {
-    font-size: 18px;
-    font-weight: normal;
-    background:#3d3d3d;
-    line-height: 18px;
-    margin: 0 !important;
-    padding: 15px !important;
-    text-indent: 20px;
 
 .snapjs-right #selfie{
    a:after, a:before {
@@ -103,7 +95,10 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-  width: 70%; margin:0 auto 0;
+  margin:0 auto 0;
+  a{text-indent: 50px;
+    &:hover {text-indent:40px;}
+  }
   .widget {margin-top:20px;}
   ul {margin: 0;}
 }
@@ -116,7 +111,6 @@
     text-decoration: none;
     text-shadow: none;
 }
-.snap-drawer li > a:hover {padding-left: 5px; }
 
 .snap-drawer p {
   font-size: 12px;

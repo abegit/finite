@@ -319,6 +319,35 @@ $.fn.cycle.defaults = {
 
 
 
+//Ready for photoSwipe!
+jQuery(function(){
+    jQuery("#single a.ngg-fancybox").each(function() {
+        jQuery(this).wrap( "<div class='ngg-gallery-thumbnail'></div>" ).attr('rel','set_1');
+        if (jQuery(this).attr("title")) {
+            newTitle = jQuery(this).children("img").attr("title");
+        } else {
+            newTitle = jQuery(this).children('img').attr("alt");
+            jQuery(this).attr("title", newTitle);
+            
+        }
+});
+    
+
+
+    // jQuery(".ngg-gallery-thumbnail a").photoSwipe({
+    //         captionAndToolbarAutoHideDelay: 0,
+    //         getImageCaption: function(el){
+    //             psTitle = jQuery(el).find("img").first().attr("alt");              
+
+    //             psCaptionString = "<strong>" + psTitle + "</strong>";
+    //             psImgCaption = jQuery(psCaptionString);
+    //             return psImgCaption;
+    //         }
+    // });
+
+
+});
+
 
 
 

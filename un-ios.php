@@ -1,7 +1,8 @@
   <!-- Set the viewport width to device width for mobile IPHONE STUFF -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="Unscene">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  
 
   <!-- Make the status bar black with white text. -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black">

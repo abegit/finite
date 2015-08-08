@@ -4,7 +4,7 @@
 
 <!-- body content -->
 
-<div id="blog" class="wrapper lt">
+<div id="blog feed" class="wrapper lt">
         <div class="row">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
             <div class="large-6 columns post">

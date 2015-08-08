@@ -1,4 +1,29 @@
 @import "mixins";
+
+$smallbreak : 480px;
+$mediumbreak : 768px;
+$largebreak : 1024px;
+
+@mixin bp-large {
+  @media only screen and (min-width: $largebreak + 1) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: $largebreak) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: $smallbreak - 1) {
+    @content;
+  }
+}
+
+
+
 @mixin border-box {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -37,7 +62,31 @@
   -moz-box-shadow: $params;
   box-shadow: $params;
 }
+@mixin text-shadow($shadow1, $shadow2:false, $shadow3:false, $shadow4:false, $shadow5:false) {
+ $params: $shadow1;
+  @if $shadow2 
+    { $params: $shadow1, $shadow2; }
+    @if $shadow3 != false
+      { $params: $shadow1, $shadow2, $shadow3; }
+      @if $shadow4 != false
+        { $params: $shadow1, $shadow2, $shadow3, $shadow4; }
+        @if $shadow5 != false
+          { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5; }
 
+  -webkit-text-shadow: $params;
+  -moz-text-shadow: $params;
+  text-shadow: $params;
+}
+@mixin linear-gradient($one, $two) {
+  background:$one; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: -moz-linear-gradient(center, linear cover, $one 0%, $two 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top, white 50%, yellow, red); /* Chrome,Safari4+ */
+  background: -o-linear-gradient(center, linear cover, $one 0%,$two 100%); /* Opera 12+ */
+  background: -ms-linear-gradient(center, linear cover, $one 0%,$two 100%); /* IE10+ */
+  background: linear-gradient(linear at center, $one 0%,$two 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$one', endColorstr='$two',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
 
 @mixin trans($numb){-webkit-transition:all $numb ease-in-out;
      -moz-transition:all $numb ease-in-out;

@@ -1,5 +1,5 @@
 <ul class="breadcrumbs catlist">
-	<li class="cat-item"><a href="/shop">All</a></li>
+	<li class="cat-item"><a href="/services?all">All</a></li>
         <?php $catsy = get_the_category();
         $myCat = $catsy->cat_ID;
         $currentcategory = '&current_category='.$myCat; ?>

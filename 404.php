@@ -4,31 +4,24 @@
 <div id="category" class="wrapper dk">
 
         <div class="row">
-            
-        <div class="large-9 columns">
-            <div class="large-6 columns">
-                <a href="<?php the_permalink() ?>" data-transition="slide" title="<?php the_title_attribute(); ?>" class="title"> <?php if ( has_post_thumbnail() ) { the_post_thumbnail('blog'); } ?>
-                <div class="info">
-                <p><?php the_time('n M Y') ?><i class="icon-clockalt-timealt"></i></p>
-                </div>
-                <div class="content">
-                <h3><?php the_title(); ?></h3>
-                <?php echo the_excerpt(); ?></div>
-                </a>
-            </div>
-            <div class="large-12 columns text-center ani">
-                <?php custom_pagination( $html_id ); ?>
-            </div>
+        <div class="large-2 medium-4 hide-for-medium-down columns sidebar">
+        <ul></ul>
         </div>
-        <div class="large-3 columns sidebar">
-        <?php if ( is_active_sidebar( 'newsletter' ) ) : ?>
-        <div style="background: url('<?php bloginfo('template_directory'); ?>/images/dont-be-square.jpg') no-repeat scroll 0px 0px / contain  rgb(249, 249, 249); padding: 50% 8% 8%;">
-        <div style="background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 20px;"><?php dynamic_sidebar( 'newsletter' ); ?></div></div>
-        <?php endif; ?>
-        
-        <ul><?php dynamic_sidebar( 'blog' ); ?></ul>
-
-        </div>            
+        <div class="large-8 columns">
+        <div class="large-2 small-12 columns"><h1>Oops!</h1>
+        </div>
+        <div class="large-10 small-12 columns"><p>Looks like that link has changed, why don't you give search a try.</p><br>
+            <p>Feeling Lucky?</p><br>
+<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+    <label for="s" class="large-2 columns small-12">Search for: </label>
+    <input type="text" value="<?php echo $s_query; ?>" name="s" id="s" class="small-12 large-8 columns" />
+    <input type="submit" id="searchsubmit" class="large-2 small-6 columns" value="Search" />
+</form>
+        </div>
+        </div>
+        <div class="large-2 medium-4 hide-for-medium-down columns ">
+        <ul></ul>
+        </div> 
         </div> <!-- end row -->
 <div class="clear"></div>
 </div>

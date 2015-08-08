@@ -29,9 +29,9 @@ get_header(); ?>
                 </div>
 
 
-                <div class="large-4 columns"><?php echo adrotate_group(1); ?>
-                        <?php dynamic_sidebar('rightbar'); ?>
-</div>
+                <div class="large-4 columns sidebar">
+            <ul> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) : ?> <?php endif; ?> </ul>
+        </div>
 
 
         

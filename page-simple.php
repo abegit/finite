@@ -21,7 +21,7 @@ get_header(); ?>
     </div>
 
     <div class="row choice">
-        <?php dynamic_sidebar('home'); ?>
+        <?php dynamic_sidebar('home-footer'); ?>
     </div><!--row-->
 </section>
 <!--end enter content-->
@@ -42,7 +42,9 @@ get_header(); ?>
                 </div>
 
 
-                <div class="large-4 columns"><?php echo adrotate_group(1); ?></div>
+                <div class="large-4 columns sidebar">
+            <ul> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) : ?> <?php endif; ?> </ul>
+        </div>
 
 
         

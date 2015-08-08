@@ -1,13 +1,13 @@
-<?php get_header('shop'); ?>
+<?php get_header(); ?>
 
 
 
 <!-- body content -->
 
 <div id="shop" class="wrapper lt woocommerce">
-
 <div class="section-header store">
-    <div class="row"> <div class="large-12 columns"><ul class="store"><?php dynamic_sidebar( 'store' ); ?></ul></div></div></div>
+    <div class="row"> <div class="large-12 columns"><ul class="store"><?php dynamic_sidebar( 'archive-7' ); ?></ul></div></div></div>
+
 
 
         <div class="row">
@@ -80,7 +80,7 @@
 
 
 <div class="large-2 pull-10 columns sidebar">
-		      	<ul class="store"><?php dynamic_sidebar( 'storeside' ); ?></ul>
+		      	<ul class="store"><?php dynamic_sidebar( 'store-6' ); ?></ul>
         	</div>
 
 
@@ -89,7 +89,8 @@
             
         </div> <!-- end row -->
 <div class="clear"></div>
+
 </div>
 
-<?php get_footer( 'shop' ); ?>
+<?php get_footer(); ?>
 

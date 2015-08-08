@@ -1,9 +1,23 @@
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <?php if (is_404()) { ?>
+<script><?php $url = "$_SERVER[REQUEST_URI]";
+                                        $chunks = array_filter(explode('/', $url));
+                                        $s_query = str_replace('/', ' ', trim($url, '/')); ?></script>
+<?php } ?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+    <meta itemprop="name" content="<?php the_title(); ?>" /> 
+    <?php if(function_exists('the_post_thumbnail')) : ?>
+    <meta itemprop="image" content="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" />
+    <?php endif; ?>
+    <meta itemprop="url" content="<?php the_permalink(); ?>" /> 
+    <meta itemprop="author" content="<?php get_the_author(); ?>"/> 
+    <meta itemprop="description" content="<?php echo get_the_excerpt(); ?>" /> 
+    <meta itemprop="datePublished" content="<?php the_time('F j, Y'); ?>" /> 
+    <meta itemprop="dateModified" content="<?php the_modified_date('F j, Y','',''); ?>" />
     <?php get_template_part('/un-ios');?>
+    
     <link rel="shortcut icon" href="/favicon.ico" >
     <link rel="icon" href="/animated_favicon.gif" type="image/gif" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -21,6 +35,9 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.scrollTo.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.nav.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
+
+
+
     <link type="text/css" rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css?=v4.3">
     <style>
     #logo {background-image:url('<?php header_image(); ?>') !important;}
@@ -100,6 +117,8 @@ html {margin-top: 0 !important; }
 
 </style>
 
+
+
 <script type="text/javascript">
 var $jfs = jQuery.noConflict();
 $jfs(document).ready(function(){
@@ -108,40 +127,27 @@ $jfs(document).ready(function(){
 </script>
  <script type="text/javascript">
 var $onlyDesktop = jQuery.noConflict();
-$onlyDesktop(window).load(function() {
-        var w = $(window).width();
+    $onlyDesktop(document).ready(function() {
+        $onlyDesktop(window).load(function() {
+            var w = $(window).width();
+            if(w>400) {
+                $onlyDesktop('section[data-type="background"]').each(function(){
+                    var $bgobj = $onlyDesktop(this); // assigning the object
+                    var $window = $onlyDesktop('#snapcontent');
 
-        if(w>400) {
-            $onlyDesktop('section[data-type="background"]').each(function(){
-                var $bgobj = $onlyDesktop(this); // assigning the object
-                var $window = $onlyDesktop('#snapcontent');
+                    $onlyDesktop('#snapcontent').scroll(function() {
+                      var yPos = -($window.scrollTop() / $bgobj.data('speed'));
 
-                $onlyDesktop('#snapcontent').scroll(function() {
-                  var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+                        // Put together our final background position
+                        var round = '50% '+ yPos;
+                        var coords = round + 'px';
 
-                    // Put together our final background position
-                    var round = '50% '+ yPos;
-                    var coords = round + 'px';
-
-                    // Move the background
-                    $bgobj.css({ backgroundPosition: coords });
+                        // Move the background
+                        $bgobj.css({ backgroundPosition: coords });
+                    });
                 });
-          });
-        }
-        else {
-
-        }
-
-    $onlyDesktop('.smoothie[href^="#"]').on('click',function (e) {
-      e.preventDefault();
-      var target = this.hash,
-      $onlyDesktoptarget = $onlyDesktop(target);
-      $onlyDesktop('#snapcontent').stop().animate({
-          'scrollTop': $onlyDesktoptarget.offset().top - 0
-      }, 750, 'swing', function () {
-      });
-    });
-        
+            }
+        }); // end window.load
     });
 
 </script>
@@ -205,11 +211,13 @@ function createDropDown(){
     </script>
 
 </head>
-
-<body
-<?php global $blog_id;  if ( is_home() ) {echo "id='blog" . $blog_id . "'" ?> <?php body_class( 'home' ); }
-  elseif ( is_single()) { echo "id='blog" . $blog_id . "'" ?> " <?php body_class( 'home' ); }
-  else { echo 'id="blog' . $blog_id . "'" ?> " <?php body_class( 'home woocommerce' ); ?> <?php } ?> >
+<?php global $blog_id; ?>
+<?php if ( is_woocommerce() ) {
+  $boxy = 'home woocommerce';
+} else {
+  $boxy = 'home';
+} ?>
+<body id="blog<?php echo $blog_id; ?>" <?php body_class( $boxy );?>>
 
 
 
@@ -234,7 +242,7 @@ function createDropDown(){
             <section id="header" class="wrapper page dk" data-type="background" data-speed="2">
 <?php } elseif (is_singular('product')) { ?>
             <section id="header" class="wrapper product" data-type="background" data-speed="2">
- <?php } elseif (is_single()) { ?>
+ <?php } elseif (is_single() && has_post_format( 'standard' )) { ?>
         <?php if (has_post_thumbnail( $post->ID ) ) { ?>
         <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
             <section id="header" class="wrapper image dk single" style="background-image: url('<?php echo $image[0]; ?>')"  data-type="background" data-speed="2">
@@ -259,6 +267,6 @@ function createDropDown(){
 </div><!--header-->
 
 <?php get_template_part('inc/titlebar') ?>
-<?php if (is_home()) { ?> <div class="clear mobi"></div><a href="#feed" class="wrapper mobi smoothie text-center"><i class="icon-circledown"></i></a><?php } ?>
+<div class="clear"></div>
 </section><!--end headerfix-->
             <!-- navigation bar -->

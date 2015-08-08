@@ -148,20 +148,6 @@ $onlyDesktop(window).load(function() {
 
 </script>
 
-<script>
-var $jj = jQuery.noConflict();
-$jj(document).ready(function(){
-    $jj('.smoothie[href^="#"]').on('click',function (e) {
-      e.preventDefault();
-      var target = this.hash,
-      $jjtarget = $jj(target);
-      $jj('#snapcontent').stop().animate({
-          'scrollTop': $jjtarget.offset().top - 0
-      }, 750, 'swing', function () {
-      });
-  });
-  });
-  </script>
 <script type="text/javascript">
     var $dd = jQuery.noConflict();
 
@@ -232,12 +218,12 @@ function createDropDown(){
 <div class="snap-drawers">
    <div class="snap-drawer snap-drawer-left">
       <div class="close-l" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
-      <ul><?php dynamic_sidebar( 'Leftbar' ); ?></ul>
+      <ul><?php dynamic_sidebar( 'left-2' ); ?></ul>
    </div>
    <div class="snap-drawer snap-drawer-right">
             <div class="close-r" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
             <div id="selfie"><a href="/"><img src="http://placehold.it/120"></a></div>
-            <ul><?php dynamic_sidebar( 'Rightbar' ); ?></ul>
+            <ul><?php dynamic_sidebar( 'right-3' ); ?></ul>
    </div>
 </div>
 
