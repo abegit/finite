@@ -9,7 +9,7 @@
               <div class="breadcrumbs"><?php if(function_exists('bcn_display')) { bcn_display(); }?></div>
       <!-- end breadcrumbs -->
  </div></div></div></div>
-      <?php } else if (!is_page('653')) { ?>
+      <?php } else if (!is_page('653') && is_page_template('page-enter')) { ?>
 <div class="wrapper dk" id="contact">
  <div class="section-header bl">
     <div class="row"> <div class="large-12 columns">
@@ -59,7 +59,6 @@
    </div>
    <div class="snap-drawer snap-drawer-right">
             <div id="close-r" style="cursor:pointer; z-index:9; background: none repeat scroll 0 0 #636363; bottom: 0; font-family: lato; font-size: 16px; line-height: 24px; padding: 10px; position: fixed; width: 100%;"> Close >> </div>
-            <div id="selfie"><a href="/"><img src="<?php bloginfo('template_directory'); ?>/images/abe-avatar.jpg"></a></div>
             <ul> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Rightbar') ) : ?>
     
     <?php endif; ?></ul>

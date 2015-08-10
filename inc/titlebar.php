@@ -1,7 +1,5 @@
 <?php if (is_page_template('page-dark-left.php')) { ?>
 	<div class="section-header">
-		<div class="text-center button ani container"><?php posts_nav_link(' or ', 'Newer <i class="icon-fastright r"></i></a>', '<i class="icon-fastleft"></i>Older</a>'); ?></div>
-
 		<div class="row">
 			<div class="large-8 small-12 columns page-head">
 				<?php if (has_post_thumbnail( $post->ID ) ) { ?>
@@ -43,7 +41,9 @@ echo '<a href="/for-business"></a>';
 </div>
 </div> <!-- end navigation -->
      </div>
-<?php } elseif (is_search()) { ?>
+<?php } elseif (is_category('case-studies')) {
+
+} elseif (is_search()) { ?>
 <div class="section-header">
 		<div class="row">
 			<div class="large-12 columns">

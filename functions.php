@@ -360,13 +360,13 @@ if (is_shop()) {
     wooInitd();
 }
 
-function check404() {
-    if (is_404()) {
-        $url = "$_SERVER[REQUEST_URI]";
-        $chunks = array_filter(explode('/', $url));
-        $s_query = str_replace('/', '+', trim($url, '/'));
-        wp_redirect( home_url().'?s='.$s_query ); exit;
-    }
-}
+// function check404() {
+//     if (is_404()) {
+//         $url = "$_SERVER[REQUEST_URI]";
+//         $chunks = array_filter(explode('/', $url));
+//         $s_query = str_replace('/', '+', trim($url, '/'));
+//         wp_redirect( home_url().'?s='.$s_query ); exit;
+//     }
+// }
 
-add_action("template_redirect", 'check404');
+// add_action("template_redirect", 'check404');

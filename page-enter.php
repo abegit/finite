@@ -32,10 +32,10 @@ get_header(); ?>
         <!--end enter content-->
 </section>
 
+<?php get_template_part('content','about'); ?>
 
 <?php get_template_part('content', 'services'); ?>
 
-<?php get_template_part('content','about'); ?>
             
 
 <?php get_footer(); ?>

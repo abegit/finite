@@ -34,18 +34,10 @@
         width: 50% !important;
         margin-bottom: 40px;}
     }
-    #dark_centered {
-    }
-
-} 
-@include bp-large {
-    .row {max-width: 1024px;}
+    #dark_centered {}
     #enter {
         background-size:162%;
         h1 {font-size: 70px;line-height: 70px; margin-bottom: 20px;}
-    }
-    .wrapper {
-        &> .row {padding:60px 0;}
     }
 }
 

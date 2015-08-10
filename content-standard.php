@@ -12,7 +12,7 @@
             <?php echo do_shortcode('[ratings]'); ?>
             </div>
             <div class="section-header"><div class="row"><div class="large-12 columns">Last Modified: <?php the_modified_date(); ?></div>
-            <div class="large-12 columns">Published: <?php the_date(); ?></div></div></div>
+            </div></div>
             <?php get_template_part('inc/authorbox'); ?>
     </div>
 

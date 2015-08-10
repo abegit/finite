@@ -1,13 +1,13 @@
-<div class="gallery post-single wrapper dk">
+<div class="gallery post-single wrapper lt">
     <div class="app-container" <?php if( class_exists( 'kdMultipleFeaturedImages' ) ) { ?> style="background-image:url('<?php echo kd_mfi_get_featured_image_url( 'featured-image-2', 'post' ); ?>')"<?php } ?>>
 <div class="row"> 
         <div class="large-12 text-center">
             <?php get_template_part('/inc/title');?>
             <?php if ( has_post_thumbnail() ) { ?>
-                <?php the_post_thumbnail('blogsingle'); ?>
+                <?php the_post_thumbnail('full'); ?>
             <?php } ?>
             <?php the_excerpt(); ?>
-        <a href="#content" class="wrapper smoothie text-center"><i class="icon-circledown"></i></a>
+        <a href="#content<?php echo $post->ID; ?>" class="wrapper smoothie text-center"><i class="icon-circledown"></i></a>
         </div>
     
     <div class="clear"></div>
@@ -60,7 +60,7 @@
         } ?>
     </div>
 
-    <div class="large-8 columns pull-2 post" id="content">  
+    <div class="large-8 columns pull-2 post" id="content<?php echo $post->ID; ?>">  
             <div class="info">
                 <p>by <?php the_author_link(); ?> <span style="float:right;"><?php the_time('j M Y') ?><i class="icon-clockalt-timealt"></i></span></p>
             </div>

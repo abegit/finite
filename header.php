@@ -14,7 +14,6 @@
     <meta itemprop="url" content="<?php the_permalink(); ?>" /> 
     <meta itemprop="author" content="<?php get_the_author(); ?>"/> 
     <meta itemprop="description" content="<?php echo get_the_excerpt(); ?>" /> 
-    <meta itemprop="datePublished" content="<?php the_time('F j, Y'); ?>" /> 
     <meta itemprop="dateModified" content="<?php the_modified_date('F j, Y','',''); ?>" />
     <?php get_template_part('/un-ios');?>
     

@@ -16,7 +16,7 @@
                     <?php the_content(); ?>
                     <?php endwhile; ?>
                     <div class="section-header"><div class="row"><div class="large-12 columns">Last Modified: <?php the_modified_date(); ?></div>
-                    <div class="large-12 columns">Published: <?php the_date(); ?></div></div></div>
+                    </div></div>
     <?php endif; ?>
                     
                 </div>

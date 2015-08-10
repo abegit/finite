@@ -7,10 +7,9 @@ get_header(); ?>
 <div id="dark_left" class="wrapper dk ani">
 	     <div class="row">    
                 <div class="large-8 columns">
+                	<div class="large-12 columns"><p>Last Modified: <span dateModified ><?php the_modified_date(); ?></span></p></div>
                 	 <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
                     <?php the_content(); ?>
-                    <div class="section-header"><div class="row"><div class="large-12 columns">Last Modified: <?php the_modified_date(); ?></div>
-					<div class="large-12 columns">Published: <?php the_date(); ?></div></div></div>
                     <?php get_template_part('inc/authorbox'); ?>
                     <?php endwhile; ?>
     				<?php endif; ?>

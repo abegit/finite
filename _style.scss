@@ -694,7 +694,7 @@ body.snapjs-right{
             border-bottom:medium none !important;
             @include border-radius($myrad);
             @include box-shadow(0 5px 0 $grn - 30);
-            color:#FFFFFF !important;
+            color:#000 !important;
             font-weight:900;
             line-height:40px;
             position:relative;
@@ -1044,9 +1044,17 @@ input#s{padding-right:80px;}
     background-color: rgba(0, 0, 0, 0);
     background-repeat: no-repeat;
     background-position:center;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap:wrap;
+    flex-flow: center;
+     justify-content: center;
+     align-items:center;
+     align-content:center;
     @include box-shadow(0 0 0 1000px rgba(0, 0, 0, 0.8) inset);
-    @include bp-large{ min-height: 640px;padding: 50px 0; }
-    @include bp-medium { min-width: 90vh; padding:20px 0;}
+    @include bp-large{ min-height: 90vh;padding: 50px 0; }
+    @include bp-medium {min-height: 640px; padding:50px 0;}
+    @include bp-small {min-height: 90vh;padding:20px 0;}
   }
 
   @include bp-large {
