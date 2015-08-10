@@ -78,7 +78,7 @@ document.addEventListener("touchstart", function(){}, true);
 
 </script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/demo.js?ver=2"></script>
-<?php if (is_archive('post')) { ?>
+<?php if (is_archive('post') || is_home() || is_search() ) { ?>
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/isotope.js?ver=2"></script>
     <script>

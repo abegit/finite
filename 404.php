@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <!-- body content -->
 
-<div id="category" class="wrapper dk">
+<div id="error" class="wrapper dk">
 
         <div class="row">
         <div class="large-2 medium-4 hide-for-medium-down columns sidebar">

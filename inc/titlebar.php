@@ -101,5 +101,5 @@ echo '<a href="/for-business"></a>';
 			</div>
 		</div>
 <?php } ?>
-<!--            <div class="clear mobi-no"></div><a href="#feed" class="wrapper mobi smoothie text-center"><i class="icon-circledown"></i></a>
+<!--            <div class="clear mobi-no"></div><a href="#content" class="wrapper mobi smoothie text-center"><i class="icon-circledown"></i></a>
 -->

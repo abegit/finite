@@ -7,7 +7,7 @@
                 <?php the_post_thumbnail('blogsingle'); ?>
             <?php } ?>
             <?php the_excerpt(); ?>
-        <a href="#feed" class="wrapper smoothie text-center"><i class="icon-circledown"></i></a>
+        <a href="#content" class="wrapper smoothie text-center"><i class="icon-circledown"></i></a>
         </div>
     
     <div class="clear"></div>
@@ -60,7 +60,7 @@
         } ?>
     </div>
 
-    <div class="large-8 columns pull-2 post" id="feed">  
+    <div class="large-8 columns pull-2 post" id="content">  
             <div class="info">
                 <p>by <?php the_author_link(); ?> <span style="float:right;"><?php the_time('j M Y') ?><i class="icon-clockalt-timealt"></i></span></p>
             </div>

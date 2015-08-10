@@ -1272,99 +1272,70 @@ body.snapjs-right #snapcontent:after {
 #blog99 #category .post > a:before {
   content: ""; }
 
-@media only screen and (min-width: 768px) {
-  #category .post {
-    width: 50%; } }
-#category .post .info {
-  display: none; }
-#category .post > a {
-  display: inline-block;
-  background: #fff;
-  border-bottom: 5px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  -webkit-transition: all 400ms ease-in-out;
-  -moz-transition: all 400ms ease-in-out;
-  -o-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out; }
-  #category .post > a:hover {
-    opacity: .8;
-    transform: scale(1.02); }
-  #category .post > a:before {
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-    -moz-osx-font-smoothing: grayscale;
-    background: none repeat scroll 0 0 #000000;
-    border-top: 3px solid #20E9AD;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color: #ffffff;
-    content: "";
-    font-family: webhostinghub-glyphs;
-    font-size: 20px;
-    left: 50%;
-    margin-left: -30px;
-    margin-top: 12%;
-    opacity: 0;
-    padding: 20px;
-    position: absolute;
-    z-index: 1; }
-  #category .post > a:hover:before {
-    opacity: 1;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out; }
-  #category .post > a span {
-    float: right;
-    background: none repeat scroll 0 0 #427aac;
-    border-bottom: 2px solid transparent !important;
-    color: #fff;
-    font-weight: 900; }
-    #category .post > a span:hover {
-      background: #568ec0;
-      color: #fff; }
-#category .post > a:hover span {
-  text-decoration: none; }
-  #category .post > a:hover span:hover {
-    text-decoration: underline; }
-#category .post img {
-  max-width: 100%;
-  height: auto; }
-  #category .post img.wp-post-image {
-    width: 100%; }
-#category .large-6.columns.post:nth-child(2n-1) {
-  clear: both; }
-#category .pagination {
-  background: none repeat scroll 0 0 #dedede !important;
-  border-radius: 5px;
-  box-shadow: 0 2px 0 #cfcfcf inset;
-  padding: 20px; }
-  #category .pagination .btn, #category .pagination button[type="submit"], #category .pagination #enter p a, #enter p #category .pagination a, #category .pagination #enter .textwidget a, #enter .textwidget #category .pagination a, #category .pagination .section-header.store li ul a, .section-header.store li ul #category .pagination a, #category .pagination .woocommerce .button, .woocommerce #category .pagination .button {
-    display: inline-block;
-    line-height: 44px;
-    padding: 0 20px;
-    border: none; }
-  #category .pagination .pre {
+#post-loop {
+  /*end post*/ }
+  #post-loop .post .info {
     display: none; }
-  #category .pagination:before {
-    content: "Pages:";
-    font-family: lato;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 13px;
-    letter-spacing: 6px; }
-  #category .pagination span.btn, #category .pagination .woocommerce span.button, .woocommerce #category .pagination span.button {
-    background: none repeat scroll 0 0 #427aac;
-    border-bottom: 2px solid transparent !important;
-    color: #fff;
-    font-weight: 900; }
-    #category .pagination span.btn:hover, #category .pagination .woocommerce span.button:hover, .woocommerce #category .pagination span.button:hover {
-      background: #568ec0;
-      color: #fff; }
+  #post-loop .post > a {
+    display: inline-block;
+    background: #fff;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out; }
+    #post-loop .post > a:hover {
+      opacity: .8;
+      transform: scale(1.02); }
+    #post-loop .post > a:before {
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
+      -moz-osx-font-smoothing: grayscale;
+      background: none repeat scroll 0 0 #000000;
+      border-top: 3px solid #20E9AD;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      color: #ffffff;
+      content: "";
+      font-family: webhostinghub-glyphs;
+      font-size: 20px;
+      left: 50%;
+      margin-left: -30px;
+      margin-top: 12%;
+      opacity: 0;
+      padding: 20px;
+      position: absolute;
+      z-index: 1; }
+    #post-loop .post > a:hover:before {
+      opacity: 1;
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out; }
+    #post-loop .post > a span {
+      float: right;
+      background: none repeat scroll 0 0 #427aac;
+      border-bottom: 2px solid transparent !important;
+      color: #fff;
+      font-weight: 900; }
+      #post-loop .post > a span:hover {
+        background: #568ec0;
+        color: #fff; }
+  #post-loop .post > a:hover span {
+    text-decoration: none; }
+    #post-loop .post > a:hover span:hover {
+      text-decoration: underline; }
+  #post-loop .post img {
+    max-width: 100%;
+    height: auto; }
+    #post-loop .post img.wp-post-image {
+      width: 100%; }
+  #post-loop .large-6.columns.post:nth-child(2n-1) {
+    clear: both; }
 
 .single.post-single img.aligncenter {
   border: 1px solid #dddddd;
@@ -2036,6 +2007,36 @@ body#blog1 .breadcrumbs .icon-camera {
 .crayon-syntax .crayon-pre > div, .crayon-syntax pre > div {
   padding: 0 10px 0 30px; }
 
+.pagination {
+  background: none repeat scroll 0 0 #dedede !important;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #cfcfcf inset;
+  padding: 20px; }
+  .pagination .btn, .pagination button[type="submit"], .pagination #enter p a, #enter p .pagination a, .pagination #enter .textwidget a, #enter .textwidget .pagination a, .pagination .section-header.store li ul a, .section-header.store li ul .pagination a, .pagination .woocommerce .woocommerce-message .button.wc-forward, .woocommerce .woocommerce-message .pagination .button.wc-forward, .pagination .woocommerce .woocommerce-info .button.wc-forward, .woocommerce .woocommerce-info .pagination .button.wc-forward, .pagination .woocommerce .woocommerce-error .button.wc-forward, .woocommerce .woocommerce-error .pagination .button.wc-forward, .pagination .woocommerce .button, .woocommerce .pagination .button {
+    display: inline-block;
+    line-height: 44px;
+    padding: 0 20px;
+    border: none; }
+  .pagination .pre {
+    display: none; }
+  .pagination:before {
+    content: "Pages:";
+    font-family: lato;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 6px; }
+  .pagination span.btn, .pagination .woocommerce .woocommerce-message span.button.wc-forward, .woocommerce .woocommerce-message .pagination span.button.wc-forward, .pagination .woocommerce .woocommerce-info span.button.wc-forward, .woocommerce .woocommerce-info .pagination span.button.wc-forward, .pagination .woocommerce .woocommerce-error span.button.wc-forward, .woocommerce .woocommerce-error .pagination span.button.wc-forward, .pagination .woocommerce span.button, .woocommerce .pagination span.button {
+    background: none repeat scroll 0 0 #427aac;
+    border-bottom: 2px solid transparent !important;
+    color: #fff;
+    font-weight: 900; }
+    .pagination span.btn:hover, .pagination .woocommerce span.button:hover, .woocommerce .pagination span.button:hover {
+      background: #568ec0;
+      color: #fff; }
+
+/*end pagination*/
 .btn, button[type="submit"], #enter p a, #enter .textwidget a, .section-header.store li ul a, .woocommerce .woocommerce-message .button.wc-forward, .woocommerce .woocommerce-info .button.wc-forward, .woocommerce .woocommerce-error .button.wc-forward, .woocommerce .button, .woocommerce .button[type="submit"], .button, button {
   font-family: lato;
   text-decoration: none;

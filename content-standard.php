@@ -1,7 +1,7 @@
 <div class="wrapper single post-single lt">
      
 <div class="row">  
-   <div class="large-8 columns post" id="feed">  
+   <div class="large-8 columns post" id="content">  
             <?php get_template_part('/inc/title');?>
             <?php if ( has_post_thumbnail() ) { the_post_thumbnail('blogsingle', array('class' => 'no-mobi')); } ?>
             <div class="info">

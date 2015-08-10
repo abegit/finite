@@ -57,3 +57,17 @@ body#blog1 {
 }
 
 
+.pagination{background:none repeat scroll 0 0 #dedede !important;
+  border-radius:5px;
+  box-shadow:0 2px 0 #cfcfcf inset;
+  padding:20px;
+    .btn{display:inline-block; line-height:44px; padding:0 20px;border:none;}
+    .pre{display:none;}
+    &:before{content:"Pages:"; @include latohv;}
+    span.btn{background:none repeat scroll 0 0 $blu;
+    border-bottom:2px solid transparent !important;
+    color:#fff; font-weight:900;
+      &:hover{background:$blu + 20; color:#fff;}
+    }
+} /*end pagination*/
+

@@ -1,15 +1,11 @@
 <?php get_header(); ?>
-<!-- body content -->
-
-<div id="category" class="wrapper lt">
-
-        <div class="row">
-            
-        <div class="large-9 columns">
+<div id="search" class="wrapper lt">
+    <div class="row">
+        <div class="large-12 columns">
             <?php if ( have_posts() ) : ?>
                 <div id="post-loop">
                     <?php while (have_posts()) : the_post(); ?> 
-                        <div class="post large-6 columns">
+                        <div class="post large-4 columns">
                             <a itemscope itemtype="http://schema.org/Article" href="<?php the_permalink() ?>" data-transition="slide" title="<?php the_title_attribute(); ?>" class="title"> <?php if ( has_post_thumbnail() ) { the_post_thumbnail('blog'); } ?>
                             <div class="info">
                             <p><?php the_time('n M Y') ?><i class="icon-clockalt-timealt"></i></p>
@@ -24,19 +20,7 @@
                 <?php get_template_part('inc/pagination'); ?>
             <?php endif; ?>
         </div>
-        <div class="large-3 columns sidebar">
-        <?php if ( is_active_sidebar( 'news-4' ) ) : ?>
-        <div style="background: url('<?php bloginfo('template_directory'); ?>/images/dont-be-square.jpg') no-repeat scroll 0px 0px / contain  rgb(249, 249, 249); padding: 50% 8% 8%;">
-        <div style="background: none repeat scroll 0% 0% rgb(255, 255, 255); padding: 20px;"><?php dynamic_sidebar( 'news-4' ); ?></div></div>
-        <?php endif; ?>
-        <ul> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) : ?>
-    
-    <?php endif; ?> </ul>
-
-        </div>            
-        </div> <!-- end row -->
-<div class="clear"></div>
+    </div> <!-- end row -->
+    <div class="clear"></div>
 </div>
-
-
 <?php get_footer(); ?>
