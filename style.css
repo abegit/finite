@@ -2001,7 +2001,7 @@ p.price {
     content: "";
     color: #147dda !important; }
 .woocommerce .woocommerce-info {
-  background: #dadada !important;
+  background: transparent !important;
   border-top: none !important;
   color: #0affb6 !important;
   border-bottom: solid 4px #0affb6 !important;

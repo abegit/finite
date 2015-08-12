@@ -22,7 +22,7 @@
       <ul class="columns large-9 small-12"><?php dynamic_sidebar( 'Footer' ); ?></ul>
         <ul class="columns large-3 small-12">
         <lh></lh>
-        <li><a href="/" id="logo" style="height:40px; width:160px; display: block; background-size:contain;"></a><p>Startup made in Costa Mesa, CA &copy; 2015. All rights reserved.</p>
+        <li><a href="/" id="logo" style="height:40px; width:160px; display: block; background-size:contain;"></a><p>Startup made in <a href="#close">Costa Mesa</a>, CA &copy; 2015. All rights reserved.</p>
 
         <?php if (current_user_can('shop_manager')) {
         // redirect them to the default place

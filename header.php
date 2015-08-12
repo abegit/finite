@@ -194,8 +194,9 @@ $jj(document).ready(function(){
       <?php if ( is_archive('product') && is_front_page()) {
             $paged = $wp_query->get( 'paged' );
                   if ( ! $paged || $paged < 2 ) {  
-                    echo get_template_part('content','slider');
-                      // slippy_slider_init('Homepage','widget', '1024px','300px'); ?>
+                    if ( !isset( $_GET['new'] ) ) {
+                      echo get_template_part('content','slider');
+                    } ?>
               <?php } else { ?>
                   <div class="wrapper dk page"><div class="section-header">
                       <div class="row">
