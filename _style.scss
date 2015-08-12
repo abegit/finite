@@ -420,7 +420,7 @@ br{clear:both;
 .selectwrap:before{
     background: #222;
     content:"";
-    font-family:webhostinghub-glyphs;
+    font-family:icomoon;
     color:#777;
     position:absolute;
     right:0;
@@ -1288,6 +1288,7 @@ input, select, textarea{
 
 
 @import "links";
+@import "featured";
 @import "woo";
 @import "productdesigner";
 @import "mobi";

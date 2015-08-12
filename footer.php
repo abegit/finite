@@ -14,15 +14,15 @@
 <section class="wrapper footer">
   <div class="section-header gr">
     <div class="row"> <div class="large-12 columns">
-        <h4 class="subheader alignleft">Want to get ahead of the game? Get in my newsletter. </h4 class="subheader">
-        <a href="http://unscene.us/register" class="btn alignright"><i class="icon-leaf"></i>Become Your Own Artist!</a>
+        <h4 class="subheader alignleft">Want to get ahead of the game? Get in my newsletter. Find out about the Latest Garment Sales!</h4 class="subheader">
+        <a href="/register" class="btn alignright"><i class="icon-leaf"></i>Sign up for free!</a>
     </div></div></div>
   <div id="footer">
 <div class="row links">
       <ul class="columns large-9 small-12"><?php dynamic_sidebar( 'Footer' ); ?></ul>
         <ul class="columns large-3 small-12">
         <lh></lh>
-        <li><a href="/" id="logo" style="height:40px; width:160px; display: block; background-size:contain;"></a><p>Startup made in Costa Mesa, CA &copy; 2014. All rights reserved.</p>
+        <li><a href="/" id="logo" style="height:40px; width:160px; display: block; background-size:contain;"></a><p>Startup made in Costa Mesa, CA &copy; 2015. All rights reserved.</p>
 
         <?php if (current_user_can('shop_manager')) {
         // redirect them to the default place
@@ -86,7 +86,7 @@ $onlyDesktop(window).load(function() {
                     var coords = yPos + 'px';
 
                     // Move the background
-                    $('section[data-type="elements"] .products').css( 'top' , coords );
+                    // $('section[data-type="elements"] .products').css( 'top' , coords );
                 });
           });
         }

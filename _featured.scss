@@ -1,0 +1,69 @@
+#featured {
+    max-height: 340px;
+    .swiper-container {max-height: 340px;}
+}
+#featured img {
+    width: 100%;
+}
+#featured .btn {background:rgba(0,0,0,.7); border:solid 3px #000; @include box-shadow(0 0 0 1px #fff inset);
+	&:hover {background:rgba(255,255,255,1);border:solid 3px #fff; @include box-shadow(0 0 0 1px #000 inset); color:#000; }
+}
+#featured .html-caption {
+   align-items: center;
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    max-height: 340px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    text-transform: uppercase;
+}
+#featured p {
+ 	color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1rem;
+    margin: 0;
+}
+#featured a {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#open-sesame .message {
+    height: 0;
+    overflow: hidden;
+    @include trans(1s);
+}
+#open-sesame .message.visible {
+    max-height: 340px;
+    height: 340px;
+    overflow: visible;
+}
+#open-sesame .message {
+    background: #000000 none repeat scroll 0 0 !important;
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 9;
+}
+
+
+#featured {
+	.html-caption > * {
+	    transform: scale(0.9);
+	    transition: all 0s ease 0s;
+	}
+	.swiper-slide-active .html-caption > * {
+	    transform: scale(1.2);
+	    transition: all 1000ms ease 1000ms;
+	}
+	.swiper-slide-active {
+	    z-index: 6;
+	}
+}

@@ -1,36 +1,47 @@
 var $popRocks = jQuery.noConflict();
-$popRocks(window).load(function(){
-	// custom popup action by unscene.us
-	$popRocks('body').prepend('<div id="btn-tip-main"><div id="btn-tip-box"><i class="btn-tip-close icon-cross"></i><div id="btn-info"><div class="btn-content"></div><a class="btn btn-default btn-tip-close" href="#">Go Back</a></div></div></div>');
-	var popbtn = $popRocks('.btn-tip');
-	var popClose = $popRocks('.btn-tip-close');
-	var popContainr = $popRocks('#btn-tip-main');
-	var popBox = $popRocks('#btn-tip-box');
-	var popInfo = $popRocks('.btn-content');
-	var addURL = popbtn.attr('href');
-	popbtn.attr('data-url',addURL);
+$popRocks(document).ready(function() {
 
-	// start popup
-	popbtn.click(function(e){
-		e.preventDefault();
-		var infoTXT=$popRocks(this).attr('data-text');
-		var infoURL=$popRocks(this).attr('data-url');
-		var infoTitle=$popRocks(this).attr('title');
-		if(infoTXT!==""){
-			popContainr.addClass('open');
-			popInfo.html(function() {
-				return "<h4>" + infoTitle + "</h4><p>" + infoTXT + "</p>" + "<a class='btn btn-primary' href='" + infoURL + "'>Continue</a>";
-				// return "<h4>" + infoTitle + "</h4><p>" + infoTXT + "</p>";
+		// custom popup action by unscene.us
+		$popRocks('body').prepend('<div id="btn-tip-main"><div id="btn-tip-box"><i class="btn-tip-close icon-cross"></i><div id="btn-info"></div></div></div>');
+		
+		$popRocks('.btn-tip').each(function() {
+			var addURL = $popRocks(this).attr('href');
+			$popRocks(this).attr('data-url',addURL);
+		});
+
+		var popbtn = $popRocks('.btn-tip');
+		var popContainr = $popRocks('#btn-tip-main');
+		var popBox = $popRocks('#btn-tip-box');
+		var popInfo = $popRocks('#btn-info');
+
+		// start popup
+		popbtn.click(function(e){
+			e.preventDefault();
+			var infoTXT=$popRocks(this).attr('data-text');
+			var infoURL=$popRocks(this).attr('data-url');
+			var infoTitle=$popRocks(this).attr('title');
+			if(infoTXT!==""){
+				popContainr.addClass('open');
+				popInfo.html(function() {
+					if(infoURL=="#close"){
+						return "<h4>" + infoTitle + "</h4><p>" + infoTXT + "</p>" + "<a class='btn btn-default btn-tip-close' href='#'>Okay, Got it!</a>";
+					} else {
+						return "<h4>" + infoTitle + "</h4><p>" + infoTXT + "</p>" + "<a class='btn btn-primary' href='" + infoURL + "' target='_new'>Continue</a>";
+					}
 				});
-		} else{
-			popContainr.addClass('open');
-		    popInfo.html(fixThisShit);
-		}
-	});
-	// end popup
-	popClose.click(function(e){
-		e.preventDefault();
-		popContainr.removeClass('open');
-	});
+				var popClose = $popRocks('.btn-tip-close');
+				popClose.click(function(e){
+					e.preventDefault();
+					popContainr.removeClass('open');
+				});
+
+
+			} else{
+				popContainr.addClass('open');
+			    popInfo.html(fixThisShit);
+			}
+		});
+
 
 });
+

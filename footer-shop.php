@@ -71,7 +71,6 @@ $onlyDesktop(window).load(function() {
                     var coords = yPos + 'px';
 
                     // Move the background
-                    $('section[data-type="elements"] .products').css( 'top' , coords );
                 });
           });
         }
