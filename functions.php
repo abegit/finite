@@ -512,7 +512,7 @@ register_sidebar(array(
 register_sidebar(array(
     'name'          =>  'Footer',
     'class'         => '',
-    'before_widget' => '<li id="%1$s" class="widget %2$s columns large-6 small-12">',
+    'before_widget' => '<li id="%1$s" class="widget %2$s columns large-4 small-12">',
     'after_widget'  => '</li>',
     'before_title'  => '<h5>',
     'after_title'   => '</h5>',
@@ -717,4 +717,7 @@ class unsceneRotator extends adrotate_widgets {
     }
 }
 add_action('widgets_init', create_function('', 'return register_widget("unsceneRotator");'));
+
+
+
 

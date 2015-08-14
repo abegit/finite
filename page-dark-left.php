@@ -15,10 +15,11 @@ get_header(); ?>
     				<?php endif; ?>
                 </div>
                 <div class="large-4 columns sidebar">
+                	<?php dynamic_sidebar( 'blog' ); ?>
 	            	<?php echo do_shortcode('[easy_sign_up title="Want Professional Help?" fnln="0" phone="0" esu_label="On iTunes Download Page" esu_class="'.get_the_title().'" esu_r_url="unscene.us/thanks"]') ?>
                 	<h3>Changelog</h3>
 					<?php $specialPosts = new WP_Query();
-					$specialPosts->query('tag=itunes-podcast-creator&showposts=4'); ?>					
+					$specialPosts->query('tag='.get_the_title().'&showposts=4'); ?>					
 					<?php if ($specialPosts->have_posts()) : while($specialPosts->have_posts()) : $specialPosts->the_post(); ?>
 					    <div class="large-6 columns">
 							<a href="<?php the_permalink(); ?>">
@@ -36,7 +37,7 @@ get_header(); ?>
 						    </a>
 						</div>
 					<?php endwhile; ?>
-					<?php endif; ?>	
+					<?php endif; ?>
                 </div> <!-- end colums -->
 
 
