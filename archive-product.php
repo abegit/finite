@@ -4,6 +4,11 @@
 <!-- body content -->
 
 <section id="shop" class="wrapper lt woocommerce" data-type="elements" data-speed="2">
+<div class="section-header store">
+    <div class="row"> <div class="large-12 columns"><ul class="store"><?php dynamic_sidebar( 'archive-7' ); ?></ul></div></div></div>
+
+
+
         <div class="row">
 
 

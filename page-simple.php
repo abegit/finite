@@ -21,7 +21,7 @@ get_header(); ?>
     </div>
 
     <div class="row choice">
-        <?php dynamic_sidebar('home'); ?>
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home-footer') ) : ?> <?php endif; ?> 
     </div><!--row-->
 </section>
 <!--end enter content-->
@@ -42,7 +42,10 @@ get_header(); ?>
                 </div>
 
 
-                <div class="large-4 columns"><?php dynamic_sidebar('blog'); ?> </div>
+                <div class="large-4 columns sidebar">
+            <ul> <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) : ?> <?php endif; ?> </ul>
+        </div>
+
 
 
         

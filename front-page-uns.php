@@ -1,18 +1,6 @@
 
 
 <?php get_header(); ?>
-
-<!--<div id="topwrap">
-
-    <div class="row">
-    <img id="top" src="bg-ft.png" />
-    
-    </div>
-<object type="application/x-shockwave-flash" style="outline:none;" data="<?php bloginfo('template_directory'); ?>/fish.swf?up_fishName=Fish&up_backgroundColor=000000&up_backgroundImage=bg-nt.gif&up_backgroundRepeat=repeat&up_foodColor=FFAC12&up_fishColor=ffffff&up_numFish=20&up_fishColor1=ffffff&up_fishColor2=333333&up_fishColor3=333333&up_fishColor4=333333&up_fishColor5=333333&up_fishColor6=333333&up_fishColor7=333333&up_fishColor8=333333&up_fishColor9=333333&up_fishColor10=333333" width="100%" height="593"><param name="movie" value="fish.swf?up_fishName=Fish&up_backgroundColor=000000&up_backgroundImage=bg-nt.gif&up_backgroundRepeat=repeat&up_foodColor=FFAC12&up_fishColor=ffffff&up_numFish=20&up_fishColor1=ffffff&up_fishColor2=333333&up_fishColor3=333333&up_fishColor4=333333&up_fishColor5=333333&up_fishColor6=333333&up_fishColor7=333333&up_fishColor8=333333&up_fishColor9=333333&up_fishColor10=333333"></param><param name="AllowScriptAccess" value="always"></param><param name="wmode" value="opaque"></param><param name="scale" value="noscale"/><param name="salign" value="tl"/></object>
-
-</div>-->
-
-
 <!-- navigation bar -->
 <div id="headerfix">
 <div id="headerscroll" class="sticktop"><!--header on scroll-->

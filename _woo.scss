@@ -11,16 +11,17 @@
 /*productlist*/
 
 .products {
-	clear:both;
+	clear:both; width: 100%; display: block;
 	.product {
 	    @include border-box;
 	    text-align: center;
 	    clear: none !important;
 	    margin: 0 0.5% !important;
 	    width: 24% !important;
+	    display: inline-block;
+	    &:before, &:after {clear:none !important;}
 	    img {@include box-shadow(none !important); margin-bottom: 0;}
-	 &:nth-child(3n+1) {
-    	clear: both;}
+	
     	.onsale {background: none repeat scroll 0 0 #FF0000;
 	    color: #FFFFFF;
 	    font-size: 11px;
@@ -34,9 +35,9 @@
 	    	del {float: left;color: #BEBEBE;}
     	}
 	    .price, .add_to_cart_button {font-size: 14px;}
-	.add_to_cart_button {float: right; display: none;}
-	.add_to_cart_button.added {display: none;}
-	.added_to_cart {float: right;}
+		.add_to_cart_button {float: right; display: none;}
+		.add_to_cart_button.added {display: none;}
+		.added_to_cart {float: right;}
 	}
 }
 
@@ -73,6 +74,7 @@
 .woocommerce-result-count { float: left;margin: 0;}
 /*end productlist*/
 
+}/*end productlist*/
 
 
 /*sidebar*/

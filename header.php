@@ -1,9 +1,22 @@
 <!DOCTYPE html>
   <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <?php if (is_404()) { ?>
+<script><?php $url = "$_SERVER[REQUEST_URI]";
+                                        $chunks = array_filter(explode('/', $url));
+                                        $s_query = str_replace('/', ' ', trim($url, '/')); ?></script>
+<?php } ?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+    <meta itemprop="name" content="<?php the_title(); ?>" /> 
+    <?php if(function_exists('the_post_thumbnail')) : ?>
+    <meta itemprop="image" content="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" />
+    <?php endif; ?>
+    <meta itemprop="url" content="<?php the_permalink(); ?>" /> 
+    <meta itemprop="author" content="<?php get_the_author(); ?>"/> 
+    <meta itemprop="description" content="<?php echo get_the_excerpt(); ?>" /> 
+    <meta itemprop="dateModified" content="<?php the_modified_date('F j, Y','',''); ?>" />
     <?php get_template_part('/un-ios');?>
+    
     <link rel="shortcut icon" href="/favicon.ico" >
     <link rel="icon" href="/animated_favicon.gif" type="image/gif" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -87,6 +100,8 @@ jQmau(document).ready(function(){
     });
 </script>
 
+
+
 <script type="text/javascript">
 var $jfs = jQuery.noConflict();
 $jfs(document).ready(function(){
@@ -121,27 +136,15 @@ $onlyDesktop(window).load(function() {
     });
 
 </script>
-
-<script>
-var $jj = jQuery.noConflict();
-$jj(document).ready(function(){
-    $jj('.smoothie[href^="#"]').on('click',function (e) {
-      e.preventDefault();
-      var target = this.hash,
-      $jjtarget = $jj(target);
-      $jj('#snapcontent').stop().animate({
-          'scrollTop': $jjtarget.offset().top - 0
-      }, 750, 'swing', function () {
-      });
-  });
-  });
-  </script>
-
-
 </head>
-
-<body id='blog' <?php body_class( "home woocommerce" ); ?>>
- <!--header wrapper-->
+<?php global $blog_id; ?>
+<?php if ( is_woocommerce() ) {
+  $boxy = 'home woocommerce';
+} else {
+  $boxy = 'home';
+} ?>
+<body id="blog<?php echo $blog_id; ?>" <?php body_class( $boxy );?>>
+    <!-- header wrapper-->
 <?php if ( is_home() ) { ?> 
         <section id="header" class="wrapper page dk" data-type="background" data-speed="2">
 <?php } elseif (is_page_template('page-enter.php')) { ?> 
@@ -154,7 +157,7 @@ $jj(document).ready(function(){
             <section id="header" class="wrapper page dk" data-type="background" data-speed="2">
 <?php } elseif (is_singular('product')) { ?>
             <section id="header" class="wrapper product" data-type="background" data-speed="2">
- <?php } elseif (is_single()) { ?>
+ <?php } elseif (is_single() && has_post_format( 'standard' )) { ?>
         <?php if (has_post_thumbnail( $post->ID ) ) { ?>
         <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
             <section id="header" class="wrapper image dk single" style="background-image: url('<?php echo $image[0]; ?>')"  data-type="background" data-speed="2">

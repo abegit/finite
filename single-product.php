@@ -44,8 +44,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 	return;
 	 }
 ?>
-           <div class="large-9 columns small-wall">
-		
+           <div class="large-8 columns small-wall">
+
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -71,9 +71,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		</div>
 
 
-      <div class="large-3 columns sidebar">
-      		<div class="summary entry-summary" style="width:100% !important;">
 
+      <div class="large-4 columns sidebar">
+      		<div class="summary entry-summary" style="width:100% !important;">
+		<p>Currently updating every product/service on the shopping cart. If you are interested in becoming a supplier, email me at unscenecreative {at} gmail {d0t} com </p>
 		<?php
 			do_action( 'woocommerce_single_product_summary' );
 		?>
@@ -125,6 +126,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
 
-<?php get_footer( 'shop' ); ?>
+<?php get_footer(); ?>
 
 

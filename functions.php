@@ -416,6 +416,79 @@ function mynewtheme_admin() {
 <?php } 
 // end function mynewtheme_admin()
 
+
+
+// add_action( 'the_content', 'addAuthor', 0 );
+// /**
+//  * Add a icon to the beginning of every post page.
+//  *
+//  * @uses is_single()
+//  */
+// function addAuthor( $content ) {
+//     if ( is_singular('post') ) {
+//         // ob_start();
+//         // get_template_part('inc/authorbox');
+//         // $authorBox = ob_get_clean();
+//         $content .= do_shortcode('[ratings]');
+//     }
+//     return $content;
+// }
+
+if( class_exists( 'kdMultipleFeaturedImages' ) ) {
+
+        $args = array(
+                'id' => 'featured-image-2',
+                'post_type' => 'post',      // Set this to post or page
+                'labels' => array(
+                    'name'      => 'Featured image 2',
+                    'set'       => 'Set featured image 2',
+                    'remove'    => 'Remove featured image 2',
+                    'use'       => 'Use as featured image 2',
+                )
+        );
+
+        new kdMultipleFeaturedImages( $args );
+}
+
+function add_post_formats() {
+    add_theme_support( 'post-formats', array( 'gallery', 'quote', 'video', 'aside', 'image', 'link' ) );
+}
+add_action( 'after_setup_theme', 'add_post_formats', 20 );
+
+
+// #3 - remove WordPress Social Login's get_avatar filter so that we can add our own
+remove_filter( 'get_avatar', 'wsl_user_custom_avatar' );
+function my_user_custom_avatar($avatar, $id_or_email, $size, $default, $alt) {
+        global $comment;
+        if( get_option ('wsl_settings_users_avatars') && !empty ($avatar)) {
+                //Check if we are in a comment
+                if (!is_null ($comment) && !empty ($comment->user_id)) {
+                        $user_id = $comment->user_id;
+                } elseif(!empty ($id_or_email)) {
+                        if ( is_numeric($id_or_email) ) {
+                                $user_id = (int) $id_or_email;
+                        } elseif ( is_string( $id_or_email ) && ( $user = get_user_by( 'email', $id_or_email ) ) ) {
+                                $user_id = $user->ID;
+                        } elseif ( is_object( $id_or_email ) && ! empty( $id_or_email->user_id ) ) {
+                                $user_id = (int) $id_or_email->user_id;
+                        }
+                }
+                // Get the thumbnail provided by WordPress Social Login
+                if ($user_id) {
+                        if (($user_thumbnail = get_user_meta ($user_id, 'wsl_user_image', true)) !== false) {
+                                if (strlen (trim ($user_thumbnail)) > 0) {
+                                        $user_thumbnail = preg_replace ('#src=([\'"])([^\\1]+)\\1#Ui', "src=\\1" . $user_thumbnail . "\\1", $avatar);
+                                        return $user_thumbnail;
+                                }
+                        }
+                }
+        }
+        // No avatar found.  Return unfiltered.
+        return $avatar;
+}
+
+
+
 wp_deregister_script( 'jquery' );
 add_filter('show_admin_bar', '__return_false');
 
@@ -471,53 +544,72 @@ add_post_type_support( 'product', 'custom-fields' );
 add_filter('widget_text', 'do_shortcode');
 
 if ( function_exists('register_sidebar') ) {
-register_sidebar(array(
-    'name'          =>  'Blog',
-    'class'         => '',
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h5>',
-    'after_title'   => '</h5>',
-    'id'            => 'sidebar-blog'
-));
+    register_sidebar(array(
+    	'name'          => 'Blog Sidebar',
+    	'id'         => 'blog-1',
+    	'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    	'after_widget'  => '</li>',
+    	'before_title'  => '<h5>',
+    	'after_title'   => '</h5>',
+    ));
 
-register_sidebar(array(
-    'name'          => 'Leftbar',
-    'class'         => 'leftbar',
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>',
-    'id'            => 'sidebar-leftbar'
-));
-register_sidebar(array(
-    'name'          => 'Rightbar',
-    'class'         => 'rightbar',
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>',
-    'id'            => 'sidebar-rightbar'
-));
+    register_sidebar(array(
+        'name'          => 'Leftbar',
+        'id'         => 'left-2',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
+    register_sidebar(array(
+        'name'          => 'Rightbar',
+        'id'         => 'right-3',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
+    register_sidebar(array(
+        'name'          => 'Newsletter',
+        'id'         => 'news-4',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+    ));
 
-register_sidebar(array(
-    'name'          =>  'Store',
-    'class'         => '',
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h5>',
-    'after_title'   => '</h5>',
-    'id'            => 'sidebar-store'
-));
-register_sidebar(array(
-    'name'          =>  'Footer',
-    'class'         => '',
-    'before_widget' => '<li id="%1$s" class="widget %2$s columns large-4 small-12">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h5>',
-    'after_title'   => '</h5>',
-    'id'            => 'sidebar-footer'
-));
+    register_sidebar(array(
+        'name'          =>  'Home Footer',
+        'id'         => 'home-footer',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>',
+    ));
+    register_sidebar(array(
+        'name'          =>  'StoreSide',
+        'id'         => 'store-6',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>',
+    ));
+    register_sidebar(array(
+        'name'          =>  'Store',
+        'id'         => 'archive-7',
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>',
+    ));
+    register_sidebar(array(
+        'name'          => 'Only Footer',
+        'id'         => 'only-footer',
+        'before_widget' => '<ul id="%1$s" class="columns large-3 small-6 widget %2$s">',
+        'after_widget'  => '</ul>',
+        'before_title'  => '<lh>',
+        'after_title'   => '</lh>',
+    ));
 }
 
 
@@ -533,23 +625,18 @@ add_action( 'init', 'register_my_menus' );
 
 
 
-function mp_cart_shortcode($atts) {
-     mp_show_cart();
-}
-add_shortcode('mp-cart-shortcode', 'mp_cart_shortcode');
 
-
-
-//disable ajax mp
 if (function_exists('add_theme_support')) {
-    add_theme_support('post-thumbnails');
-        set_post_thumbnail_size(640, 145, true); // Normal post thumbnails
-                add_image_size('block_1', 200, 200, true );
-                add_image_size('left_image', 800, 1200, false );
-                add_image_size('video', 290, 163, true );
-                add_image_size('blog', 650, 290, true );
-                add_image_size('blogsingle', 800, 350, true );          
-}   
+
+	add_theme_support('post-thumbnails');
+		set_post_thumbnail_size(640, 145, true); // Normal post thumbnails
+				add_image_size('block_1', 200, 200, true );
+                update_option('medium_size_w', 800);
+                update_option('medium_size_h', 1200);
+				add_image_size('video', 290, 163, true );
+				add_image_size('blog', 650, 290, true );
+				add_image_size('blogsingle', 800, 350, true );			
+}	
 
 
 // Changing excerpt length
@@ -720,4 +807,20 @@ add_action('widgets_init', create_function('', 'return register_widget("unsceneR
 
 
 
+function wooInitd() {
+    dequeue_scripts('woocommerce_scripts');
+}
+if (is_shop()) {
+    wooInitd();
+}
 
+// function check404() {
+//     if (is_404()) {
+//         $url = "$_SERVER[REQUEST_URI]";
+//         $chunks = array_filter(explode('/', $url));
+//         $s_query = str_replace('/', '+', trim($url, '/'));
+//         wp_redirect( home_url().'?s='.$s_query ); exit;
+//     }
+// }
+
+// add_action("template_redirect", 'check404');
